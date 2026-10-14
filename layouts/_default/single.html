@@ -10,8 +10,15 @@
         <p class="article-byline">Huan Ning <span aria-hidden="true">·</span> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ if eq .Section "publication" }}{{ .Date.Format "2006" }}{{ else }}{{ .Date.Format "January 2, 2006" }}{{ end }}</time></p>
       {{ end }}
     </header>
-    {{ if .Params.demo_url }}
-    <div class="research-demo-actions"><a class="button button-primary" href="{{ .Params.demo_url }}" target="_blank" rel="noopener noreferrer">Launch interactive application ↗</a>{{ with .Params.demo_status }}<span class="demo-status">{{ . }}</span>{{ end }}</div>
+    {{ if eq .Section "project" }}
+      {{ if or .Params.demo_url .Params.repo_url .Params.paper_url .Params.data_url }}
+      <nav class="research-resource-links" aria-label="Research project resources">
+        {{ with .Params.demo_url }}<a class="button button-primary" href="{{ . }}" target="_blank" rel="noopener noreferrer">Interactive Demo ↗</a>{{ end }}
+        {{ with .Params.paper_url }}<a class="project-resource-text" href="{{ . }}" target="_blank" rel="noopener noreferrer">Paper ↗</a>{{ end }}
+        {{ with .Params.repo_url }}<a class="project-resource-text" href="{{ . }}" target="_blank" rel="noopener noreferrer">Code Repository ↗</a>{{ end }}
+        {{ with .Params.data_url }}<a class="project-resource-text" href="{{ . }}" target="_blank" rel="noopener noreferrer">Dataset ↗</a>{{ end }}
+      </nav>
+      {{ end }}
     {{ end }}
     <div class="article-prose">{{ .Content }}</div>
     {{ with .Params.original }}<div class="source-box"><strong>Original publication</strong><p>{{ if $.Params.archive_note }}{{ $.Params.archive_note }}{{ else }}For the original article and accompanying media, see the author's earlier website.{{ end }}</p><a href="{{ . }}">View original source ↗</a></div>{{ end }}

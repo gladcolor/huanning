@@ -36,3 +36,7 @@ a{color:inherit;text-decoration:none}a:hover{color:#007a73}a:focus-visible,butto
 .project-links .demo-link{color:#087b75;text-decoration:underline;text-underline-offset:3px}
 .project-card .project-links a:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
 .research-demo-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:23px 0 35px}
+
+/* Research resources intentionally link to independently hosted apps and repositories. */
+.research-resource-links{display:flex;align-items:center;flex-wrap:wrap;gap:12px 22px;padding:20px 0;margin:19px 0 22px;border-bottom:1px solid var(--line)}
+.research-resource-links .project-resource-text{color:var(--teal);font-weight:800;font-size:12px;text-decoration:underline;text-underline-offset:3px}

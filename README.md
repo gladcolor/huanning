@@ -25,7 +25,7 @@ The homepage assembles the latest News, Blog, Articles, Projects, and Publicatio
 
 ## Interactive projects: external links only
 
-The main personal site contains project descriptions and links, not embedded applications. A project may set `demo_url` in its front matter, and the homepage project card and project page will show **Launch interactive demo** linking to that independent website.
+The main personal site contains project descriptions and links, not embedded applications. A project may set `demo_url`, `paper_url`, `repo_url`, and `data_url` in its front matter. Project pages show simple links labelled **Interactive Demo**, **Paper**, **Code Repository**, and **Dataset** only when those URLs are provided. The homepage project card shows the interactive demo URL when available.
 
 Each interactive app is maintained and hosted separately in its own repository. If a demo is offline, the academic site's text and other research pages will continue to work. Other optional related resources can be added as ordinary Markdown links to publications, code, and datasets. Do not put API keys or private data in the website repository.
 
@@ -34,9 +34,9 @@ The U.S. Hourly Population Explorer is a currently linked example: https://gladc
 ## Publishing
 
 1. Merge the review branch after the pull request build check succeeds.
-2. Under GitHub repository **Settings > Pages**, set **Build and deployment > Source** to **GitHub Actions**.
+2. Under GitHub repository **Settings > Pages**, set **Build and deployment > Source** to **GitHub Actions**. A preview branch has already deployed successfully; its public address is https://gladcolor.github.io/huanning/.
 3. Publish at `https://gladcolor.github.io/huanning/` and verify the homepage, internal links, articles, projects, and search.
-4. Sign in to [Pages CMS](https://app.pagescms.org/) with GitHub, grant access to `gladcolor/huanning`, and select the main branch. The CMS sees the repository's `.pages.yml`.
+4. Sign in to [Pages CMS](https://app.pagescms.org/) with GitHub, grant access only to `gladcolor/huanning`, and open the repository. **While the prototype branch is the live deployed website, select `website-prototype-2026-10`, not `main`.** After final review, merge the PR into `main` and switch the editor to `main` only when deployment is configured for that branch. The CMS reads `.pages.yml` on the selected branch.
 5. Use News, Blog, Articles, Projects, and Publications in Pages CMS. Saving an entry commits a Markdown file; GitHub Actions rebuilds the website.
 
 **Do not change the DNS for huanning.me until the GitHub Pages test site has been checked.** When ready, configure the custom domain under Settings > Pages, then update the domain's DNS records. Update `.pages.yml` media output from `/huanning/media` to `/media` at that time.
@@ -72,3 +72,14 @@ The original sites should remain online until the content and links are verified
 - [W3C Web Accessibility Initiative](https://www.w3.org/WAI/tips/designing/): contrast, navigation and mobile layouts
 
 This is an original design inspired by established academic website patterns, not a copy of another site's code or branding.
+
+## Adding content through Pages CMS
+
+1. Open https://app.pagescms.org/ and sign in to GitHub as gladcolor.
+2. Authorize only the huanning repository, then select branch `website-prototype-2026-10` while it powers the preview.
+3. Select News, Research Articles, Blog, Projects, Publications, or About. Click New for a new entry or open an existing entry to edit.
+4. Fill Title, Date, Summary, and the rich-text Body. Optional links in Projects are Interactive Demo URL, Paper URL, Code Repository URL, and Dataset URL.
+5. Click Save. Pages CMS writes a Markdown file to the chosen branch, where the GitHub Pages workflow rebuilds the website.
+6. Verify the published URL. New News automatically appears in Latest News; recent Blog/Articles appear in Research & Writing.
+
+**Important:** A CMS draft is an item with `draft: true`. Hugo does not publish drafts by default. Set it to false when ready. The current site preview uses the prototype branch, not main.

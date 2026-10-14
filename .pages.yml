@@ -87,7 +87,10 @@ content:
       - { name: area, label: Research area, type: string }
       - { name: summary, label: Short description, type: text }
       - { name: external_link, label: External link, type: string }
-      - { name: demo_url, label: Interactive application URL, type: string }
+      - { name: demo_url, label: Interactive Demo URL (optional), type: string }
+      - { name: paper_url, label: Paper URL (optional), type: string }
+      - { name: repo_url, label: Code Repository URL (optional), type: string }
+      - { name: data_url, label: Dataset URL (optional), type: string }
       - { name: demo_status, label: Demo status, type: select, options: { values: [live, prototype, planned] } }
       - { name: draft, label: Draft, type: boolean }
       - { name: body, label: Project overview, type: rich-text }

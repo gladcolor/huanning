@@ -2,6 +2,8 @@
 title: "LLM-Find: A Geospatial Data Retrieval Agent"
 date: 2025-01-01
 area: "AI AGENTS / DATA DISCOVERY"
+repo_url: "https://github.com/gladcolor/LLM-Find"
+paper_url: "https://doi.org/10.1080/17538947.2025.2458688"
 summary: "Natural-language discovery and downloading of geospatial datasets, guided by reusable data source handbooks."
 tags: ["Autonomous GIS","AI Agents","Geospatial Data"]
 ---
@@ -11,6 +13,4 @@ Its architecture uses **data source handbooks**, structured packages that provid
 
 **Resources**
 
-- [LLM-Find repository](https://github.com/gladcolor/LLM-Find)
-- [2025 journal article](https://doi.org/10.1080/17538947.2025.2458688)
 - [Original project introduction](https://www.huanning.me/projects)

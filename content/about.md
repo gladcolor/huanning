@@ -2,6 +2,8 @@
 title: About Huan Ning
 summary: "Computational data scientist working on geospatial AI, autonomous GIS, and spatial data science."
 ---
+
+![Huan Ning profile](media/google-sites/home/amxu72ta9vjra0p7skxbulxn-x9lpbesw48iwqxhialkkaiu1ypuzcd-c3728fc89.png)
 Huan Ning is a computational data scientist and researcher in **AI for Science** and **spatial data science**. According to his existing academic profile, he is a Postdoctoral Research Fellow at Emory University.
 
 He holds a Ph.D. from Pennsylvania State University, a master's degree from the University of South Carolina, and a bachelor's degree in Geographic Information Science from Wuhan University, China. He has more than ten years of industry experience in spatial data engineering, development, management, and technology leadership, and also studied Information Systems at New Jersey Institute of Technology.

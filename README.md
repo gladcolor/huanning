@@ -45,7 +45,7 @@ The U.S. Hourly Population Explorer is a currently linked example: https://gladc
 
 This branch includes a verified biography, research-project pages, selected publications, an initial news feed, and short archive entries for the WordPress weblog. Archive entries link to the complete original posts.
 
-**WordPress articles, original images, comments, and attachments have NOT been fully imported.** Before redirecting the domain or deleting the old blog:
+**Public WordPress articles have been imported via the WordPress REST API and original HTML backed up; Google Sites source pages have been archived and key content migrated.** Private posts, drafts, restricted attachments, external video/iframe assets, and content accessible only through signed-in administrator exports are not covered. Before redirecting the domain or deleting the old blog:
 
 1. Export WordPress.com via Tools > Export (XML).
 2. Download media files separately.
@@ -85,3 +85,8 @@ This is an original design inspired by established academic website patterns, no
 The CMS is configured to preserve existing frontmatter not explicitly shown in its form, including historical tags and reference metadata. This avoids accidental metadata loss when editing older posts.
 
 **Important:** A CMS draft is an item with `draft: true`. Hugo does not publish drafts by default. Set it to false when ready. The current site preview uses the prototype branch, not main.
+
+
+## Public archive migration verification
+
+Read `MIGRATION_STATUS.md`, `migration-report.json`, and the raw source files under `archive/google-sites/` and `archive/wordpress/`. The original Google Sites publications page is preserved in `archive/google-sites/publications.md`, and the public WordPress article bodies are independent Markdown pages with locally stored images under `static/media/wordpress/`. Media downloaded from the public Google Sites pages is under `static/media/google-sites/`. Compare article layouts and image placement against the original sites before switching domain names.

@@ -2,6 +2,8 @@
 title: "U.S. Hourly Population Maps"
 date: 2025-04-01
 area: "HUMAN MOBILITY / URBAN ANALYTICS"
+demo_url: "https://gladcolor.github.io/hourly_population/"
+demo_status: "live"
 summary: "Fine-grained estimates of hourly population in roughly 220,000 U.S. census block groups during 2022."
 tags: ["Human Mobility","Population","Urban Informatics"]
 ---

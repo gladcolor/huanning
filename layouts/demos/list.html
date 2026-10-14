@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="container inner-page">
+  <header class="page-intro"><p class="eyebrow">EXPLORE SCIENTIFIC RESULTS</p><h1>Interactive Research</h1><div class="page-description">{{ .Content }}</div></header>
+  <div class="demo-archive">
+    {{ range .Pages.ByDate.Reverse }}
+      <article class="demo-tile">
+        <span class="demo-status{{ if eq .Params.demo_status "planned" }} demo-status-planned{{ end }}">{{ with .Params.demo_status }}{{ . }}{{ else }}Research application{{ end }}</span>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+        <div class="demo-tile-actions">
+          {{ with .Params.demo_url }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Launch live demo ↗</a>{{ end }}
+          <a href="{{ .RelPermalink }}">Research details ↗</a>
+          {{ with .Params.paper_url }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Paper ↗</a>{{ end }}
+        </div>
+      </article>
+    {{ else }}
+      <p>Research applications will appear here when they are released.</p>
+    {{ end }}
+  </div>
+</div>
+{{ end }

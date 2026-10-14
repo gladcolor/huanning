@@ -11,9 +11,6 @@ main:
   - name: Blog
     pageRef: /post
     weight: 40
-  - name: Demos
-    pageRef: /demos
-    weight: 45
   - name: Projects
     pageRef: /project
     weight: 50

@@ -71,27 +71,6 @@ content:
       - { name: archive_note, label: Archive migration note, type: text }
       - { name: draft, label: Draft, type: boolean }
       - { name: body, label: Blog post, type: rich-text }
-  - name: demos
-    label: Interactive Demos
-    type: collection
-    path: content/demos
-    format: yaml-frontmatter
-    filename: "{primary}.md"
-    exclude: ["_index.md"]
-    view:
-      fields: [title, demo_status, date]
-      primary: title
-    fields:
-      - { name: title, label: Demo title, type: string, required: true }
-      - { name: date, label: Date, type: date }
-      - { name: summary, label: Short description, type: text }
-      - { name: demo_status, label: Status (live, prototype, planned), type: select, options: { values: [live, prototype, planned] } }
-      - { name: demo_url, label: Live application URL, type: string }
-      - { name: project_url, label: Related project URL, type: string }
-      - { name: code_url, label: Source code URL, type: string }
-      - { name: paper_url, label: Related paper URL, type: string }
-      - { name: draft, label: Draft, type: boolean }
-      - { name: body, label: Application details, type: rich-text }
   - name: projects
     label: Projects
     type: collection

@@ -18,25 +18,18 @@ An independent, low-maintenance website for Huan Ning's research and writing.
 | Research Articles | `content/articles` |
 | Blog | `content/post` |
 | Research Projects | `content/project` |
-| Interactive Applications | `content/demos` |
 | Publications | `content/publication` |
 | Biography | `content/about.md` |
 
-The homepage assembles the latest News, Blog, Articles, Projects, and Publications automatically and highlights one verified live interactive research application.
+The homepage assembles the latest News, Blog, Articles, Projects, and Publications automatically and links to independently hosted interactive research applications from project pages.
 
-## Interactive research: long-term architecture
+## Interactive projects: external links only
 
-Treat the academic website as a stable **discovery hub**, not the hosting environment for every large research application:
+The main personal site contains project descriptions and links, not embedded applications. A project may set `demo_url` in its front matter, and the homepage project card and project page will show **Launch interactive demo** linking to that independent website.
 
-- Add each interactive result to `content/demos/` with `demo_status`, `demo_url`, project URL, source code, and optional publication link.
-- Add `demo_url` to related project pages so visitors can launch working software directly from research summaries.
-- Client-side applications using JavaScript, HTML, WebGL, or map libraries can be hosted on GitHub Pages in their own repositories, or kept as standalone static assets. They do not require a server-side database.
-- Expensive model inference, private credentials, restricted geodata, and large datasets should be hosted separately from the public static website. Do not commit API keys or confidential datasets.
-- Keep each demo independently deployable and exportable, using versioned code and data snapshots when licenses permit. Even if a demo becomes unavailable, its research page, description, screenshots, code links and publications can remain intact.
-- Prefer explicit **Launch interactive demo** links. Do not assume an outside application permits framing. Add a preview embed only after testing permissions, accessibility, and mobile behavior.
-- Do not make all projects wait on the least stable demo: applications should be modular, and failures must not affect the homepage.
+Each interactive app is maintained and hosted separately in its own repository. If a demo is offline, the academic site's text and other research pages will continue to work. Other optional related resources can be added as ordinary Markdown links to publications, code, and datasets. Do not put API keys or private data in the website repository.
 
-The currently verified live app is the [2022 U.S. Hourly Population Map](https://gladcolor.github.io/hourly_population/), with 2D/3D exploration. The website does not claim that all research projects are deployed interactive applications.
+The U.S. Hourly Population Explorer is a currently linked example: https://gladcolor.github.io/hourly_population/
 
 ## Publishing
 
@@ -44,7 +37,7 @@ The currently verified live app is the [2022 U.S. Hourly Population Map](https:/
 2. Under GitHub repository **Settings > Pages**, set **Build and deployment > Source** to **GitHub Actions**.
 3. Publish at `https://gladcolor.github.io/huanning/` and verify the homepage, internal links, articles, projects, and search.
 4. Sign in to [Pages CMS](https://app.pagescms.org/) with GitHub, grant access to `gladcolor/huanning`, and select the main branch. The CMS sees the repository's `.pages.yml`.
-5. Use News, Blog, Articles, Projects, Interactive Demos, and Publications in Pages CMS. Saving an entry commits a Markdown file; GitHub Actions rebuilds the website.
+5. Use News, Blog, Articles, Projects, and Publications in Pages CMS. Saving an entry commits a Markdown file; GitHub Actions rebuilds the website.
 
 **Do not change the DNS for huanning.me until the GitHub Pages test site has been checked.** When ready, configure the custom domain under Settings > Pages, then update the domain's DNS records. Update `.pages.yml` media output from `/huanning/media` to `/media` at that time.
 

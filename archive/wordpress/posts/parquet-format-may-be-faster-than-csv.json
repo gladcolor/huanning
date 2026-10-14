@@ -1,0 +1,17 @@
+{
+  "id": 58,
+  "date": "2025-10-14T20:33:31-05:00",
+  "slug": "parquet-format-may-be-faster-than-csv",
+  "link": "https://gladcolor.wordpress.com/2025/10/14/parquet-format-may-be-faster-than-csv/",
+  "title": {
+    "rendered": "Parquet format may be faster than CSV"
+  },
+  "content": {
+    "rendered": "\n<p class=\"wp-block-paragraph\">I use CSV file for a long time to process a lot of tabular data. However, one of my recent project need to extract rows from a large parquet table. After a few testing, I found that DuckDB can speed up my work by about 5 times. I recommend to try Parquet and DuckDB if you need a fast processing.</p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n"
+  },
+  "excerpt": {
+    "rendered": "<p>I use CSV file for a long time to process a lot of tabular data. However, one of my recent project need to extract rows from a large parquet table. After a few testing, I found that DuckDB can speed up my work by about 5 times. I recommend to try Parquet and DuckDB if [&hellip;]</p>\n"
+  },
+  "categories": [],
+  "tags": []
+}

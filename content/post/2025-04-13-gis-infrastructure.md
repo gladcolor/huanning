@@ -1,11 +1,22 @@
 ---
-title: "Autonomous GIS as infrastructure?"
-date: 2025-04-13
-summary: "Exploring local, centralized, and infrastructure-scale GIS agents."
-original: "https://gladcolor.wordpress.com/2025/04/13/autonomous-gis-as-infrastructure/"
-archive_note: "This is a verified archive summary. The complete original article and its media will remain at WordPress until a full export is imported."
-tags: ["AI", "GIScience"]
+title: Autonomous GIS as infrastructure?
+date: '2025-04-13T15:19:52-05:00'
+summary: 'Huan Ning, Zhenlong Li | 2025-04-13 In a recent vision paper, GIScience in the Era of Artificial Intelligence: A
+  Research Agenda Towards Autonomous GIS, we proposed three scales of autonomous GIS agents: local, centralized, and infrastructure.
+  Some GIS agents have been developed on local and centralized scales, such as LLM-Geo and Google Geospatial Reasoning. What
+  do the infras'
+original: https://gladcolor.wordpress.com/2025/04/13/autonomous-gis-as-infrastructure/
+wordpress_id: 46
+aliases:
+- /post/autonomous-gis-as-infrastructure/
 ---
-The article examines standards, infrastructure, and interoperability for autonomous GIS agents and links these questions to agent communication protocols.
 
-*The complete original article remains linked below. This page is an archive entry pending full migration.*
+**Huan Ning, Zhenlong Li | 2025-04-13**
+
+In a recent vision paper, [GIScience in the Era of Artificial Intelligence: A Research Agenda Towards Autonomous GIS](https://arxiv.org/abs/2503.23633), we proposed three scales of autonomous GIS agents: local, centralized, and infrastructure. Some GIS agents have been developed on local and centralized scales, such as [LLM-Geo](https://github.com/gladcolor/LLM-Geo) and [Google Geospatial Reasoning](https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/). What do the infrastructure agents look like? In the vision paper, we discussed that “A key challenge [to develop the infrastructure-scale GIS agents] lies in establishing secure standards, protocols and policies to let generative AI manage computational resources.” The release of Google’s [A2A protocol](https://github.com/google/A2A) (early April 2025) to support communications of agents shined a light on the infrastructure scale agents, allowing AI agents can collaborate with each other to accomplish complex tasks using the resources across different types of infrastructure, such as data and computational resources.
+
+Besides protocols among AI agents like A2A, [Anthropic AI’s Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) (MCP) focuses on AI-ready resources (e.g., data and tools). Released in late 2024, it aims to expose resources for large language models (LLMs). Our understanding is that MCP is a wrapper of existing resources (e.g., data, services) to provide information or materials for LLMs, so that they can provide better answers for users, rather than output plausible text according to LLM’s internal knowledge. In GIScience, geospatial data sharing attempts led by Open Geospatial Consortium (OGC) have been started since 1994, benefiting the geospatial community. Online geospatial resources that meet OGC standards can be shared across programs via API (application programming interface). In addition, the strong needs for geospatial data sharing, integration, and discovery led to the development of [National Spatial Data Infrastructure](https://doi.org/10.1007/978-0-387-35973-1_860) (NSDI) and the large NSF-funded initiatives such as [EarthCube](https://www.earthcube.org/) and [I-GUIDE](https://i-guide.io/).  In the era of artificial intelligence (AI), these geospatial resources may need to be wrapped up for AI applications, especially for autonomous GIS agents. Our paper, [Autonomous GIS: the next-generation AI-powered GIS](https://www.tandfonline.com/doi/full/10.1080/17538947.2023.2278895) has mentioned the need to prepare data for AI agents, and we implemented a data retrieval agent [LLM-Find](https://www.tandfonline.com/doi/full/10.1080/17538947.2025.2458688)and it’s QGIS implementation, demonstrating a practical and plug-and-play manner for AI applications to access geospatial data. MCP is probably a more general way to share data for AI, especially authorization, but whether it can be adapted for geospatial data need further investigation.
+
+Due to the nature of LLMs, many of these solutions or practices, like A2A, MCP, LLM-Find, and [GIS Copilot](https://arxiv.org/abs/2411.03205), used a straightforward method – feeding descriptions of all available resources (e.g., agents, tools, and data) into an LLM and expect the LLM chooses the needed resources. This strategy faces the scalability problem: what if there are hundreds or thousands of resources? For example, there are about 30,000 [Census variables](https://api.census.gov/data/2023/acs/acs5/variables.html) and 200,000 OGC [services](https://cici.lab.asu.edu/polarhub3/) (by [PolarHub](https://cici.lab.asu.edu/polarhub3/)). Obviously, it is challenging to put the super-long descriptions of all variables and services into the LLM. Our team is testing the RAG (retrieval augmented generation) in [GIS Copilot](https://arxiv.org/abs/2411.03205) to help the Copilot to select appropriate tools to process geospatial data for users. We think fine-tuning multiple LLMs may be an alternative. Since humans have created countless public and private services for geospatial data infrastructure, autonomous GIS agents at the infrastructure scale need to discover, test, document, and recommend these resources, but how? We think this is a fascinating and useful research topic.
+
+**Reposted from:** [**https://sites.psu.edu/giscience/2025/04/13/autonomous-gis-as-infrastructure/**](https://sites.psu.edu/giscience/2025/04/13/autonomous-gis-as-infrastructure/)

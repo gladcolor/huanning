@@ -1,11 +1,37 @@
 ---
-title: "What Should Be the Scientific Community’s Immediate Priorities in the Age of AGI?"
-date: 2026-09-03
-summary: "A reflection on research priorities as AI systems become increasingly capable."
-original: "https://gladcolor.wordpress.com/2026/09/03/what-should-be-the-scientific-communitys-immediate-priorities-in-the-age-of-agi/"
-archive_note: "This is a verified archive summary. The complete original article and its media will remain at WordPress until a full export is imported."
-tags: ["AI", "GIScience"]
+title: What Should Be the Scientific Community’s Immediate Priorities in the Age of AGI?
+date: '2026-09-03T20:40:11-05:00'
+summary: On September 3, 2026, OpenAI released GPT-6 and formally declared that the era of artificial general intelligence,
+  or AGI, had arrived, meaning that artificial intelligence now surpasses most humans in most domains. Regardless of how AGI
+  is defined, AI has clearly reached an exceptionally high level of analytical and reasoning capability, at a cost that […]
+original: https://gladcolor.wordpress.com/2026/09/03/what-should-be-the-scientific-communitys-immediate-priorities-in-the-age-of-agi/
+wordpress_id: 79
+aliases:
+- /post/what-should-be-the-scientific-communitys-immediate-priorities-in-the-age-of-agi/
 ---
-This essay explores future scientific priorities, unified knowledge representation, and autonomous scientific modeling.
 
-*The complete original article remains linked below. This page is an archive entry pending full migration.*
+On September 3, 2026, OpenAI released GPT-6 and formally declared that the era of artificial general intelligence, or AGI, had arrived, meaning that artificial intelligence now surpasses most humans in most domains. Regardless of how AGI is defined, AI has clearly reached an exceptionally high level of analytical and reasoning capability, at a cost that is increasingly affordable. When our team was writing about this topic two years ago, we still had to carefully consider whether to mention AGI. Today, perhaps that debate is no longer necessary.
+
+For academia, the first challenge of the AGI era is determining how to reorganize this new productive force: a continuous supply of high-level reasoning and programming intelligence. In the past, developing such human expertise required many years of training, followed by considerable effort to bring experts together. Now, comparable intellectual capabilities can be accessed at the cost of tokens.
+
+For several years, our team has been envisioning what future scientific research might look like and exploring the application of AI agents to geographic information science. After years of exploration, research, and practice, we believe that disciplinary barriers will continue to exist. Scientific research will still take the form of AGI combined with domain knowledge, but cross-disciplinary research will become the norm. Research involving AI will increasingly be organized around the problem itself rather than around established academic disciplines.
+
+AI will primarily perform implementation and exploration, searching for possible solutions tens, hundreds, or even thousands of times faster than humans. Human experts, meanwhile, will guide AI toward deeper levels of inquiry within their areas of expertise.
+
+Under these emerging conditions, what kind of scientific infrastructure do we need? We now have access to a nearly continuous supply of intelligence, represented operationally by tokens. Yet today’s research system, including how knowledge is represented and stored and how experts divide and coordinate their work, was largely designed around the cognitive capacities and working boundaries of humans.
+
+For example, a scientific paper is typically limited to approximately 5,000 words. It prioritizes a small number of successful findings while omitting numerous failed explorations. Research evaluation is closely tied to publications and citations. A paper may be published once it receives the approval of one journal editor and two reviewers, who may be researchers or doctoral students from adjacent fields. Meanwhile, the complexity of research processes and outputs often makes scientific findings difficult to understand, verify, and reproduce.
+
+The scientific community clearly needs to redesign its infrastructure to accommodate this transformation in productive capacity. Our team has begun with the representation, storage, and updating of scientific knowledge. We have proposed the Fractal Research Graph, which converts scientific outputs into basic units with a standardized form of representation and organizes them into research graphs that retain similar structures across different scales.
+
+This self-similarity supports the long-term operation of AI agent swarms while reducing the need for extensive orchestration. It also enables crowdsourced participation. Much like SETI@home once allowed citizen scientists to contribute their personal computers to the search for extraterrestrial intelligence at home, individuals could contribute their unused AGI capacity or computing resources to automated scientific research.
+
+Research outputs would be reviewed by domain experts through a model resembling a combination of Wikipedia +  GitHub. Both successful and unsuccessful explorations would be recorded, allowing AI systems and human researchers to examine, verify, and reproduce them. We have presented an initial formulation of this proposal in a paper available on [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7380678), and we plan to explore its implementation in future work.
+
+Once a unified form of knowledge representation has been established, what should come next?
+
+We plan to explore a unified approach to scientific modeling that would allow AI agents to investigate problems across different domains using a common methodology. The goal is to take full advantage of AI’s exceptional capacity for execution and exploration.
+
+By combining the Fractal Research Graph with AI agent swarms, we aim to make scientific research increasingly automated, self-organizing, and decentralized. Ultimately, such a system could become self-growing, rapidly expanding the body of scientific knowledge.
+
+![](media/wordpress/what-should-be-the-scientific-communitys-immediate-priorities-in-the-age-of-agi/snipaste_2026-09-03_21-21-55-078dd9a50.jpg)

@@ -1,0 +1,52 @@
+
+<p class="wp-block-paragraph">In May 2024, our team (<a href="https://www.linkedin.com/in/zhenlongli?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAARvnTYBvom3tpF9GgXgXHu0V8PeJ1E6PaE"><strong>Zhenlong Li</strong></a> <a href="https://www.linkedin.com/in/temitope-akinboyewa?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAABcwlx4BqVa2mvISnAMmeos0wwVeN6AE1MQ"><strong>Temitope Ezekiel Akinboyewa</strong></a> <a href="https://www.linkedin.com/in/ACoAADABFKAB7Cu_KWpvkP3doI3LM8okUuzDyj8?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADABFKAB7Cu_KWpvkP3doI3LM8okUuzDyj8"><strong>M. Naser Lessani)</strong></a> developed LLM-Find — an autonomous GIS agent framework for geospatial data retrieval. At its core is a concept we call the <strong>&#8220;data source handbook&#8221;</strong>: a structured, plug-and-play knowledge package that teaches an LLM <em>how</em> to retrieve data from a specific source, including metadata, API details, code patterns, and technical requirements.</p>
+
+
+
+<p class="wp-block-paragraph">The mechanism: when a user makes a natural language data request, the LLM browses brief descriptions from all available handbooks, selects the most relevant data source, loads the full handbook, and generates executable code to fetch the data. New data sources can be added simply by writing a new handbook file — no retraining, no code changes.</p>
+
+
+
+<p class="wp-block-paragraph">Fast forward to <strong>October 2025</strong>, about 1.5 years later, Anthropic announced <strong>Claude Skills</strong>: reusable, modular instruction sets packaged as folders with a <code>SKILL.md</code> file that Claude can browse, select from, and load on demand. Simon Willison called it &#8220;maybe a bigger deal than MCP.&#8221; The parallel is striking:</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th class="has-text-align-left" data-align="left"> </th><th class="has-text-align-left" data-align="left">LLM-Find Handbooks (2024)</th><th class="has-text-align-left" data-align="left">Claude Skills (2025)</th></tr></thead><tbody><tr><td>Format</td><td><code>.toml</code>&nbsp;files with metadata + instructions</td><td><code>SKILL.md</code>&nbsp;files with YAML frontmatter + instructions</td></tr><tr><td>Discovery</td><td>LLM reads brief descriptions, selects the best match</td><td>Claude scans frontmatter descriptions, finds relevant matches</td></tr><tr><td>Loading</td><td>Full handbook loaded only when selected</td><td>Full skill loaded only when needed</td></tr><tr><td>Extensibility</td><td>Add a new&nbsp;<code>.toml</code>&nbsp;file → new capability</td><td>Add a new skill folder → new capability</td></tr><tr><td>Design philosophy</td><td>Plug-and-play</td><td>Composable and portable</td></tr></tbody></table></figure>
+
+
+
+<p class="wp-block-paragraph">The conceptual alignment goes deeper. In our research agenda paper <em>&#8220;GIScience in the Era of Artificial Intelligence&#8221;</em> (arXiv: March 2025, 7 months before Claude Skills launched), we explicitly defined <strong>&#8220;skills&#8221;</strong> as <strong>&#8220;practical abilities to operate data and solve problems&#8221;</strong> — distinguishing them from mere textual knowledge. We argued that AI&#8217;s lack of domain-specific skills is the key bottleneck for autonomous systems, and proposed &#8220;self-growing&#8221; agents that learn from documentation to expand their capabilities over time.</p>
+
+
+
+<p class="wp-block-paragraph">This is exactly the paradigm Claude Skills now implements at scale — and what LLM-Find demonstrated in the geospatial domain a year and a half earlier.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>This convergence points to a broader truth: there is no such thing as a truly &#8220;general&#8221; agent.</strong> An LLM foundation model is a general <em>understanding</em> of its training data — it can reason, follow instructions, and generate code. But general understanding is not the same as specific competence. An LLM that has never seen the OpenTopography API documentation cannot reliably fetch elevation data, no matter how powerful the model is. The real architecture for capable agents is not a monolithic super-model — it is <strong>a foundation model + pluggable skill/knowledge sets</strong>. The foundation model provides reasoning, language comprehension, and planning; the skills provide the domain-specific knowledge, tool interfaces, and procedural expertise that turn reasoning into reliable action. This is precisely the pattern both LLM-Find handbooks and Claude Skills implement: the LLM remains general-purpose, while skills make it specifically capable. As new domains emerge, you don&#8217;t retrain the model — you write a new handbook. This &#8220;foundation model + skills&#8221; paradigm may well be the general architecture for AI agents across all fields, not just GIS.</p>
+
+
+
+<p class="wp-block-paragraph">I&#8217;m not claiming Anthropic borrowed from our work. Great ideas often converge independently. But I do think this convergence validates the research direction: <strong>the future of AI agents is not just bigger models; it&#8217;s structured, shareable skill libraries that let agents learn new capabilities without retraining.</strong></p>
+
+
+
+<p class="wp-block-paragraph">If you&#8217;re interested:</p>
+
+
+
+<ul class="wp-block-list">
+<li>LLM-Find paper: <a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2025.2458688">https://www.tandfonline.com/doi/full/10.1080/17538947.2025.2458688</a></li>
+
+
+
+<li>LLM-Find code: <a href="https://github.com/gladcolor/LLM-Find">https://github.com/gladcolor/LLM-Find</a></li>
+
+
+
+<li>Autonomous GIS research agenda: <a href="https://www.tandfonline.com/doi/full/10.1080/19475683.2025.2552161">https://www.tandfonline.com/doi/full/10.1080/19475683.2025.2552161</a></li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">#AI #LLM #GIS #AutonomousGIS #AgentSkills #Research #Innovation #GIScience #ArtificialIntelligence #Geospatial</p>

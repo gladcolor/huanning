@@ -1,11 +1,13 @@
 ---
-title: "Parquet format may be faster than CSV"
-date: 2025-10-14
-summary: "Notes on analyzing large tabular datasets using Parquet and DuckDB."
-original: "https://gladcolor.wordpress.com/2025/10/14/parquet-format-may-be-faster-than-csv/"
-archive_note: "This is a verified archive summary. The complete original article and its media will remain at WordPress until a full export is imported."
-tags: ["AI", "GIScience"]
+title: Parquet format may be faster than CSV
+date: '2025-10-14T20:33:31-05:00'
+summary: I use CSV file for a long time to process a lot of tabular data. However, one of my recent project need to extract
+  rows from a large parquet table. After a few testing, I found that DuckDB can speed up my work by about 5 times. I recommend
+  to try Parquet and DuckDB if […]
+original: https://gladcolor.wordpress.com/2025/10/14/parquet-format-may-be-faster-than-csv/
+wordpress_id: 58
+aliases:
+- /post/parquet-format-may-be-faster-than-csv/
 ---
-A practical data engineering note comparing workflows for querying large tabular data with Parquet and DuckDB.
 
-*The complete original article remains linked below. This page is an archive entry pending full migration.*
+I use CSV file for a long time to process a lot of tabular data. However, one of my recent project need to extract rows from a large parquet table. After a few testing, I found that DuckDB can speed up my work by about 5 times. I recommend to try Parquet and DuckDB if you need a fast processing.

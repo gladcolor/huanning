@@ -15,7 +15,7 @@ taxonomies:
 markup:
   goldmark:
     renderer:
-      unsafe: false
+      unsafe: true
   highlight:
     style: github
     noClasses: false

@@ -82,4 +82,6 @@ This is an original design inspired by established academic website patterns, no
 5. Click Save. Pages CMS writes a Markdown file to the chosen branch, where the GitHub Pages workflow rebuilds the website.
 6. Verify the published URL. New News automatically appears in Latest News; recent Blog/Articles appear in Research & Writing.
 
+The CMS is configured to preserve existing frontmatter not explicitly shown in its form, including historical tags and reference metadata. This avoids accidental metadata loss when editing older posts.
+
 **Important:** A CMS draft is an item with `draft: true`. Hugo does not publish drafts by default. Set it to false when ready. The current site preview uses the prototype branch, not main.

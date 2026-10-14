@@ -51,6 +51,10 @@
         "source": "https://gladcolor.wordpress.com/2025/03/19/the-zeroth-law-of-geography-and-geospatial-modeling/",
         "destination": "content/post/2025-03-19-zeroth-law.md"
       }
+    ],
+    "notes": [
+      "Public posts: 11/11 migrated; WordPress pages APIs responded HTTP 404 and page count cannot be independently verified without account export.",
+      "All public post HTML and API JSON are archived. Locally downloadable images stored in static/media/wordpress/."
     ]
   },
   "google_sites": {
@@ -99,7 +103,11 @@
         "text_characters": 20974,
         "images": 6
       }
-    ]
+    ],
+    "bibliography_citation_paragraphs_preserved": 38,
+    "curation_note": "The full Google Sites bibliography was rebuilt from archive/google-sites/publications.md rather than collapsed year-group text.",
+    "project_figure_links_localized": 3,
+    "thoughts_figure_links_localized": 5
   },
   "assets": {
     "saved": 19,

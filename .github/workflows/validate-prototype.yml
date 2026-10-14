@@ -27,3 +27,8 @@ jobs:
           test -s public/post/index.html
           test -s public/project/index.html
           test -s public/pagefind/pagefind-ui.js
+          test -s public/post/ai-agent-memory-system/index.html
+          test -s public/publication/index.html
+          test -s public/project/mosquito-habitat/index.html
+          grep -q 'media/wordpress/' public/post/ai-agent-memory-system/index.html
+          grep -q 'media/google-sites/' public/project/mosquito-habitat/index.html

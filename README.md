@@ -45,7 +45,7 @@ The U.S. Hourly Population Explorer is a currently linked example: https://gladc
 
 This branch includes a verified biography, research-project pages, selected publications, an initial news feed, and short archive entries for the WordPress weblog. Archive entries link to the complete original posts.
 
-**Public WordPress articles have been imported via the WordPress REST API and original HTML backed up; Google Sites source pages have been archived and key content migrated.** Private posts, drafts, restricted attachments, external video/iframe assets, and content accessible only through signed-in administrator exports are not covered. Before redirecting the domain or deleting the old blog:
+**All 11 public WordPress posts returned by the REST API have been imported as independent Markdown pages with local images and original HTML backed up; four Google Sites source pages have been archived, the full bibliography restored, and research projects and figures migrated.** Private posts, drafts, restricted attachments, external video/iframe assets, and content accessible only through signed-in administrator exports are not covered. Before redirecting the domain or deleting the old blog:
 
 1. Export WordPress.com via Tools > Export (XML).
 2. Download media files separately.
@@ -90,3 +90,7 @@ The CMS is configured to preserve existing frontmatter not explicitly shown in i
 ## Public archive migration verification
 
 Read `MIGRATION_STATUS.md`, `migration-report.json`, and the raw source files under `archive/google-sites/` and `archive/wordpress/`. The original Google Sites publications page is preserved in `archive/google-sites/publications.md`, and the public WordPress article bodies are independent Markdown pages with locally stored images under `static/media/wordpress/`. Media downloaded from the public Google Sites pages is under `static/media/google-sites/`. Compare article layouts and image placement against the original sites before switching domain names.
+
+## CMS editing note
+
+A published WordPress article with `wordpress_id` is self-contained, and no "Read the original WordPress version" box is shown on the new website. The original source URL is retained in the Markdown front matter and full API backups for verification only.

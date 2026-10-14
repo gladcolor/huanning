@@ -1,6 +1,5 @@
 ---
 title: News
-view: date-title-summary
-description: "Research updates, announcements, and academic news."
+description: "News and announcements relating to Huan Ning's research."
 ---
-Updates on research outputs, developments, projects, and scientific community news.
+Short updates on projects, research announcements, and scientific developments. These appear automatically in the Latest News column on the homepage.

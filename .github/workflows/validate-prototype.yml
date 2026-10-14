@@ -1,25 +1,29 @@
 name: Validate website prototype
-
 on:
   pull_request:
     branches: [main]
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up Hugo
+      - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "0.136.5"
           extended: true
-      - name: Build Hugo site
+      - name: Build site
         run: hugo --minify --baseURL https://gladcolor.github.io/huanning/
-      - name: Check generated homepage
-        run: test -s public/index.html
+      - name: Generate search index
+        run: npx --yes pagefind@1.5.2 --site public
+      - name: Verify pages
+        run: |
+          test -s public/index.html
+          test -s public/news/index.html
+          test -s public/post/index.html
+          test -s public/project/index.html
+          test -s public/pagefind/pagefind-ui.js

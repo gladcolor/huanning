@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="container article-layout">
+  <article class="article">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{{ .Site.Home.RelPermalink }}">Home</a><span aria-hidden="true">/</span>{{ with .CurrentSection }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</nav>
+    <header class="article-header">
+      <p class="eyebrow">{{ if eq .Section "post" }}BLOG{{ else if eq .Section "" }}PROFILE{{ else }}{{ upper .Section }}{{ end }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.summary }}<p class="article-summary">{{ . }}</p>{{ end }}
+      {{ if and (not .Date.IsZero) (ne .Section "") (ne .Section "project") }}
+        <p class="article-byline">Huan Ning <span aria-hidden="true">·</span> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ if eq .Section "publication" }}{{ .Date.Format "2006" }}{{ else }}{{ .Date.Format "January 2, 2006" }}{{ end }}</time></p>
+      {{ end }}
+    </header>
+    <div class="article-prose">{{ .Content }}</div>
+    {{ with .Params.original }}<div class="source-box"><strong>Original publication</strong><p>{{ if $.Params.archive_note }}{{ $.Params.archive_note }}{{ else }}For the original article and accompanying media, see the author's earlier website.{{ end }}</p><a href="{{ . }}">View original source ↗</a></div>{{ end }}
+    {{ with .Params.tags }}<div class="tags">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+  </article>
+  <aside class="article-aside"><div class="article-aside-inner"><p class="eyebrow">ABOUT THIS WEBSITE</p><p>Research and writing by Huan Ning on AI-enabled spatial science and its applications.</p><a href="{{ "about/" | relURL }}">About the author ↗</a><hr><a href="{{ "post/index.xml" | relURL }}">Subscribe to blog RSS ↗</a></div></aside>
+</div>
+{{ end }}

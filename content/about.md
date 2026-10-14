@@ -1,16 +1,21 @@
 ---
-title: "About"
-date: 2026-10-13
-summary: "Background and research interests of Huan Ning."
+title: About Huan Ning
+summary: "Computational data scientist working on geospatial AI, autonomous GIS, and spatial data science."
 ---
-# Huan Ning
+Huan Ning is a computational data scientist and researcher in **AI for Science** and **spatial data science**. According to his existing academic profile, he is a Postdoctoral Research Fellow at Emory University.
 
-I am a computational data scientist and researcher working on **AI for Science**, **Autonomous GIS**, and **spatial data science**.
+He holds a Ph.D. from Pennsylvania State University, a master's degree from the University of South Carolina, and a bachelor's degree in Geographic Information Science from Wuhan University, China. He has more than ten years of industry experience in spatial data engineering, development, management, and technology leadership, and also studied Information Systems at New Jersey Institute of Technology.
 
-I earned a Ph.D. from Pennsylvania State University, a master's degree from the University of South Carolina, and a bachelor's degree in Geographic Information Science from Wuhan University. My experience includes research and spatial-data software engineering.
+His research focuses on autonomous GIS, geospatial AI agents, human mobility, urban informatics, public health, and the application of AI to scientific inquiry.
 
-My work explores AI agents that can discover data, plan geographic analyses, and support scientific inquiry. Other projects focus on geospatial public health, urban environments, and human mobility.
+Recent work includes predicting mosquito larval habitats and productivity, geospatial data retrieval agents, and neighborhood-level hourly population estimates.
 
-**Contact:** [huan.ning@emory.edu](mailto:huan.ning@emory.edu)
+### Contact and links
 
-**Links:** [GitHub](https://github.com/gladcolor) · [Existing academic website](https://www.huanning.me/) · [WordPress archive](https://gladcolor.wordpress.com/)
+- **Email:** [huan.ning@emory.edu](mailto:huan.ning@emory.edu)
+- [GitHub](https://github.com/gladcolor)
+- [Google Scholar](https://scholar.google.com/citations?user=aK57tWMAAAAJ)
+- [Current academic website](https://www.huanning.me/)
+- [Original WordPress weblog](https://gladcolor.wordpress.com/)
+
+*This biography is adapted from the existing academic website and should be updated if positions or affiliations change.*

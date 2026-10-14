@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="container inner-page">
+  <header class="page-intro"><p class="eyebrow">SITE ARCHIVE</p><h1>Search the website</h1><p>Search articles, news, research projects, and publications.</p></header>
+  <div id="search" role="search"></div>
+  <noscript>Please enable JavaScript to search. You can also browse News, Articles, Blog, and Publications.</noscript>
+</div>
+<link href="{{ "pagefind/pagefind-ui.css" | relURL }}" rel="stylesheet">
+<script src="{{ "pagefind/pagefind-ui.js" | relURL }}" defer></script>
+<script>window.addEventListener("DOMContentLoaded", function () { if (typeof PagefindUI !== "undefined") new PagefindUI({ element: "#search", showSubResults: true }); });</script>
+{{ end }}

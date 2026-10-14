@@ -1,9 +1,16 @@
 ---
-title: "LLM-Find: Geospatial Data Retrieval Agent"
+title: "LLM-Find: A Geospatial Data Retrieval Agent"
 date: 2025-01-01
-summary: "An autonomous agent for finding and downloading geospatial data from sources such as OpenStreetMap."
-tags: ["Autonomous GIS", "AI Agents", "Geospatial Data"]
+area: "AI AGENTS / DATA DISCOVERY"
+summary: "Natural-language discovery and downloading of geospatial datasets, guided by reusable data source handbooks."
+tags: ["Autonomous GIS","AI Agents","Geospatial Data"]
 ---
-LLM-Find explores natural-language geospatial data retrieval. Users can describe the data they need, and the agent identifies and retrieves information from supported geospatial sources.
+LLM-Find is an autonomous agent for geospatial data retrieval and downloading. A user can specify a request such as obtaining coffee shop locations from OpenStreetMap for New York City. The agent selects a suitable data source and carries out the retrieval workflow.
 
-[Project repository](https://github.com/gladcolor/LLM-Find) · [Project introduction](https://www.huanning.me/projects)
+Its architecture uses **data source handbooks**, structured packages that provide source-specific metadata, APIs, and retrieval knowledge. This allows sources to be added and reused in new GIS tasks.
+
+**Resources**
+
+- [LLM-Find repository](https://github.com/gladcolor/LLM-Find)
+- [2025 journal article](https://doi.org/10.1080/17538947.2025.2458688)
+- [Original project introduction](https://www.huanning.me/projects)

@@ -1,50 +1,66 @@
-# Huan Ning: Academic Website Prototype
+# Huan Ning Academic Website
 
-This is a research-oriented website built with **Hugo and HugoBlox** for GitHub Pages.
+An independent, low-maintenance website for Huan Ning's research and writing.
 
-## Sections
+- Website: Hugo (pinned to version 0.136.5)
+- Hosting: GitHub Pages with the GitHub Actions workflow in `.github/workflows/publish.yaml`
+- Content storage: versioned Markdown files in this repository
+- Editorial UI: [Pages CMS](https://app.pagescms.org/), configured by `.pages.yml`
+- Search: Pagefind static index generated during build, version 1.5.2
 
-- **News**: Research announcements and updates at `content/news/`.
-- **Articles**: Research essays and explainers at `content/articles/`.
-- **Blog**: Personal research notes at `content/post/`.
-- **Projects**: Independent research project pages at `content/project/`.
-- **Publications**: Selected research papers at `content/publication/`.
-- **About**: Biography at `content/about.md`.
+**No database, paid web server, remote theme module, JavaScript framework, or runtime service required.**
 
-The homepage automatically lists the latest content for these sections. All content remains Markdown in GitHub for portable backups.
+## Structure
 
-## Publishing with GitHub Pages
+| Section | Folder |
+|---|---|
+| News | `content/news` |
+| Research Articles | `content/articles` |
+| Blog | `content/post` |
+| Research Projects | `content/project` |
+| Publications | `content/publication` |
+| Biography | `content/about.md` |
 
-1. Review and merge the website prototype pull request into `main`.
-2. Open **Settings → Pages** in this repository.
-3. Set **Build and deployment → Source** to **GitHub Actions**.
-4. The existing workflow at `.github/workflows/publish.yaml` builds and deploys the site when `main` changes.
-5. The initial test address will be `https://gladcolor.github.io/huanning/` if Pages deployment is enabled and succeeds.
+The homepage assembles the latest News, Blog, Articles, Projects, and Publications automatically.
 
-**Do not add a CNAME or update huanning.me DNS until the test website has been verified.**
+## Publishing
 
-## Browser-based editing
+1. Merge the review branch after the pull request build check succeeds.
+2. Under GitHub repository **Settings > Pages**, set **Build and deployment > Source** to **GitHub Actions**.
+3. Publish at `https://gladcolor.github.io/huanning/` and verify the homepage, internal links, articles, projects, and search.
+4. Sign in to [Pages CMS](https://app.pagescms.org/) with GitHub, grant access to `gladcolor/huanning`, and select the main branch. The CMS sees the repository's `.pages.yml`.
+5. Use News, Blog, Articles, Projects, and Publications in Pages CMS. Saving an entry commits a Markdown file; GitHub Actions rebuilds the website.
 
-The repository includes `.pages.yml` for [Pages CMS](https://app.pagescms.org/).
+**Do not change the DNS for huanning.me until the GitHub Pages test site has been checked.** When ready, configure the custom domain under Settings > Pages, then update the domain's DNS records. Update `.pages.yml` media output from `/huanning/media` to `/media` at that time.
 
-1. Sign in to Pages CMS with GitHub.
-2. Grant the Pages CMS GitHub App access to `gladcolor/huanning`.
-3. Select the repository and the appropriate branch.
-4. Create or edit entries under News, Articles, Blog, Projects, or Publications.
-5. Saving commits a Markdown file. A push to `main` automatically triggers the GitHub Pages workflow.
+## Content migration status
 
-Editor uploads initially use `/huanning/media`, which is appropriate for the trial URL. Update this media URL when switching to a custom root domain.
+This branch includes a verified biography, research-project pages, selected publications, an initial news feed, and short archive entries for the WordPress weblog. Archive entries link to the complete original posts.
 
-## Content migration
+**WordPress articles, original images, comments, and attachments have NOT been fully imported.** Before redirecting the domain or deleting the old blog:
 
-The content in this prototype consists of **short summaries and direct links** to original pages at [huanning.me](https://www.huanning.me) and [gladcolor.wordpress.com](https://gladcolor.wordpress.com). It does **not** claim to have imported your complete WordPress archive, attachments, or comments.
+1. Export WordPress.com via Tools > Export (XML).
+2. Download media files separately.
+3. Convert posts preserving original dates, content, embeds and source URLs.
+4. Import media under `static/media/` and check image paths.
+5. Compare every imported post with its original, then preserve redirects and backups.
 
-For full migration, export WordPress content, verify media copies, and plan redirects for old post URLs.
+The original sites should remain online until the content and links are verified.
 
-## Long-term backups
+## Longevity / maintenance
 
-Clone or download this repository periodically. Keep your WordPress XML and image exports separately until full migration is confirmed.
+- Keep the theme as plain Hugo templates and CSS under `layouts/` and `static/css/`; there are no external theme modules to update.
+- The Hugo version and Pagefind version are pinned in GitHub Actions.
+- Use GitHub's **Download ZIP** or `git clone` periodically for local offsite backups, and retain the WordPress XML and media archive.
+- Update the GitHub Actions versions periodically when needed for security/support compatibility. 'Low maintenance' does not imply no maintenance forever.
+- Keep original research figures and large binaries out of the site repository if they exceed GitHub Pages limits. Link to archived datasets, scholarly repositories, or GitHub releases.
+- Existing historic content stays readable without a CMS login.
 
-## Template credit
+## Design references
 
-Originally based on the open-source [Hugo Academic CV theme by HugoBlox](https://github.com/HugoBlox/theme-academic-cv). See `LICENSE.md`.
+- [DataHealth Lab](https://datahealthlab.org/): research and latest news hierarchy
+- [Urban Demographics](https://www.urbandemographics.org/): research writing and publications
+- [Penn State GIScience](https://giscience.psu.edu/): news, blog, and research navigation
+- [W3C Web Accessibility Initiative](https://www.w3.org/WAI/tips/designing/): contrast, navigation and mobile layouts
+
+This is an original design inspired by established academic website patterns, not a copy of another site's code or branding.

@@ -1,0 +1,61 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">GEOSPATIAL SCIENCE · AI FOR DISCOVERY</p>
+      <h1>Understanding our world with <em>intelligent spatial systems.</em></h1>
+      <p class="hero-lead">Research, projects and perspectives at the intersection of geospatial AI, autonomous GIS, urban analytics and scientific discovery.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{ "project/" | relURL }}">Explore research <span aria-hidden="true">↗</span></a>
+        <a class="button button-text" href="{{ "about/" | relURL }}">About Huan Ning <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <aside class="hero-aside" aria-label="Research focus">
+      <span class="aside-label">RESEARCH FOCUS / 01</span>
+      <div class="hero-symbol" aria-hidden="true"><div class="symbol-circle circle-one"></div><div class="symbol-circle circle-two"></div><div class="symbol-circle circle-three"></div><div class="symbol-core">AI<br><span>× GIS</span></div></div>
+      <div class="focus-list"><span>Autonomous GIS</span><span>Geospatial AI agents</span><span>Human mobility &amp; health</span></div>
+    </aside>
+  </div>
+</section>
+<section class="content-hub container">
+  <div class="content-main">
+    <div class="section-heading"><div><p class="eyebrow">LATEST FROM THE DESK</p><h2>Research &amp; Writing</h2></div><a href="{{ "post/" | relURL }}">All blog posts <span aria-hidden="true">↗</span></a></div>
+    {{ $articles := (where .Site.RegularPages "Section" "articles") }}
+    {{ $blog := (where .Site.RegularPages "Section" "post") }}
+    {{ $writing := union $articles $blog }}
+    <div class="entry-list">{{ range first 5 $writing.ByDate.Reverse }}{{ partial "entry-card.html" . }}{{ end }}</div>
+    <div class="section-heading section-heading-projects"><div><p class="eyebrow">EXPLORE THE WORK</p><h2>Selected Projects</h2></div><a href="{{ "project/" | relURL }}">All projects <span aria-hidden="true">↗</span></a></div>
+    <div class="project-grid">
+      {{ range first 4 ((where .Site.RegularPages "Section" "project").ByDate.Reverse) }}
+      <a class="project-card" href="{{ .RelPermalink }}">
+        <div class="project-glyph" aria-hidden="true">⌁</div>
+        <p class="eyebrow">{{ with .Params.area }}{{ . }}{{ else }}RESEARCH PROJECT{{ end }}</p>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Params.summary }}</p>
+        <span class="project-link">Project details ↗</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  <aside class="news-sidebar" aria-label="Latest news">
+    <div class="sidebar-heading"><p class="eyebrow">RESEARCH UPDATES</p><h2>Latest News</h2></div>
+    {{ $news := (where .Site.RegularPages "Section" "news").ByDate.Reverse }}
+    {{ range first 7 $news }}
+      <article class="sidebar-news">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      </article>
+    {{ end }}
+    <a class="sidebar-all" href="{{ "news/" | relURL }}">Browse news archive ↗</a>
+    <div class="sidebar-note"><strong>Open science, openly shared.</strong><p>Find software, research papers, ongoing experiments, and new ideas.</p><a href="https://github.com/gladcolor">Explore GitHub ↗</a></div>
+  </aside>
+</section>
+<section class="publications-strip">
+  <div class="container">
+    <div class="section-heading"><div><p class="eyebrow">SELECTED SCIENTIFIC WORK</p><h2>Publications</h2></div><a href="{{ "publication/" | relURL }}">Publication archive ↗</a></div>
+    <div class="pub-home-list">{{ range first 4 ((where .Site.RegularPages "Section" "publication").ByDate.Reverse) }}
+      <a href="{{ .RelPermalink }}"><span>{{ .Date.Format "2006" }}</span><strong>{{ .Title }}</strong><span aria-hidden="true">↗</span></a>
+    {{ end }}</div>
+  </div>
+</section>
+{{ end }}

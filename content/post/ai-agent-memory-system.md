@@ -1,14 +1,11 @@
 ---
 title: "How to build a memory system for an AI agent?"
 date: 2026-10-13
-summary: "Keeping conversational evidence, tracking changing context, and building more useful AI agent memory."
+summary: "How conversational memory can preserve evidence, track changing circumstances, and support more reliable AI agents."
+original: "https://gladcolor.wordpress.com/2026/10/13/how-to-build-a-memory-system-for-an-ai-agent/"
+archive_note: "This is a verified archive summary. The complete original article and its media will remain at WordPress until a full export is imported."
 tags: ["AI Agents", "Memory", "Autonomous GIS"]
-authors: [admin]
 ---
-In this October 2026 research note, I discuss agent memory systems that preserve conversation history, account for changing personal context, and allow important details to be checked against original records.
+Good agent memory needs to preserve the original conversation, not just summaries. Profiles should reflect changes in a person's goals or circumstances rather than freeze outdated interpretations. Important facts must remain checkable, and users should have control over retention and correction. These principles also apply to Autonomous GIS agents that remember research goals, datasets, methods, and verified results.
 
-The ideas are relevant to companion AI systems and autonomous GIS research workflows.
-
-This is an **archive pointer**, not a full migration of the WordPress article. The full text and its images remain on WordPress for now.
-
-[Read the full original article](https://gladcolor.wordpress.com/2026/10/13/how-to-build-a-memory-system-for-an-ai-agent/).
+*The complete original article remains linked below. This page is an archive entry pending full migration.*

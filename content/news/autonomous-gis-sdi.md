@@ -1,12 +1,10 @@
 ---
-title: "Autonomous GIS and U.S. spatial data infrastructure modernization"
+title: "FGDC spatial data infrastructure objectives and Autonomous GIS"
 date: 2026-08-22
-summary: "A research update discussing how Autonomous GIS concepts connect with the 2026–2027 SDI modernization objectives."
-tags: ["Autonomous GIS", "SDI", "GeoAI"]
-authors: [admin]
+summary: "A research update on how Autonomous GIS goals relate to U.S. spatial data infrastructure modernization objectives."
+original: "https://gladcolor.wordpress.com/2026/08/22/federal-geographic-data-committee-adopted-our-proposed-goals-of-autonomous-gis/"
+tags: ["Autonomous GIS","SDI"]
 ---
-In August 2026, I shared a research update on the relevance of Autonomous GIS goals to the U.S. Federal Geographic Data Committee's spatial data infrastructure modernization objectives.
+An August 2026 research update discusses language in the Federal Geographic Data Committee's 2026–2027 Spatial Data Infrastructure modernization objectives and its relationship to the Autonomous GIS research agenda.
 
-This site is being prepared as a central archive for research announcements. Until full migration, the complete discussion remains on my existing blog.
-
-[Read the original research update](https://gladcolor.wordpress.com/2026/08/22/federal-geographic-data-committee-adopted-our-proposed-goals-of-autonomous-gis/).
+Read the original post for the discussion and supporting references.

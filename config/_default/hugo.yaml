@@ -1,31 +1,21 @@
-# Hugo site configuration. Production workflow overrides baseURL as required.
-title: "Huan Ning | Geospatial AI & Research"
+title: "Huan Ning | Geospatial AI and Autonomous GIS"
 baseURL: "https://gladcolor.github.io/huanning/"
+languageCode: "en-us"
 defaultContentLanguage: en
-hasCJKLanguage: true
 enableRobotsTXT: true
-enableEmoji: true
-summaryLength: 35
+enableGitInfo: false
+summaryLength: 34
 pagination:
-  pagerSize: 10
-permalinks:
-  authors: "/author/:slug/"
+  pagerSize: 12
 outputs:
-  home: [HTML, RSS, headers, redirects, backlinks]
+  home: [HTML, RSS]
   section: [HTML, RSS]
 taxonomies:
-  author: authors
   tag: tags
-  category: categories
-  publication_type: publication_types
 markup:
-  _merge: deep
-build:
-  writeStats: true
-imaging:
-  quality: 80
-  anchor: smart
-security:
-  _merge: deep
-sitemap:
-  _merge: deep
+  goldmark:
+    renderer:
+      unsafe: false
+  highlight:
+    style: github
+    noClasses: false

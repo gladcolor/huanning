@@ -1,22 +1,22 @@
 main:
   - name: Home
-    url: /
+    pageRef: /
     weight: 10
   - name: News
-    url: news/
+    pageRef: /news
     weight: 20
   - name: Articles
-    url: articles/
+    pageRef: /articles
     weight: 30
   - name: Blog
-    url: post/
+    pageRef: /post
     weight: 40
   - name: Projects
-    url: projects/
+    pageRef: /project
     weight: 50
   - name: Publications
-    url: publication/
+    pageRef: /publication
     weight: 60
   - name: About
-    url: about/
+    pageRef: /about
     weight: 70

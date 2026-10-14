@@ -1,6 +1,5 @@
 ---
-title: Articles
-view: date-title-summary
-description: "Long-form scientific and technical articles."
+title: Research Articles
+description: "Essays, explainers, and long-form research writing."
 ---
-Research explainers, technical articles, and essays.
+Research articles and in-depth discussions about geospatial AI, scientific automation, and spatial reasoning.

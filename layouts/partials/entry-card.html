@@ -1,0 +1,7 @@
+{{ $p := . }}
+<article class="entry-card">
+  <div class="entry-meta"><span>{{ if eq $p.Section "post" }}BLOG{{ else }}{{ upper $p.Section }}{{ end }}</span>{{ if and (not $p.Date.IsZero) (ne $p.Section "project") }}<time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ if eq $p.Section "publication" }}{{ $p.Date.Format "2006" }}{{ else }}{{ $p.Date.Format "Jan 2, 2006" }}{{ end }}</time>{{ end }}</div>
+  <h3><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+  {{ with $p.Params.summary }}<p>{{ . }}</p>{{ else }}{{ with $p.Summary }}<p>{{ . | plainify | truncate 170 }}</p>{{ end }}{{ end }}
+  <a class="entry-arrow" href="{{ $p.RelPermalink }}" aria-label="Read {{ $p.Title }}">Read details <span aria-hidden="true">↗</span></a>
+</article>

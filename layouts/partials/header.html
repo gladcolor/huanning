@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Huan Ning, home">
+      <span class="brand-mark" aria-hidden="true">HN<span class="brand-dot">.</span></span>
+      <span class="brand-text"><strong>HUAN NING</strong><small>RESEARCH &amp; WRITING</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      {{ range .Site.Menus.main }}<a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}
+    </nav>
+    <a class="header-search" href="{{ "search/" | relURL }}" aria-label="Search the website">Search <span aria-hidden="true">⌕</span></a>
+    <details class="mobile-nav">
+      <summary aria-label="Open menu">Menu</summary>
+      <nav aria-label="Mobile navigation">{{ range .Site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}<a href="{{ "search/" | relURL }}">Search</a></nav>
+    </details>
+  </div>
+</header>

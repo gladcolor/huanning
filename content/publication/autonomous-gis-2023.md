@@ -1,10 +1,11 @@
 ---
 title: "Autonomous GIS: the next-generation AI-powered GIS"
 date: 2023-01-01
-authors: ["Zhenlong Li", admin]
-publication_types: ["article-journal"]
-publication: "International Journal of Digital Earth 16(2), 4668–4686"
-summary: "A foundational perspective on the vision of autonomous GIS."
-featured: true
+summary: "A perspective introducing the vision of AI-powered autonomous GIS."
+publication: "International Journal of Digital Earth 16(2), 4668–4686 (2023)"
 ---
-[Find the publication in the existing publication list](https://www.huanning.me/publications).
+**Authors:** Zhenlong Li and Huan Ning.
+
+*International Journal of Digital Earth*, 16(2), 4668–4686 (2023).
+
+[View the original publication listing](https://www.huanning.me/publications).

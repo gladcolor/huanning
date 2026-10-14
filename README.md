@@ -94,3 +94,7 @@ Read `MIGRATION_STATUS.md`, `migration-report.json`, and the raw source files un
 ## CMS editing note
 
 A published WordPress article with `wordpress_id` is self-contained, and no "Read the original WordPress version" box is shown on the new website. The original source URL is retained in the Markdown front matter and full API backups for verification only.
+
+## Website editorial policy
+
+All migrated WordPress articles are self-contained; the public site must not display links back to the old WordPress site as substitutes for article bodies. Retain the old URLs only as source metadata and in the migration archive. News articles derived from WordPress must include the complete relevant content, not merely a link. Legacy WordPress originals remain preserved for offline audit, not navigation. To prevent duplicate summary entries, the original Gemma 4 placeholder was removed and its URL redirected to the complete migrated post.

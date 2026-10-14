@@ -11,4 +11,4 @@ This page is a brief index entry for the research work, not a copy of the comple
 
 [Read the research agenda on arXiv](https://doi.org/10.48550/arXiv.2503.23633).
 
-[See the publication listing](https://www.huanning.me/publications).
+[See the publication listing]({{< relref "publication/_index.md" >}}).

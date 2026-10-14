@@ -2,7 +2,6 @@
 title: Spatial Computing Thoughts (archived)
 date: 2025-01-01
 summary: Essays, research ideas and perspectives preserved from the former Google Sites personal website.
-original: https://www.huanning.me/thoughts
 ---
 
 ### Frankly, I have a lot of thoughts on various things, especially on spatial computing, as I have been in this field since 2003, more than 20 years now. Some ideas I will publish as academic articles, and others I would like to share here before polishing and testing them for professional journals.  Dear readers, feel free to contact me for any discussion.
@@ -159,11 +158,11 @@ I have devleoped a very useful Python [package](https://github.com/gladcolor/Str
 
 ## The Zeroth Law of Geography and Geospatial Modeling
 
-I tried to write some blogs in the site, but seems Google Site is not very good for blog writing, so I put the post to Wordpress.com. There is the [link](https://gladcolor.wordpress.com/2025/03/19/the-zeroth-law-of-geography-and-geospatial-modeling/). Sorry for that! 
+The complete essay, *The Zeroth Law of Geography and Geospatial Modeling*, is now [available here]({{< relref "post/2025-03-19-zeroth-law.md" >}}).
 
 This post was written in Feb. 2024. It is the first time I start to think and learn complex systems. I would like to write a story about this post later.
 
-[![](https://lh3.googleusercontent.com/docsubipk/AP9E6xXDrr2QjH2GYGkJuP2bhZIsX0vFCOcZ90LFngPB3Y25nRXolGLmK1iTrMNqfmEgW2-5nuTcoCX0KsA6LOoeLx2yoprSLTCuVrDWFbuZcH14MJlLtCLkXsdCZ7WxwL-AELevrEjP81gEFlA)The Zeroth Law of Geography and Geospatial ModelingIntroduction Geospatial modeling is the process of combining observations and spatial data to investigate the dynamic of phenomena over the Earth, covering physical and societal processes. Such inv…](https://www.google.com/url?q=https%3A%2F%2Fgladcolor.wordpress.com%2F2025%2F03%2F19%2Fthe-zeroth-law-of-geography-and-geospatial-modeling%2F&sa=D&sntz=1&usg=AOvVaw28TqJNsbv8QfWQWImXGAas)
+[Read the complete essay]({{< relref "post/2025-03-19-zeroth-law.md" >}})
 
 [LinkedIn](https://www.linkedin.com/in/huan-ning-53367254),  [GitHub](http://github.com/gladcolor)
 
@@ -171,4 +170,4 @@ huan.ning@emory.edu
 
 [C.V.](https://1drv.ms/w/c/369e31f0e09c2899/ERGxPMoWWa5PhR1R1g5cpGoBUNeBIm9q52PVVq5SoRev3g?e=npcVmQ) ,  [Google Scholar](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=aK57tWMAAAAJ&sortby=pubdate)
 
-[Blog](https://gladcolor.wordpress.com/)
+[Blog]({{< relref "post/_index.md" >}})

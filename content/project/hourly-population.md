@@ -29,6 +29,3 @@ Site link: [Fine-Grained US Hourly Population Map (2022)](https://gladcolor.gith
 ![Research figure](media/google-sites/projects/amxu72uwrpwsj73erzsrc27kkpoxxs9dfds2v-rzvntlneh-ig_dv6u-8aa111f0a.png)
 
 **Resources**
-
-- [Original project description](https://www.huanning.me/projects)
-

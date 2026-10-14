@@ -21,7 +21,6 @@
       {{ end }}
     {{ end }}
     <div class="article-prose">{{ .Content }}</div>
-    {{ if and .Params.original (not .Params.wordpress_id) }}{{ with .Params.original }}<div class="source-box"><strong>Archived source</strong><p>This material was originally published on another website and is preserved here for reference.</p><a href="{{ . }}">Original source ↗</a></div>{{ end }}{{ end }}
     {{ with .Params.tags }}<div class="tags">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
   </article>
   <aside class="article-aside"><div class="article-aside-inner"><p class="eyebrow">ABOUT THIS WEBSITE</p><p>Research and writing by Huan Ning on AI-enabled spatial science and its applications.</p><a href="{{ "about/" | relURL }}">About the author ↗</a><hr><a href="{{ "post/index.xml" | relURL }}">Subscribe to blog RSS ↗</a></div></aside>

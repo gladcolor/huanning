@@ -8,6 +8,8 @@ summary: 'I used my Autonomous GIS agent, LLM-Geo (github.com/gladcolor/LLM-Geo)
   […]'
 original: https://gladcolor.wordpress.com/2026/04/06/can-a-31b-open-weight-model-handle-autonomous-gis-tasks-on-a-single-gpu-i-tested-googles-new-gemma-4-31b-it-q4-k-m-on-an-rtx-3090-to-find-out-%f0%9f%a4%96%f0%9f%97%ba%ef%b8%8f/
 wordpress_id: 68
+aliases:
+  - /post/2026-04-06-local-gpu-autonomous-gis/
 ---
 
 I used my Autonomous GIS agent, **LLM-Geo** ([github.com/gladcolor/LLM-Geo](https://github.com/gladcolor/LLM-Geo)), to run a school walkability case study. The pipeline task:

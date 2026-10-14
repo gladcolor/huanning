@@ -32,3 +32,13 @@ jobs:
           test -s public/project/mosquito-habitat/index.html
           grep -q 'media/wordpress/' public/post/ai-agent-memory-system/index.html
           grep -q 'media/google-sites/' public/project/mosquito-habitat/index.html
+
+      - name: Verify standalone WordPress-to-News migration
+        run: |
+          test -s public/news/autonomous-gis-sdi/index.html
+          grep -q 'We recently learned' public/news/autonomous-gis-sdi/index.html
+          grep -q 'self-growing' public/news/autonomous-gis-sdi/index.html
+          ! grep -qi 'gladcolor.wordpress.com' public/news/autonomous-gis-sdi/index.html
+          ! grep -qi 'gladcolor.wordpress.com' public/news/new-article-agent-memory/index.html
+          ! grep -qi 'gladcolor.wordpress.com' public/post/index.html
+          test -s public/post/2026-04-06-local-gpu-autonomous-gis/index.html

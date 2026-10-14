@@ -30,7 +30,6 @@ content:
       - { name: title, label: Headline, type: string, required: true }
       - { name: date, label: Date, type: date, required: true }
       - { name: summary, label: Short summary, type: text }
-      - { name: original, label: Original/source link, type: string }
       - { name: draft, label: Draft, type: boolean }
       - { name: body, label: News story, type: rich-text }
   - name: articles
@@ -51,7 +50,6 @@ content:
       - { name: title, label: Article title, type: string, required: true }
       - { name: date, label: Date, type: date, required: true }
       - { name: summary, label: Summary, type: text }
-      - { name: original, label: Original link, type: string }
       - { name: draft, label: Draft, type: boolean }
       - { name: body, label: Article content, type: rich-text }
   - name: blog
@@ -72,8 +70,6 @@ content:
       - { name: title, label: Blog post title, type: string, required: true }
       - { name: date, label: Date, type: date, required: true }
       - { name: summary, label: Summary, type: text }
-      - { name: original, label: Original WordPress URL, type: string }
-      - { name: archive_note, label: Archive migration note, type: text }
       - { name: draft, label: Draft, type: boolean }
       - { name: body, label: Blog post, type: rich-text }
   - name: projects

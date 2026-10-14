@@ -6,4 +6,4 @@ tags: ["AI agents","Writing"]
 ---
 A new research note on conversational memory asks how assistants can maintain continuity across tasks without losing the original evidence, locking users into outdated profiles, or confusing plans with completed actions.
 
-[Read the full essay in the original WordPress archive](https://gladcolor.wordpress.com/2026/10/13/how-to-build-a-memory-system-for-an-ai-agent/).
+[Read the full essay]({{< relref "post/ai-agent-memory-system.md" >}}).

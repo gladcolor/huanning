@@ -20,6 +20,3 @@ What the user need to is to type in the request in natural language, the agent w
 Below is an example of download boundary and image for Tempe, Arizona, US.
 
 **Resources**
-
-- [Original project introduction](https://www.huanning.me/projects)
-

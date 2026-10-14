@@ -1,2 +1,6 @@
-Huan Ning
-Computational data scientist, Researcher on AI4Science
+Huan Ning Computational data scientist, Researcher on AI4Science
+View my C.V. or resume .
+Huan Ning is a Postdoctoral Research Fellow at Emory University. His research focuses on AI for Science and s patial data science . He holds a Ph.D. from Pennsylvania State University, a Master's degree from the University of South Carolina (USC), and a Bachelor's degree in Geographic Information Science from Wuhan University, China, and has worked in the industry for over ten years as a spatial data engineer, developer, manager, and chief technology officer. He studied Information Systems at the New Jersey Institute of Technology. Huan likes to develop algorithms and use new technology to process and analyze spatial data for the social good. Most of his work is based on AI and machine learning. His current research interest covers AI agents, big data in public health, artificial intelligence, and urban informatics. Huan’s recent work includes predicting mosquito larval habitats and productivity for a pilot project funded by the Gates Foundation, aiming to save lives from malaria. He contributed an emerging field in GIScience: Autonomous GIS .  He also developed the first hourly population dataset in the United States using human mobility big data. His recent interest is AI for Science, with the aim of developing AI agents to conduct scientific research.
+Note: this website is still being developed, and I will add more information. Feel free to contact me for any questions!
+LinkedIn , GitHub huan.ning@emory.edu
+C.V. , Google Scholar Blog

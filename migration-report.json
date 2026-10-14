@@ -1,5 +1,5 @@
 {
-  "run_utc": "2026-10-14T02:36:59.616175+00:00",
+  "run_utc": "2026-10-14T02:38:30.948388+00:00",
   "wordpress": {
     "status": "partial",
     "posts_api_count": 11,
@@ -54,42 +54,55 @@
     ]
   },
   "google_sites": {
-    "status": "partial",
+    "status": "completed",
     "pages_requested": 4,
     "pages_saved": 4,
-    "projects_updated": 0,
-    "bibliography_entries": 0,
+    "projects_updated": 3,
+    "bibliography_entries": 8,
     "assets_by_page": {
-      "home": [],
-      "projects": [],
+      "home": [
+        "media/google-sites/home/amxu72ta9vjra0p7skxbulxn-x9lpbesw48iwqxhialkkaiu1ypuzcd-c3728fc89.png"
+      ],
+      "projects": [
+        "media/google-sites/projects/amxu72sqqvrkib7exbw1m-5zggjwtv7rbbtadr1-rlc6w5la6o6gpbb-65560b3b6.png",
+        "media/google-sites/projects/amxu72tmlsbxbe1ip0wpjlv81gptovvlmjat63ck21mjn0ob044w98h-1cab0d552.png",
+        "media/google-sites/projects/amxu72uwrpwsj73erzsrc27kkpoxxs9dfds2v-rzvntlneh-ig_dv6u-8aa111f0a.png"
+      ],
       "publications": [],
-      "thoughts": []
+      "thoughts": [
+        "media/google-sites/thoughts/amxu72spixljpnd446gfmabphsoufp-h2pwbe1b0epb31xysqhue4u5-bcbf26ae9.png",
+        "media/google-sites/thoughts/amxu72sw0pimlzatdrfaeo9egq6nao0hqmsvjgdwevhh7i01ykqeigf-0d9788e3b.jpg",
+        "media/google-sites/thoughts/amxu72tlrlyswdpdkhsmhgl_vwfvwxvsflxxbd3ndiskqwcr9q1ki8w-2bf332b12.png",
+        "media/google-sites/thoughts/amxu72ugdmvvjdmyuhpdlmbdgkhwfk3pc_mtegvoocfd1jft4keqdt8-48899b60d.jpg",
+        "media/google-sites/thoughts/amxu72uw1833j1c1jyec8itxxeqps6_1czqgfxdvvugaro4n-rxbn5o-d18c0c062.png",
+        "media/google-sites/thoughts/ap9e6xxdrr2qjh2gygkjup2bhzisx0vfcocz90lfngpb3y25nrxolgl-6331f7d66.jpg"
+      ]
     },
     "pages": [
       {
         "source": "https://www.huanning.me/",
-        "text_characters": 64,
-        "images": 0
+        "text_characters": 1550,
+        "images": 1
       },
       {
         "source": "https://www.huanning.me/projects",
-        "text_characters": 8,
-        "images": 0
+        "text_characters": 3846,
+        "images": 3
       },
       {
         "source": "https://www.huanning.me/publications",
-        "text_characters": 12,
+        "text_characters": 9215,
         "images": 0
       },
       {
         "source": "https://www.huanning.me/thoughts",
-        "text_characters": 26,
-        "images": 0
+        "text_characters": 20974,
+        "images": 6
       }
     ]
   },
   "assets": {
-    "saved": 9,
+    "saved": 19,
     "failed": [],
     "oversize": []
   },
@@ -97,12 +110,7 @@
     {
       "source": "WordPress",
       "kind": "pages",
-      "message": "404 Client Error: Not Found for url: https://gladcolor.wordpress.com/wp-json/wp/v2/pages?per_page=100&page=1&_embed=1"
-    },
-    {
-      "source": "GoogleSites",
-      "page": "publications",
-      "message": "bibliography extraction only 0 items; raw source archived"
+      "message": "404 Client Error: Not Found for url: https://public-api.wordpress.com/rest/v1.1/sites/gladcolor.wordpress.com/pages/?number=100"
     }
   ]
 }

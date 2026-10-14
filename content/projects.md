@@ -1,18 +1,19 @@
 ---
-title: 'Projects'
-date: 2024-05-19
+title: "Research Projects"
+date: 2026-10-13
 type: landing
-
 design:
-  # Section spacing
-  spacing: '5rem'
-
-# Page sections
+  spacing: "4rem"
 sections:
+  - block: markdown
+    content:
+      title: "Research Projects"
+      text: "Selected work in autonomous GIS, AI agents, human mobility, and geospatial public health."
+    design:
+      columns: "1"
   - block: collection
     content:
-      title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      title: "Selected Projects"
       filters:
         folders:
           - project

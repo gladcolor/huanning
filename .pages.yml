@@ -1,0 +1,108 @@
+# Pages CMS: https://app.pagescms.org/
+# Configure the Pages CMS GitHub App to access gladcolor/huanning.
+# New content is stored as flat Markdown files for easy editing and export.
+media:
+  input: static/media
+  output: /huanning/media
+  rename: safe
+content:
+  - name: news
+    label: News
+    type: collection
+    path: content/news
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    exclude: ["_index.md"]
+    view:
+      fields: [title, date, summary]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: summary, label: Summary, type: text }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: body, label: Content, type: rich-text }
+  - name: articles
+    label: Research Articles
+    type: collection
+    path: content/articles
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    exclude: ["_index.md"]
+    view:
+      fields: [title, date, summary]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: summary, label: Summary, type: text }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: body, label: Article, type: rich-text }
+  - name: blog
+    label: Blog
+    type: collection
+    path: content/post
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    exclude: ["_index.md"]
+    view:
+      fields: [title, date, summary]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: summary, label: Summary, type: text }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: body, label: Content, type: rich-text }
+  - name: projects
+    label: Research Projects
+    type: collection
+    path: content/project
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      fields: [title, summary]
+      primary: title
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: summary, label: Summary, type: text }
+      - { name: external_link, label: External project URL, type: string }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: body, label: Project description, type: rich-text }
+  - name: publications
+    label: Publications
+    type: collection
+    path: content/publication
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    exclude: ["_index.md"]
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Publication date, type: date }
+      - { name: publication, label: Journal or venue, type: string }
+      - { name: doi, label: DOI, type: string }
+      - { name: summary, label: Summary, type: text }
+      - { name: body, label: Notes, type: rich-text }
+  - name: about
+    label: About page
+    type: file
+    path: content/about.md
+    format: yaml-frontmatter
+    operations:
+      delete: false
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: summary, label: Summary, type: text }
+      - { name: body, label: Biography, type: rich-text }

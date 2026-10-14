@@ -1,52 +1,50 @@
-# [Hugo Academic CV Theme](https://github.com/HugoBlox/theme-academic-cv)
+# Huan Ning: Academic Website Prototype
 
-[![Screenshot](.github/preview.webp)](https://hugoblox.com/templates/)
+This is a research-oriented website built with **Hugo and HugoBlox** for GitHub Pages.
 
-The Hugo **Academic CV Template** empowers you to easily create your job-winning online resumé, showcase your academic publications, and create online courses or knowledge bases to grow your audience.
+## Sections
 
-[![Get Started](https://img.shields.io/badge/-Get%20started-ff4655?style=for-the-badge)](https://hugoblox.com/templates/)
-[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/GetResearchDev?label=Follow%20on%20Twitter)](https://twitter.com/GetResearchDev)
+- **News**: Research announcements and updates at `content/news/`.
+- **Articles**: Research essays and explainers at `content/articles/`.
+- **Blog**: Personal research notes at `content/post/`.
+- **Projects**: Independent research project pages at `content/project/`.
+- **Publications**: Selected research papers at `content/publication/`.
+- **About**: Biography at `content/about.md`.
 
-️**Trusted by 250,000+ researchers, educators, and students.** Highly customizable via the integrated **no-code, Hugo Blox Builder**, making every site truly personalized ⭐⭐⭐⭐⭐
+The homepage automatically lists the latest content for these sections. All content remains Markdown in GitHub for portable backups.
 
-Easily write technical content with plain text Markdown, LaTeX math, diagrams, RMarkdown, or Jupyter, and import publications from BibTeX.
+## Publishing with GitHub Pages
 
-[Check out the latest demo](https://academic-demo.netlify.app/) of what you'll get in less than 10 minutes, or [get inspired by our academics and research groups](https://hugoblox.com/creators/).
+1. Review and merge the website prototype pull request into `main`.
+2. Open **Settings → Pages** in this repository.
+3. Set **Build and deployment → Source** to **GitHub Actions**.
+4. The existing workflow at `.github/workflows/publish.yaml` builds and deploys the site when `main` changes.
+5. The initial test address will be `https://gladcolor.github.io/huanning/` if Pages deployment is enabled and succeeds.
 
-The integrated [**Hugo Blox Builder**](https://hugoblox.com) and CMS makes it easy to create a beautiful website for free. Edit your site in the CMS (or your favorite editor), generate it with [Hugo](https://github.com/gohugoio/hugo), and deploy with GitHub or Netlify. Customize anything on your site with widgets, light/dark themes, and language packs.
+**Do not add a CNAME or update huanning.me DNS until the test website has been verified.**
 
-- 👉 [**Get Started**](https://hugoblox.com/templates/)
-- 📚 [View the **documentation**](https://docs.hugoblox.com/)
-- 💬 [Chat with the **Hugo Blox Builder community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@GetResearchDev](https://twitter.com/GetResearchDev) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithHugoBlox](https://twitter.com/search?q=%23MadeWithHugoBlox&src=typed_query)
-- ⬇️ **Automatically import your publications from BibTeX** with the [Hugo Academic CLI](https://github.com/GetRD/academic-file-converter)
-- 💡 [Suggest an improvement](https://github.com/HugoBlox/hugo-blox-builder/issues)
-- ⬆️ **Updating?** View the [Update Guide](https://docs.hugoblox.com/reference/update/) and [Release Notes](https://github.com/HugoBlox/hugo-blox-builder/releases)
+## Browser-based editing
 
-## We ask you, humbly, to support this open source movement
+The repository includes `.pages.yml` for [Pages CMS](https://app.pagescms.org/).
 
-Today we ask you to defend the open source independence of the Hugo Blox Builder and themes 🐧
+1. Sign in to Pages CMS with GitHub.
+2. Grant the Pages CMS GitHub App access to `gladcolor/huanning`.
+3. Select the repository and the appropriate branch.
+4. Create or edit entries under News, Articles, Blog, Projects, or Publications.
+5. Saving commits a Markdown file. A push to `main` automatically triggers the GitHub Pages workflow.
 
-We're an open source movement that depends on your support to stay online and thriving, but 99.9% of our creators don't give; they simply look the other way.
+Editor uploads initially use `/huanning/media`, which is appropriate for the trial URL. Update this media URL when switching to a custom root domain.
 
-### [❤️ Click here to become a Sponsor, unlocking awesome perks such as _exclusive academic templates and blocks_](https://hugoblox.com/sponsor/)
+## Content migration
 
-<!--
-<p align="center"><a href="https://hugoblox.com/templates/" target="_blank" rel="noopener"><img src="https://hugoblox.com/uploads/readmes/academic_logo_200px.png" alt="Hugo Academic Theme for Hugo Blox Builder"></a></p>
--->
+The content in this prototype consists of **short summaries and direct links** to original pages at [huanning.me](https://www.huanning.me) and [gladcolor.wordpress.com](https://gladcolor.wordpress.com). It does **not** claim to have imported your complete WordPress archive, attachments, or comments.
 
-## Demo image credits
+For full migration, export WordPress content, verify media copies, and plan redirects for old post URLs.
 
-- [Unsplash](https://unsplash.com)
+## Long-term backups
 
-## Latest news
+Clone or download this repository periodically. Keep your WordPress XML and image exports separately until full migration is confirmed.
 
-<!--START_SECTION:news-->
+## Template credit
 
-- [Easily make an academic CV website to get more cites and grow your audience 🚀](https://hugoblox.com/blog/easily-make-academic-website/)
-- [What&#39;s new in v5.2?](https://hugoblox.com/blog/whats-new-in-v5.2/)
-- [What&#39;s new in v5.1?](https://hugoblox.com/blog/whats-new-in-v5.1/)
-- [Version 5.0 (February 2021)](https://hugoblox.com/blog/version-5.0-february-2021/)
-- [Version 5.0 Beta 3 (February 2021)](https://hugoblox.com/blog/version-5.0-beta-3-february-2021/)
-<!--END_SECTION:news-->
+Originally based on the open-source [Hugo Academic CV theme by HugoBlox](https://github.com/HugoBlox/theme-academic-cv). See `LICENSE.md`.

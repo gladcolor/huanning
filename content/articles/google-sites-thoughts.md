@@ -1,0 +1,173 @@
+---
+title: Spatial Computing Thoughts (archived)
+date: 2025-01-01
+summary: Essays, research ideas and perspectives preserved from the former Google Sites personal website.
+---
+
+### Frankly, I have a lot of thoughts on various things, especially on spatial computing, as I have been in this field since 2003, more than 20 years now. Some ideas I will publish as academic articles, and others I would like to share here before polishing and testing them for professional journals.  Dear readers, feel free to contact me for any discussion.
+
+## What Should Be the Scientific Community’s Immediate Priorities in the Age of AGI?
+
+Huan Ning | 2026-09-03
+
+On September 3, 2026, OpenAI released GPT-6 and formally declared that the era of artificial general intelligence, or AGI, had arrived, meaning that artificial intelligence now surpasses most humans in most domains. Regardless of how AGI is defined, AI has clearly reached an exceptionally high level of analytical and reasoning capability, at a cost that is increasingly affordable. When our team was writing about this topic two years ago, we still had to carefully consider whether to mention AGI. Today, perhaps that debate is no longer necessary.
+
+For academia, the first challenge of the AGI era is determining how to reorganize this new productive force: a continuous supply of high-level reasoning and programming intelligence. In the past, developing such human expertise required many years of training, followed by considerable effort to bring experts together. Now, comparable intellectual capabilities can be accessed at the cost of tokens.
+
+For several years, our team has been envisioning what future scientific research might look like and exploring the application of AI agents to geographic information science. After years of exploration, research, and practice, we believe that disciplinary barriers will continue to exist. Scientific research will still take the form of AGI combined with domain knowledge, but cross-disciplinary research will become the norm. Research involving AI will increasingly be organized around the problem itself rather than around established academic disciplines.
+
+AI will primarily perform implementation and exploration, searching for possible solutions tens, hundreds, or even thousands of times faster than humans. Human experts, meanwhile, will guide AI toward deeper levels of inquiry within their areas of expertise.
+
+Under these emerging conditions, what kind of scientific infrastructure do we need? We now have access to a nearly continuous supply of intelligence, represented operationally by tokens. Yet today’s research system, including how knowledge is represented and stored and how experts divide and coordinate their work, was largely designed around the cognitive capacities and working boundaries of humans.
+
+For example, a scientific paper is typically limited to approximately 5,000 words. It prioritizes a small number of successful findings while omitting numerous failed explorations. Research evaluation is closely tied to publications and citations. A paper may be published once it receives the approval of one journal editor and two reviewers, who may be researchers or doctoral students from adjacent fields. Meanwhile, the complexity of research processes and outputs often makes scientific findings difficult to understand, verify, and reproduce.
+
+The scientific community clearly needs to redesign its infrastructure to accommodate this transformation in productive capacity. Our team has begun with the representation, storage, and updating of scientific knowledge. We have proposed the Fractal Research Graph, which converts scientific outputs into basic units with a standardized form of representation and organizes them into research graphs that retain similar structures across different scales.
+
+This self-similarity supports the long-term operation of AI agent swarms while reducing the need for extensive orchestration. It also enables crowdsourced participation. Much like SETI@home once allowed citizen scientists to contribute their personal computers to the search for extraterrestrial intelligence at home, individuals could contribute their unused AGI capacity or computing resources to automated scientific research.
+
+Research outputs would be reviewed by domain experts through a model resembling a combination of Wikipedia +  GitHub. Both successful and unsuccessful explorations would be recorded, allowing AI systems and human researchers to examine, verify, and reproduce them. We have presented an initial formulation of this proposal in a paper available on [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7380678), and we plan to explore its implementation in future work.
+
+Once a unified form of knowledge representation has been established, what should come next?
+
+We plan to explore a unified approach to scientific modeling that would allow AI agents to investigate problems across different domains using a common methodology. The goal is to take full advantage of AI’s exceptional capacity for execution and exploration.
+
+By combining the Fractal Research Graph with AI agent swarms, we aim to make scientific research increasingly automated, self-organizing, and decentralized. Ultimately, such a system could become self-growing, rapidly expanding the body of scientific knowledge.
+
+![Research figure](media/google-sites/thoughts/amxu72ugdmvvjdmyuhpdlmbdgkhwfk3pc_mtegvoocfd1jft4keqdt8-48899b60d.jpg)
+
+## From Data Source Handbooks to Agent Skills: How Academic Research Anticipated Industry Trends
+
+Huan Ning | 2026-02-19
+
+In May 2024, our team developed LLM-Find — an autonomous GIS agent framework for geospatial data retrieval. At its core is a concept we call the "data source handbook": a structured, plug-and-play knowledge package that teaches an LLM how to retrieve data from a specific source — including metadata, API details, code patterns, and technical requirements.
+
+The mechanism: when a user makes a natural language data request, the LLM browses brief descriptions from all available handbooks, selects the most relevant data source, loads the full handbook, and generates executable code to fetch the data. New data sources can be added simply by writing a new handbook file — no retraining, no code changes.
+
+Fast forward to October 2025, about 1.5 years later, Anthropic announced Claude Skills: reusable, modular instruction sets packaged as folders with a SKILL.md file that Claude can browse, select from, and load on demand. Simon Willison called it "maybe a bigger deal than MCP." The parallel is striking:
+
+![Research figure](media/google-sites/thoughts/amxu72sw0pimlzatdrfaeo9egq6nao0hqmsvjgdwevhh7i01ykqeigf-0d9788e3b.jpg)
+
+The conceptual alignment goes deeper. In our research agenda paper "GIScience in the Era of Artificial Intelligence" (arXiv: March 2025, 7 months before Claude Skills launched), we explicitly defined "skills" as "practical abilities to operate data and solve problems" — distinguishing them from mere textual knowledge. We argued that AI's lack of domain-specific skills is the key bottleneck for autonomous systems, and proposed "self-growing" agents that learn from documentation to expand their capabilities over time.
+
+This is exactly the paradigm Claude Skills now implements at scale — and what LLM-Find demonstrated in the geospatial domain a year and a half earlier.
+
+This convergence points to a broader truth: there is no such thing as a truly "general" agent. An LLM foundation model is a general understanding of its training data — it can reason, follow instructions, and generate code. But general understanding is not the same as specific competence. An LLM that has never seen the OpenTopography API documentation cannot reliably fetch elevation data, no matter how powerful the model is. The real architecture for capable agents is not a monolithic super-model — it is a foundation model + pluggable skill/knowledge sets. The foundation model provides reasoning, language comprehension, and planning; the skills provide the domain-specific knowledge, tool interfaces, and procedural expertise that turn reasoning into reliable action. This is precisely the pattern both LLM-Find handbooks and Claude Skills implement: the LLM remains general-purpose, while skills make it specifically capable. As new domains emerge, you don't retrain the model — you write a new handbook. This "foundation model + skills" paradigm may well be the general architecture for AI agents across all fields, not just GIS.
+
+I'm not claiming Anthropic borrowed from our work. Great ideas often converge independently. But I do think this convergence validates the research direction: the future of AI agents is not just bigger models; it's structured, shareable skill libraries that let agents learn new capabilities without retraining.
+
+If you're interested:
+
+* LLM-Find paper:<https://www.tandfonline.com/doi/full/10.1080/17538947.2025.2458688>
+* LLM-Find code:<https://github.com/gladcolor/LLM-Find>
+* Autonomous GIS research agenda:<https://www.tandfonline.com/doi/full/10.1080/19475683.2025.2552161>
+
+## AI-assisted scientific research
+
+Huan Ning | 2025-09-11
+
+Recently, Google released a wonderful paper:  An AI system to help scientists write expert-level empirical software (<https://research.google/blog/accelerating-scientific-discovery-with-ai-powered-empirical-software>). The authors synthesized the following ideas to enable LLM to write programs for scientific research:  Genetic Programming, Generative Programming, LLM coding, Automated Machine Learning (AutoML), and agents for scientific discovery.
+
+Simply speaking, let LLM conduct model and parameter search to find out the best-fitting models to the training/testing data. This work proves that AI can help researchers in scientific modeling, although this idea is straightforward and has been tested in various domains. The key point is to use LLM as the decision core to propose hypotheses, conduct experiments, and assess results. 
+
+In one of our research team’s papers, GIScience in the Era of Artificial Intelligence: A Research Agenda Towards Autonomous GIS (<https://arxiv.org/abs/2503.23633>), we proposed autonomous geographic modeling, which discussed the possibility of autonomous research in this discipline. We will work on the concept-of-proof project to demonstrate this trend.
+
+![Research figure](media/google-sites/thoughts/amxu72uw1833j1c1jyec8itxxeqps6_1czqgfxdvvugaro4n-rxbn5o-d18c0c062.png)
+
+Schematic of the algorithm that feeds a scorable task and research ideas to an LLM, which generates evaluation code in a sandbox. This code is then used in a tree search, where new nodes are created and iteratively improved using the LLM. (Source: <https://research.google/blog/accelerating-scientific-discovery-with-ai-powered-empirical-software> )
+
+## Autonomous GIS as infrastructure?
+
+Huan Ning, Zhenlong Li | 2025-04-13
+
+In a recent vision paper, [GIScience in the Era of Artificial Intelligence: A Research Agenda Towards Autonomous GIS](https://arxiv.org/abs/2503.23633), we proposed three scales of autonomous GIS agents: local, centralized, and infrastructure. Some GIS agents have been developed on local and centralized scales, such as [LLM-Geo](https://github.com/gladcolor/LLM-Geo) and [Google Geospatial Reasoning](https://research.google/blog/geospatial-reasoning-unlocking-insights-with-generative-ai-and-multiple-foundation-models/). What do the infrastructure agents look like? In the vision paper, we discussed that “A key challenge [to develop the infrastructure-scale GIS agents] lies in establishing secure standards, protocols and policies to let generative AI manage computational resources.” The release of Google’s [A2A protocol](https://github.com/google/A2A) (early April 2025) to support communications of agents shined a light on the infrastructure scale agents, allowing AI agents can collaborate with each other to accomplish complex tasks using the resources across different types of infrastructure, such as data and computational resources.
+
+Besides protocols among AI agents like A2A, [Anthropic AI’s Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) (MCP) focuses on AI-ready resources (e.g., data and tools). Released in late 2024, it aims to expose resources for large language models (LLMs). Our understanding is that MCP is a wrapper of existing resources (e.g., data, services) to provide information or materials for LLMs, so that they can provide better answers for users, rather than output plausible text according to LLM’s internal knowledge. In GIScience, geospatial data sharing attempts led by Open Geospatial Consortium (OGC) have been started since 1994, benefiting the geospatial community. Online geospatial resources that meet OGC standards can be shared across programs via API (application programming interface). In addition, the strong needs for geospatial data sharing, integration, and discovery led to the development of [National Spatial Data Infrastructure](https://doi.org/10.1007/978-0-387-35973-1_860) (NSDI) and the large NSF-funded initiatives such as [EarthCube](https://www.earthcube.org/) and [I-GUIDE](https://i-guide.io/).  In the era of artificial intelligence (AI), these geospatial resources may need to be wrapped up for AI applications, especially for autonomous GIS agents. Our paper, [Autonomous GIS: the next-generation AI-powered GIS](https://www.tandfonline.com/doi/full/10.1080/17538947.2023.2278895) has mentioned the need to prepare data for AI agents, and we implemented a data retrieval agent [LLM-Find](https://www.tandfonline.com/doi/full/10.1080/17538947.2025.2458688) and it’s QGIS implementation, demonstrating a practical and plug-and-play manner for AI applications to access geospatial data. MCP is probably a more general way to share data for AI, especially authorization, but whether it can be adapted for geospatial data need further investigation.
+
+Due to the nature of LLMs, many of these solutions or practices, like A2A, MCP, LLM-Find, and [GIS Copilot](https://arxiv.org/abs/2411.03205), used a straightforward method – feeding descriptions of all available resources (e.g., agents, tools, and data) into an LLM and expect the LLM chooses the needed resources. This strategy faces the scalability problem: what if there are hundreds or thousands of resources? For example, there are about 30,000 [Census variables](https://api.census.gov/data/2023/acs/acs5/variables.html) and 200,000 OGC [services](https://cici.lab.asu.edu/polarhub3/) (by [PolarHub](https://cici.lab.asu.edu/polarhub3/)). Obviously, it is challenging to put the super-long descriptions of all variables and services into the LLM. Our team is testing the RAG (retrieval augmented generation) in [GIS Copilot](https://arxiv.org/abs/2411.03205) to help the Copilot to select appropriate tools to process geospatial data for users. We think fine-tuning multiple LLMs may be an alternative. Since humans have created countless public and private services for geospatial data infrastructure, autonomous GIS agents at the infrastructure scale need to discover, test, document, and recommend these resources, but how? We think this is a fascinating and useful research topic.
+
+Reposted from:<https://sites.psu.edu/giscience/2025/04/13/autonomous-gis-as-infrastructure/>
+
+## Geospatial Reasoning by Google: A Leap Towards Autonomous GIS
+
+Huan Ning | 04/09/2025
+
+  
+
+Google Research released a framework named Geospatial Reasoning, which provides a user-friendly inference for spatial analysis and visualization. By receiving users’ requests in natural language about geospatial tasks, Geospatial Reasoning can choose appropriate data sources and foundation models and then create and execute geoprocessing workflows to extract information and insights from data to reply to users’ requests. One application of Geospatial Reasoning is to assess the damaged building for emergency response. This is fantastic work, and many congratulations to the team!
+
+  
+
+Geospatial Reasoning can be viewed as an autonomous agent for GIS/RS (Geographic Information Systems and Remote Sensing). It reflects the vision of our 2023 paper “Autonomous GIS: the next-generation AI-powered GIS“. The core idea of that paper is converting the spatial analysis to a geoprocessing workflow using the reasoning and coding capabilities of generative AI, i.e., dividing the task into small pieces and solving them (divide-and-conquer). A step can be a small function, a tool, a model, or a smaller geoprocessing workflow. Google’s Geospatial Reasoning adopts the strategy of using GIS tools and foundation models as the steps in the geoprocessing workflow.
+
+  
+
+Recently, in collaboration with other 14 leading GIScience scholars, our team released another paper to further the discussion of autonomous GIS: “GIScience in the Era of Artificial Intelligence: A Research Agenda Towards Autonomous GIS“. Besides five autonomous levels (routine-, workflow-, data-, result-, and knowledge-aware), we also proposed three agent scales: local, centralized, and infrastructure. Geospatial Reasoning can be categorized as an earlier stage of Level 3 data-aware GIS as it is supposed to be able to use appropriate data for the given task. It is designed as a centralized GIS agent because it serves multiple users and runs on computing clusters under centralized management. Agents at this scale can process geospatial big data for analysis.
+
+  
+
+Since early 2023, we released the LLM-Geo among the first attempts of autonomous GIS agents, we are witnessing more and more GIS agents being researched and developed. We believe that Autonomous GIS is emerging as a new sub-field of GIScience, and our team is collaborating with various domain experts to advance the research of autonomous geospatial agents. The combination of large language models (or more broadly generative AI) and domain knowledge can significantly automate research productivity.
+
+  
+
+Reposted from: https://giscience.psu.edu/2025/04/10/geospatial-reasoning-by-google-a-leap-toward-autonomous-gis/
+
+## Building Large Spatial Models
+
+![Research figure](media/google-sites/thoughts/amxu72spixljpnd446gfmabphsoufp-h2pwbe1b0epb31xysqhue4u5-bcbf26ae9.png)
+
+This is a piece adapted by AI from an abandoned part of a revision paper for an autonomous geographic information system (GIS) agent. I think it is interesting, so I put it here. 
+
+ 
+
+1. What is a Large Spatial Model?
+
+Large Language Models (LLMs) learn patterns in human language and generate text by predicting what comes next. They are trained on huge amounts of text and sometimes images or videos.
+
+Can we do something similar in GIS (Geographic Information Science)? In geography, nearby places are more connected than distant ones—similar to how words in a sentence relate to each other. The idea is to break down complex geographic patterns into smaller, simpler parts (like tokens in language) and train a model to predict spatial and temporal patterns.
+
+But geographic data is more complicated than text. It comes in many forms—maps, satellite images, networks, and more—and varies by location and scale. Data gaps are also common. While there are models built for specific tasks (e.g., satellite image analysis), a general model for all geographic data, like an LLM for language, hasn’t been fully developed yet.
+
+Simply put, a Large Spatial Model (LSM) is like a multi-, hyper-, or ultra-modal LLM for geospatial science. It would handle many types of geographic data (images, maps, networks, text) and learn patterns across space and time to support a wide range of applications, from environmental monitoring to urban planning.
+
+2. Geospatial Embedding
+
+A key challenge is how to represent geographic data in a way the model can process—this is called geospatial embedding. In language models, the basic unit is a token. For geographic data, it’s more complex.
+
+Some researchers use graphs to represent connections between places based on data like human movement or environmental factors. However, geography isn’t just static connections; many phenomena (like traffic or weather) change over time. Current models often miss this temporal aspect, so more work is needed to capture both space and time in these embeddings.
+
+3. Challenges to Building Large Spatial Models
+
+Training large models requires enormous computing power. GIS researchers often have fewer resources than those working on LLMs, so they may need to focus on specific types of big geospatial data, like satellite images or mobility data.
+
+There are also concerns about privacy and data security, especially when dealing with sensitive location data. Cross-disciplinary collaboration will be key to building responsible and secure LSMs.
+
+In short, there is big potential in building Large Spatial Models, but also major technical and ethical challenges ahead.
+
+Note: the picture is generated by Gemini 2.0 Flase.
+
+## Continual geospatial agent
+
+![Research figure](media/google-sites/thoughts/amxu72tlrlyswdpdkhsmhgl_vwfvwxvsflxxbd3ndiskqwcr9q1ki8w-2bf332b12.png)
+
+I have devleoped a very useful Python [package](https://github.com/gladcolor/StreetView) to operate Google Street View images, but maintaining it is painful, because I released more and more packages and research code. The maintaince like the "interest", and it is getting more and more. So that I envision a contiual agent, specialized of a relatively simple and specific task, such as maintaining the code repository and data crawling. It have the ability the run and learn all time. It will follow the given "meta-instruction" forever. For example, it can keep adding functions to my street view image package, testing the functions, receiving pull requests, and creating documentations. This is it only task. I may have research idea to prototype such an agent! I thinkg it is amazing.
+
+  
+
+(The image is generated by Gemini, please ignore its types.😁)
+
+## The Zeroth Law of Geography and Geospatial Modeling
+
+The complete essay, *The Zeroth Law of Geography and Geospatial Modeling*, is now [available here]({{< relref "post/2025-03-19-zeroth-law.md" >}}).
+
+This post was written in Feb. 2024. It is the first time I start to think and learn complex systems. I would like to write a story about this post later.
+
+[Read the complete essay]({{< relref "post/2025-03-19-zeroth-law.md" >}})
+
+[LinkedIn](https://www.linkedin.com/in/huan-ning-53367254),  [GitHub](http://github.com/gladcolor)
+
+huan.ning@emory.edu
+
+[C.V.](https://1drv.ms/w/c/369e31f0e09c2899/ERGxPMoWWa5PhR1R1g5cpGoBUNeBIm9q52PVVq5SoRev3g?e=npcVmQ) ,  [Google Scholar](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=aK57tWMAAAAJ&sortby=pubdate)
+
+[Blog]({{< relref "post/_index.md" >}})

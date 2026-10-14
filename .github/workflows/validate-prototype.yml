@@ -1,0 +1,44 @@
+name: Validate website prototype
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.136.5"
+          extended: true
+      - name: Build site
+        run: hugo --minify --baseURL https://gladcolor.github.io/huanning/
+      - name: Generate search index
+        run: npx --yes pagefind@1.5.2 --site public
+      - name: Verify pages
+        run: |
+          test -s public/index.html
+          test -s public/news/index.html
+          test -s public/post/index.html
+          test -s public/project/index.html
+          test -s public/pagefind/pagefind-ui.js
+          test -s public/post/ai-agent-memory-system/index.html
+          test -s public/publication/index.html
+          test -s public/project/mosquito-habitat/index.html
+          grep -q 'media/wordpress/' public/post/ai-agent-memory-system/index.html
+          grep -q 'media/google-sites/' public/project/mosquito-habitat/index.html
+
+      - name: Verify standalone WordPress-to-News migration
+        run: |
+          test -s public/news/autonomous-gis-sdi/index.html
+          grep -q 'We recently learned' public/news/autonomous-gis-sdi/index.html
+          grep -q 'self-growing' public/news/autonomous-gis-sdi/index.html
+          ! grep -qi 'gladcolor.wordpress.com' public/news/autonomous-gis-sdi/index.html
+          ! grep -qi 'gladcolor.wordpress.com' public/news/new-article-agent-memory/index.html
+          ! grep -qi 'gladcolor.wordpress.com' public/post/index.html
+          test -s public/post/2026-04-06-local-gpu-autonomous-gis/index.html

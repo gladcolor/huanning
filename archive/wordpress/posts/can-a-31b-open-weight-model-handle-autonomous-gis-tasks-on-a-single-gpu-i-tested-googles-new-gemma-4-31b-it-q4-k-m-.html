@@ -1,0 +1,66 @@
+
+<p class="wp-block-paragraph">I used my Autonomous GIS agent, <strong>LLM-Geo</strong> (<a href="https://github.com/gladcolor/LLM-Geo" target="_blank" rel="noreferrer noopener">github.com/gladcolor/LLM-Geo</a>), to run a school walkability case study. The pipeline task: </p>
+
+
+
+<p class="wp-block-paragraph">1️⃣ Generate 1 km study area buffers around multiple schools. </p>
+
+
+
+<p class="wp-block-paragraph">2️⃣ Compute walkability scores (the ratio of sidewalk length to road length). </p>
+
+
+
+<p class="wp-block-paragraph">3️⃣ Map the results with the score as the title, overlaying sidewalks and buffers on an OpenStreetMap basemap.</p>
+
+
+
+<p class="wp-block-paragraph">Frontier models like GPT-5 and Gemini 3 handle this easily today, whereas just recently in 2025, LLMs still required complex exact harnesses—like Directed Acyclic Graphs (DAGs)—to pull this off. So, how did Gemma 4 hold up?</p>
+
+
+
+<p class="wp-block-paragraph">✅ <strong>The Good:</strong> Surprisingly, this quantized 31B model <em>can</em> complete the entire pipeline. It successfully generated the geoprocessing workflow, implemented the data operations, assembled the programs, reviewed its code, and corrected its own bugs.</p>
+
+
+
+<p class="wp-block-paragraph">❌ <strong>The Reality Check:</strong> It failed roughly 8 out of 10 trials. Due to its limited parameter size, it simply lacks foundational GIScience knowledge. For example, the model fundamentally struggled to understand how to properly create a 1 km buffer within a WGS 84 geographic coordinate system. Getting it across the finish line required its &#8220;think&#8221; mode and a lot of heavy prompt scaffolding.</p>
+
+
+
+<p class="wp-block-paragraph">💡 <strong>The Takeaways:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>GIScience knowledge is limited:</strong> You will hit the ceiling of its domain-specific training quickly.</li>
+
+
+
+<li><strong>Scaffolding is mandatory:</strong> It works, but strictly requires heavy structural support to accomplish complex spatial analysis.</li>
+
+
+
+<li><strong>The Time vs. Compute Tradeoff:</strong> If your goal is to finish tasks reliably and budget isn&#8217;t a concern, stick to the most advanced SOTA models. If you opt for smaller models, expect to spend significant time on knowledge probing and prompt engineering.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Has anyone else tested the Gemma 4 family on domain-specific spatial data? Let me know your results! 👇</p>
+
+
+
+<p class="wp-block-paragraph">#GeoAI #GIS #SpatialAnalysis #Gemma4 #OpenSource #MachineLearning #LLMGeo #Python</p>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img loading="lazy" width="1886" height="973" data-attachment-id="70" data-permalink="https://gladcolor.wordpress.com/2026/04/06/can-a-31b-open-weight-model-handle-autonomous-gis-tasks-on-a-single-gpu-i-tested-googles-new-gemma-4-31b-it-q4-k-m-on-an-rtx-3090-to-find-out-%f0%9f%a4%96%f0%9f%97%ba%ef%b8%8f/%e5%b1%8f%e5%b9%95%e6%88%aa%e5%9b%be-2026-04-06-214209/" data-orig-file="https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-214209.png" data-orig-size="1886,973" data-comments-opened="1" data-image-title="屏幕截图 2026-04-06 214209" data-image-description="" data-image-caption="" data-large-file="https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-214209.png?w=1886" data-id="70" src="https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-214209.png?w=1886" alt="" class="wp-image-70" srcset="https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-214209.png 1886w, https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-214209.png?w=128 128w, https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-214209.png?w=300 300w, https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-214209.png?w=768 768w, https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-214209.png?w=1024 1024w, https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-214209.png?w=1440 1440w" sizes="auto, (max-width: 1886px) 100vw, 1886px" /></figure>
+</figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1171" height="621" data-attachment-id="69" data-permalink="https://gladcolor.wordpress.com/2026/04/06/can-a-31b-open-weight-model-handle-autonomous-gis-tasks-on-a-single-gpu-i-tested-googles-new-gemma-4-31b-it-q4-k-m-on-an-rtx-3090-to-find-out-%f0%9f%a4%96%f0%9f%97%ba%ef%b8%8f/%e5%b1%8f%e5%b9%95%e6%88%aa%e5%9b%be-2026-04-06-215704/" data-orig-file="https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-215704.png" data-orig-size="1171,621" data-comments-opened="1" data-image-title="屏幕截图 2026-04-06 215704" data-image-description="" data-image-caption="" data-large-file="https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-215704.png?w=1171" src="https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-215704.png?w=1171" alt="" class="wp-image-69" srcset="https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-215704.png 1171w, https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-215704.png?w=128 128w, https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-215704.png?w=300 300w, https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-215704.png?w=768 768w, https://gladcolor.wordpress.com/wp-content/uploads/2026/04/e5b18fe5b995e688aae59bbe-2026-04-06-215704.png?w=1024 1024w" sizes="auto, (max-width: 1171px) 100vw, 1171px" /></figure>
+
+
+
+<pre class="wp-block-preformatted"></pre>

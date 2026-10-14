@@ -1,0 +1,130 @@
+# Edit at https://app.pagescms.org/ with authorized GitHub access.
+# Media URLs are set for the GitHub Pages project preview.
+# Change output to /media when the custom root domain is enabled.
+# Preserve metadata that is not explicitly exposed in the visual editor.
+settings:
+  content:
+    merge: true
+
+media:
+  input: static/media
+  output: /huanning/media
+  rename: safe
+
+content:
+  - name: news
+    label: News
+    type: collection
+    path: content/news
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    exclude: ["_index.md"]
+    view:
+      fields: [title, date, summary]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Headline, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: summary, label: Short summary, type: text }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: body, label: News story, type: rich-text }
+  - name: articles
+    label: Research Articles
+    type: collection
+    path: content/articles
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    exclude: ["_index.md"]
+    view:
+      fields: [title, date, summary]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Article title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: summary, label: Summary, type: text }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: body, label: Article content, type: rich-text }
+  - name: blog
+    label: Blog
+    type: collection
+    path: content/post
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    exclude: ["_index.md"]
+    view:
+      fields: [title, date, summary]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Blog post title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: summary, label: Summary, type: text }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: body, label: Blog post, type: rich-text }
+  - name: projects
+    label: Projects
+    type: collection
+    path: content/project
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    exclude: ["_index.md"]
+    view:
+      fields: [title, summary]
+      primary: title
+    fields:
+      - { name: title, label: Project title, type: string, required: true }
+      - { name: date, label: Date, type: date }
+      - { name: area, label: Research area, type: string }
+      - { name: summary, label: Short description, type: text }
+      - { name: external_link, label: External link, type: string }
+      - { name: demo_url, label: Interactive Demo URL (optional), type: string }
+      - { name: paper_url, label: Paper URL (optional), type: string }
+      - { name: repo_url, label: Code Repository URL (optional), type: string }
+      - { name: data_url, label: Dataset URL (optional), type: string }
+      - { name: demo_status, label: Demo status, type: select, options: { values: [live, prototype, planned] } }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: body, label: Project overview, type: rich-text }
+  - name: publications
+    label: Publications
+    type: collection
+    path: content/publication
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    exclude: ["_index.md"]
+    view:
+      fields: [title, date, publication]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Publication title, type: string, required: true }
+      - { name: date, label: Publication year/date, type: date }
+      - { name: publication, label: Journal or venue, type: string }
+      - { name: doi, label: DOI, type: string }
+      - { name: summary, label: Short summary, type: text }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: body, label: Publication details, type: rich-text }
+  - name: about
+    label: About page
+    type: file
+    path: content/about.md
+    format: yaml-frontmatter
+    operations:
+      delete: false
+    fields:
+      - { name: title, label: Page title, type: string, required: true }
+      - { name: summary, label: Summary, type: text }
+      - { name: body, label: Biography, type: rich-text }

@@ -128,7 +128,12 @@ def import_wp():
                 except Exception as e2:
                     R["errors"].append({"source":"WordPress","kind":kind,"message":str(e2)});continue
             else:
-                R["errors"].append({"source":"WordPress","kind":kind,"message":str(e)});continue
+                try:
+                    r=fetch("https://public-api.wordpress.com/rest/v1.1/sites/gladcolor.wordpress.com/pages/",params={"number":100})
+                    data=r.json()
+                    records=[{"id":p.get("ID"),"date":p.get("date"),"slug":p.get("slug"),"link":p.get("URL"),"title":{"rendered":p.get("title","")},"content":{"rendered":p.get("content","")},"excerpt":{"rendered":p.get("excerpt","")}} for p in data.get("pages",[])]
+                except Exception as e2:
+                    R["errors"].append({"source":"WordPress","kind":kind,"message":str(e2)});continue
         out[kind+"_api_count"]=len(records)
         for p in records:
             title=html.unescape(p.get("title",{}).get("rendered","Untitled"))
@@ -154,17 +159,23 @@ def import_wp():
             except Exception as e:R["errors"].append({"source":"WordPress","url":original,"message":str(e)})
     out["status"]="completed" if not any(x["source"]=="WordPress" for x in R["errors"]) else "partial"
 def extract_main(soup):
-    main=soup.select_one("main, [role=main]")
-    if main:return main
+    # Google Sites uses a title-only ARIA main and separate content tiles.
+    # Prefer the actual tyJCtd content tiles over [role=main].
     tiles=soup.select(".tyJCtd")
     if tiles:
         holder=BeautifulSoup("<div></div>","html.parser").div
         for tile in tiles:holder.append(BeautifulSoup(str(tile),"html.parser"))
         return holder
-    return soup.body or soup
+    main=soup.select_one("main, [role=main]")
+    return main or soup.body or soup
 def plain(el):
     copy=BeautifulSoup(str(el),"html.parser")
     for t in copy.select("script,style,nav,header,footer,button,iframe,svg"):t.decompose()
+    # Each Google Sites text tile is one semantic content block. Reading
+    # individual span nodes separately can fragment bibliography citations.
+    tiles=copy.select(".tyJCtd")
+    if tiles:
+        return "\n".join(x.get_text(" ",strip=True) for x in tiles if x.get_text(" ",strip=True))
     lines=[t.strip() for t in copy.get_text("\n",strip=True).splitlines() if t.strip()]
     return "\n".join(lines)
 def update_projects(text):

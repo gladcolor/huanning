@@ -1,5 +1,5 @@
 {{ $p := .page }}
-{{ $labels := dict "post" "Blog" "articles" "Article" "news" "News" "publication" "Publication" "project" "Project" }}
+{{ $labels := dict "post" "Blog" "thoughts" "Thoughts" "news" "News" "publication" "Publication" "project" "Project" }}
 {{ $thumb := partial "thumb.html" (dict "page" $p "size" "300x300") }}
 <article class="stream-item">
   <div class="stream-body">

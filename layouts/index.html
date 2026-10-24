@@ -27,7 +27,7 @@
 <section class="home-section">
   <div class="container narrow">
     <h2 class="section-title">Research &amp; Writing</h2>
-    {{ $writing := union (where .Site.RegularPages "Section" "articles") (where .Site.RegularPages "Section" "post") }}
+    {{ $writing := union (where .Site.RegularPages "Section" "thoughts") (where .Site.RegularPages "Section" "post") }}
     <div class="stream">{{ range first 5 $writing.ByDate.Reverse }}{{ partial "stream-item.html" (dict "page" . "showSection" true) }}{{ end }}</div>
     <a class="see-all" href="{{ "post/" | relURL }}">See all blog posts {{ partial "icon.html" "chevron" }}</a>
   </div>

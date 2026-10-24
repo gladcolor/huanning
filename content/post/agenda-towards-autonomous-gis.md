@@ -4,6 +4,7 @@ date: 2025-03-31
 summary: "A research agenda exploring Autonomous GIS, AI agents, and future geographic information infrastructure."
 tags: ["Autonomous GIS", "GIScience", "AI for Science"]
 authors: [admin]
+aliases: [/articles/agenda-towards-autonomous-gis/]
 ---
 A collaborative research agenda investigating how artificial intelligence could transform geographic information systems into increasingly autonomous scientific tools and infrastructure.
 

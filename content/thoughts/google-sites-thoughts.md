@@ -2,6 +2,7 @@
 title: Spatial Computing Thoughts (archived)
 date: 2025-01-01
 summary: Essays, research ideas and perspectives preserved from the former Google Sites personal website.
+aliases: [/articles/google-sites-thoughts/]
 ---
 
 ### Frankly, I have a lot of thoughts on various things, especially on spatial computing, as I have been in this field since 2003, more than 20 years now. Some ideas I will publish as academic articles, and others I would like to share here before polishing and testing them for professional journals.  Dear readers, feel free to contact me for any discussion.

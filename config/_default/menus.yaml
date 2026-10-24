@@ -5,8 +5,8 @@ main:
   - name: News
     pageRef: /news
     weight: 20
-  - name: Articles
-    pageRef: /articles
+  - name: Thoughts
+    pageRef: /thoughts
     weight: 30
   - name: Blog
     pageRef: /post

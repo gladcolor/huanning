@@ -15,13 +15,13 @@ An independent, low-maintenance website for Huan Ning's research and writing.
 | Section | Folder |
 |---|---|
 | News | `content/news` |
-| Research Articles | `content/articles` |
+| Thoughts | `content/thoughts` |
 | Blog | `content/post` |
 | Research Projects | `content/project` |
 | Publications | `content/publication` |
 | Biography | `content/about.md` |
 
-The homepage assembles the latest News, Blog, Articles, Projects, and Publications automatically and links to independently hosted interactive research applications from project pages.
+The homepage assembles the latest News, Blog, Thoughts, Projects, and Publications automatically and links to independently hosted interactive research applications from project pages.
 
 ## Interactive projects: external links only
 
@@ -35,9 +35,9 @@ The U.S. Hourly Population Explorer is a currently linked example: https://gladc
 
 1. Merge the review branch after the pull request build check succeeds.
 2. Under GitHub repository **Settings > Pages**, set **Build and deployment > Source** to **GitHub Actions**. A preview branch has already deployed successfully; its public address is https://gladcolor.github.io/huanning/.
-3. Publish at `https://gladcolor.github.io/huanning/` and verify the homepage, internal links, articles, projects, and search.
+3. Publish at `https://gladcolor.github.io/huanning/` and verify the homepage, internal links, blog, thoughts, projects, and search.
 4. Sign in to [Pages CMS](https://app.pagescms.org/) with GitHub, grant access only to `gladcolor/huanning`, and open the repository. **While the prototype branch is the live deployed website, select `website-prototype-2026-10`, not `main`.** After final review, merge the PR into `main` and switch the editor to `main` only when deployment is configured for that branch. The CMS reads `.pages.yml` on the selected branch.
-5. Use News, Blog, Articles, Projects, and Publications in Pages CMS. Saving an entry commits a Markdown file; GitHub Actions rebuilds the website.
+5. Use News, Blog, Thoughts, Projects, and Publications in Pages CMS. Saving an entry commits a Markdown file; GitHub Actions rebuilds the website.
 
 **Do not change the DNS for huanning.me until the GitHub Pages test site has been checked.** When ready, configure the custom domain under Settings > Pages, then update the domain's DNS records. Update `.pages.yml` media output from `/huanning/media` to `/media` at that time.
 
@@ -78,10 +78,10 @@ This is an original design inspired by established academic website patterns, no
 
 1. Open https://app.pagescms.org/ and sign in to GitHub as gladcolor.
 2. Authorize only the huanning repository, then select branch `website-prototype-2026-10` while it powers the preview.
-3. Select News, Research Articles, Blog, Projects, Publications, or About. Click New for a new entry or open an existing entry to edit.
+3. Select News, Blog, Thoughts, Projects, Publications, or About. Click New for a new entry or open an existing entry to edit.
 4. Fill Title, Date, Summary, and the rich-text Body. Optional links in Projects are Interactive Demo URL, Paper URL, Code Repository URL, and Dataset URL.
 5. Click Save. Pages CMS writes a Markdown file to the chosen branch, where the GitHub Pages workflow rebuilds the website.
-6. Verify the published URL. New News automatically appears in Latest News; recent Blog/Articles appear in Research & Writing.
+6. Verify the published URL. New News automatically appears in Latest News; recent Blog and Thoughts entries appear in Research & Writing.
 
 The CMS is configured to preserve existing frontmatter not explicitly shown in its form, including historical tags and reference metadata. This avoids accidental metadata loss when editing older posts.
 

@@ -2,58 +2,58 @@
 <section class="hero">
   <div class="container hero-inner">
     <div class="hero-copy">
-      <p class="eyebrow">HUAN NING · RESEARCH & WRITING</p>
-      <h1>Geospatial AI for scientific discovery.</h1>
-      <p class="hero-lead">Research projects, peer-reviewed publications, interactive tools, and writing on autonomous GIS, spatial data science, and AI for science.</p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="{{ "project/" | relURL }}">Explore Research <span aria-hidden="true">↗</span></a>
-        <a class="button button-text" href="{{ "about/" | relURL }}">About Huan Ning <span aria-hidden="true">→</span></a>
-      </div>
+      <h1 class="hero-title">Geospatial AI for scientific discovery.</h1>
+      <p class="lead">Research projects, peer-reviewed publications, interactive tools, and writing on autonomous GIS, spatial data science, and AI for science.</p>
+      <p class="hero-actions">
+        <a class="btn btn-primary" href="{{ "project/" | relURL }}">Explore Research {{ partial "icon.html" "arrow" }}</a>
+        <a class="btn btn-outline" href="{{ "about/" | relURL }}">About Huan Ning</a>
+      </p>
     </div>
+    {{ with .Site.Params.hero_image }}{{ with resources.Get . }}
+    {{ $img := .Fill "760x640 webp q80 Right" }}
+    <div class="hero-media"><img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="Huan Ning in front of a mountain landscape"></div>
+    {{ end }}{{ end }}
   </div>
 </section>
-<section class="content-hub container">
-  <div class="content-main">
-    <div class="section-heading"><div><p class="eyebrow">LATEST FROM THE DESK</p><h2>Research &amp; Writing</h2></div><a href="{{ "post/" | relURL }}">All blog posts <span aria-hidden="true">↗</span></a></div>
-    {{ $articles := (where .Site.RegularPages "Section" "articles") }}
-    {{ $blog := (where .Site.RegularPages "Section" "post") }}
-    {{ $writing := union $articles $blog }}
-    <div class="entry-list">{{ range first 5 $writing.ByDate.Reverse }}{{ partial "entry-card.html" . }}{{ end }}</div>
-    <div class="section-heading section-heading-projects"><div><p class="eyebrow">EXPLORE THE WORK</p><h2>Selected Projects</h2></div><a href="{{ "project/" | relURL }}">All projects <span aria-hidden="true">↗</span></a></div>
-    <div class="project-grid">
-      {{ range first 4 ((where .Site.RegularPages "Section" "project").ByDate.Reverse) }}
-      <article class="project-card">
-        <div class="project-glyph" aria-hidden="true">⌁</div>
-        <p class="eyebrow">{{ with .Params.area }}{{ . }}{{ else }}RESEARCH PROJECT{{ end }}</p>
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <p>{{ .Params.summary }}</p>
-        <div class="project-links">
-          <a class="project-link" href="{{ .RelPermalink }}">Project details ↗</a>
-          {{ with .Params.demo_url }}<a class="project-link demo-link" href="{{ . }}" target="_blank" rel="noopener noreferrer">Launch interactive demo ↗</a>{{ end }}
-        </div>
-      </article>
-      {{ end }}
-    </div>
+
+<section class="home-section">
+  <div class="container narrow">
+    <h2 class="section-title">Latest News</h2>
+    <div class="stream">{{ range first 4 (where .Site.RegularPages "Section" "news").ByDate.Reverse }}{{ partial "stream-item.html" (dict "page" .) }}{{ end }}</div>
+    <a class="see-all" href="{{ "news/" | relURL }}">See all news {{ partial "icon.html" "chevron" }}</a>
   </div>
-  <aside class="news-sidebar" aria-label="Latest news">
-    <div class="sidebar-heading"><p class="eyebrow">RESEARCH UPDATES</p><h2>Latest News</h2></div>
-    {{ $news := (where .Site.RegularPages "Section" "news").ByDate.Reverse }}
-    {{ range first 7 $news }}
-      <article class="sidebar-news">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-      </article>
-    {{ end }}
-    <a class="sidebar-all" href="{{ "news/" | relURL }}">Browse news archive ↗</a>
-    <div class="sidebar-note"><strong>Open science, openly shared.</strong><p>Find software, research papers, ongoing experiments, and new ideas.</p><a href="https://github.com/gladcolor">Explore GitHub ↗</a></div>
-  </aside>
 </section>
-<section class="publications-strip">
+
+<section class="home-section">
+  <div class="container narrow">
+    <h2 class="section-title">Research &amp; Writing</h2>
+    {{ $writing := union (where .Site.RegularPages "Section" "articles") (where .Site.RegularPages "Section" "post") }}
+    <div class="stream">{{ range first 5 $writing.ByDate.Reverse }}{{ partial "stream-item.html" (dict "page" . "showSection" true) }}{{ end }}</div>
+    <a class="see-all" href="{{ "post/" | relURL }}">See all blog posts {{ partial "icon.html" "chevron" }}</a>
+  </div>
+</section>
+
+<section class="home-section">
   <div class="container">
-    <div class="section-heading"><div><p class="eyebrow">SELECTED SCIENTIFIC WORK</p><h2>Publications</h2></div><a href="{{ "publication/" | relURL }}">Publication archive ↗</a></div>
-    <div class="pub-home-list">{{ range first 4 ((where .Site.RegularPages "Section" "publication").ByDate.Reverse) }}
-      <a href="{{ .RelPermalink }}"><span>{{ .Date.Format "2006" }}</span><strong>{{ .Title }}</strong><span aria-hidden="true">↗</span></a>
-    {{ end }}</div>
+    <h2 class="section-title">Selected Projects</h2>
+    <div class="card-grid">{{ range first 6 (where .Site.RegularPages "Section" "project").ByDate.Reverse }}{{ partial "card.html" . }}{{ end }}</div>
+    <a class="see-all" href="{{ "project/" | relURL }}">See all projects {{ partial "icon.html" "chevron" }}</a>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container narrow">
+    <h2 class="section-title">Featured Publications</h2>
+    <div class="pub-list">{{ range first 4 (where .Site.RegularPages "Section" "publication").ByDate.Reverse }}{{ partial "pub-item.html" . }}{{ end }}</div>
+    <a class="see-all" href="{{ "publication/" | relURL }}">See all publications {{ partial "icon.html" "chevron" }}</a>
+  </div>
+</section>
+
+<section class="home-section cta-section">
+  <div class="container cta-group">
+    <a class="btn btn-primary btn-lg" href="{{ "about/" | relURL }}">About me {{ partial "icon.html" "arrow" }}</a>
+    <a class="btn btn-primary btn-lg" href="{{ .Site.Params.github }}">Open-source code {{ partial "icon.html" "arrow" }}</a>
+    <a class="btn btn-primary btn-lg" href="mailto:{{ .Site.Params.email }}">Get in touch {{ partial "icon.html" "arrow" }}</a>
   </div>
 </section>
 {{ end }}

@@ -1,0 +1,15 @@
+{{ $p := .page }}
+{{ $labels := dict "post" "Blog" "articles" "Article" "news" "News" "publication" "Publication" "project" "Project" }}
+{{ $thumb := partial "thumb.html" (dict "page" $p "size" "300x300") }}
+<article class="stream-item">
+  <div class="stream-body">
+    <h3 class="stream-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+    {{ with $p.Params.summary }}<p class="stream-summary">{{ . }}</p>{{ else }}{{ with $p.Summary }}<p class="stream-summary">{{ . | plainify | truncate 200 }}</p>{{ end }}{{ end }}
+    <p class="meta">
+      {{- if .showSection }}<span>{{ index $labels $p.Section | default "Page" }}</span>{{ end -}}
+      {{- if not $p.Date.IsZero }}<time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "Jan 2, 2006" }}</time>{{ end -}}
+      {{- if gt $p.ReadingTime 0 }}<span>{{ $p.ReadingTime }} min read</span>{{ end -}}
+    </p>
+  </div>
+  {{ with $thumb }}<a class="stream-thumb" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="{{ . }}" alt="" loading="lazy" width="150" height="150"></a>{{ end }}
+</article>

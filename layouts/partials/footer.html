@@ -1,7 +1,12 @@
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div><strong>Huan Ning</strong><p>Spatial computing · AI for Science · Autonomous GIS</p></div>
-    <div><a href="https://github.com/gladcolor">GitHub</a> <a href="https://scholar.google.com/citations?user=aK57tWMAAAAJ">Google Scholar</a> <a href="mailto:huan.ning@emory.edu">Contact</a></div>
-    <div><small>© {{ now.Year }} Huan Ning. Built with Hugo. Content archived in GitHub.</small></div>
+  <div class="container">
+    <p class="footer-links">
+      <a href="{{ .Site.Params.github }}">GitHub</a>
+      <a href="{{ .Site.Params.scholar }}">Google Scholar</a>
+      <a href="mailto:{{ .Site.Params.email }}">Email</a>
+      <a href="{{ "post/index.xml" | relURL }}">RSS</a>
+    </p>
+    <p>© {{ now.Year }} Huan Ning · Spatial computing, AI for Science, and Autonomous GIS</p>
+    <p class="footer-note">Published with <a href="https://gohugo.io/">Hugo</a>. Content archived on <a href="https://github.com/gladcolor/huanning">GitHub</a>.</p>
   </div>
 </footer>

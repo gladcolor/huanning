@@ -1,0 +1,28 @@
+{{/* Returns a card image for a page: front-matter `image`, else the first image in the body.
+     Local media is resized to WebP; external images are used as-is. Returns "" when none. */}}
+{{ $p := .page }}
+{{ $size := .size | default "600x400" }}
+{{ $src := "" }}
+{{ with $p.Params.image }}{{ $src = . }}{{ end }}
+{{ if not $src }}
+  {{ with findRESubmatch `!\[[^\]]*\]\(([^)\s]+)` $p.RawContent 1 }}{{ $src = index (index . 0) 1 }}{{ end }}
+{{ end }}
+{{ if not $src }}
+  {{ with findRESubmatch `<img[^>]+src="([^"]+)"` $p.RawContent 1 }}{{ $src = index (index . 0) 1 }}{{ end }}
+{{ end }}
+{{ $out := "" }}
+{{ if $src }}
+  {{ if hasPrefix $src "http" }}
+    {{ $out = $src }}
+  {{ else }}
+    {{ $path := replaceRE `^/(huanning/)?` "" $src }}
+    {{ with resources.Get $path }}
+      {{ if eq .MediaType.MainType "image" }}
+        {{ if eq .MediaType.SubType "svg" }}{{ $out = .RelPermalink }}{{ else }}{{ $out = (.Fill (printf "%s webp q78 Smart" $size)).RelPermalink }}{{ end }}
+      {{ end }}
+    {{ else }}
+      {{ $out = $path | relURL }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return $out }}

@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="container narrow page">
+  {{ partial "page-header.html" . }}
+  <h2 class="section-subtitle">Featured publications</h2>
+  <div class="pub-list">{{ range .Pages.ByDate.Reverse }}{{ partial "pub-item.html" . }}{{ end }}</div>
+  {{ with .Content }}
+  <h2 class="section-subtitle">Full bibliography</h2>
+  <div class="prose bibliography">{{ . }}</div>
+  {{ end }}
+</div>
+{{ end }}

@@ -58,6 +58,7 @@ The original sites should remain online until the content and links are verified
 ## Longevity / maintenance
 
 - Keep the theme as plain Hugo templates and CSS under `layouts/` and `static/css/`; there are no external theme modules to update.
+- Card and list thumbnails come from the optional `image` front-matter field (Pages CMS: **Card image**), otherwise from the first image in the body. Hugo resizes local images to small WebP files at build time.
 - The Hugo version and Pagefind version are pinned in GitHub Actions.
 - Use GitHub's **Download ZIP** or `git clone` periodically for local offsite backups, and retain the WordPress XML and media archive.
 - Update the GitHub Actions versions periodically when needed for security/support compatibility. 'Low maintenance' does not imply no maintenance forever.

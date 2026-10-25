@@ -1,11 +1,5 @@
 name: Import public WordPress and Google Sites archives
 on:
-  push:
-    branches:
-      - website-prototype-2026-10
-    paths:
-      - 'scripts/migrate_public_sites.py'
-      - '.github/workflows/import-public-sites.yml'
   workflow_dispatch:
 permissions:
   contents: write
@@ -16,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: website-prototype-2026-10
+          ref: main
           persist-credentials: true
       - uses: actions/setup-python@v5
         with:
@@ -27,11 +21,11 @@ jobs:
         run: python scripts/migrate_public_sites.py
       - name: Show migration report
         run: cat MIGRATION_STATUS.md
-      - name: Commit archives and restored content to prototype branch
+      - name: Commit archives and restored content to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add content archive static/media migration-report.json MIGRATION_STATUS.md
           if git diff --cached --quiet; then echo 'No changes'; exit 0; fi
           git commit -m "Import public WordPress and Google Sites content and images"
-          git push origin HEAD:website-prototype-2026-10
+          git push origin HEAD:main

@@ -1,6 +1,6 @@
 ---
 title: AI-Generated Synthetic Users for Software Testing
-date: 2026-10-25
+date: 2026-10-25T16:26:12-04:00
 weight: 5
 area: AI agents, synthetic data
 summary: Fictional users, each with a simulated year of life, for testing the memory system of an AI companion without using private conversations.

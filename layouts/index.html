@@ -18,7 +18,7 @@
     <section class="block">
       <header class="block-head"><h2>Research</h2><a href="{{ "project/" | relURL }}">All projects</a></header>
       <div class="project-list">
-        {{ range first 4 (where .Site.RegularPages "Section" "project").ByWeight }}
+        {{ range first 4 (sort (where .Site.RegularPages "Section" "project").ByWeight "Date" "desc") }}
         {{ $thumb := partial "thumb.html" (dict "page" . "size" "240x160") }}
         <article class="project-row">
           <a class="project-thumb" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">{{ with $thumb }}<img src="{{ . }}" alt="" width="120" height="80" loading="lazy">{{ else }}<span class="contour-fill"></span>{{ end }}</a>

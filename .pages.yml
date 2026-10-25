@@ -86,9 +86,9 @@ content:
       primary: title
     fields:
       - { name: title, label: Project title, type: string, required: true }
-      - { name: date, label: Date, type: date }
+      - { name: date, label: Date (newest projects show first), type: date, required: true }
       - { name: area, label: Research area, type: string }
-      - { name: weight, label: Display order (lower numbers first), type: number }
+      - { name: weight, label: Order among projects with the same date (optional; lower numbers first), type: number }
       - { name: summary, label: Short description, type: text }
       - { name: image, label: Card image (optional; otherwise the first image in the body is used), type: image }
       - { name: external_link, label: External link, type: string }

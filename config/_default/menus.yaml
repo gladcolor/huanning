@@ -17,6 +17,9 @@ main:
   - name: Publications
     pageRef: /publication
     weight: 60
+  - name: Teaching
+    pageRef: /teaching
+    weight: 65
   - name: About
     pageRef: /about
     weight: 70

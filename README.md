@@ -19,6 +19,7 @@ An independent, low-maintenance website for Huan Ning's research and writing.
 | Blog | `content/post` |
 | Research Projects | `content/project` |
 | Publications | `content/publication` |
+| Teaching | `content/teaching.md` |
 | Biography | `content/about.md` |
 
 The homepage assembles the latest News, Blog, Thoughts, Projects, and Publications automatically and links to independently hosted interactive research applications from project pages.
@@ -45,7 +46,7 @@ The U.S. Hourly Population Explorer is a currently linked example: https://gladc
 
 This branch includes a verified biography, research-project pages, selected publications, an initial news feed, and short archive entries for the WordPress weblog. Archive entries link to the complete original posts.
 
-**All 11 public WordPress posts returned by the REST API have been imported as independent Markdown pages with local images and original HTML backed up; four Google Sites source pages have been archived, the full bibliography restored, and research projects and figures migrated.** Private posts, drafts, restricted attachments, external video/iframe assets, and content accessible only through signed-in administrator exports are not covered. Before redirecting the domain or deleting the old blog:
+**All 11 public WordPress posts returned by the REST API have been imported as independent Markdown pages with local images and original HTML backed up; five Google Sites source pages (including Teaching) have been archived, the full bibliography restored, and research projects and figures migrated.** Private posts, drafts, restricted attachments, external video/iframe assets, and content accessible only through signed-in administrator exports are not covered. Before redirecting the domain or deleting the old blog:
 
 1. Export WordPress.com via Tools > Export (XML).
 2. Download media files separately.
@@ -78,7 +79,7 @@ This is an original design inspired by established academic website patterns, no
 
 1. Open https://app.pagescms.org/ and sign in to GitHub as gladcolor.
 2. Authorize only the huanning repository and open branch `main` (the default).
-3. Select News, Blog, Thoughts, Projects, Publications, or About. Click New for a new entry or open an existing entry to edit.
+3. Select News, Blog, Thoughts, Projects, Publications, Teaching page, or About page. Click New for a new entry or open an existing entry to edit.
 4. Fill Title, Date, Summary, and the rich-text Body. Optional links in Projects are Interactive Demo URL, Paper URL, Code Repository URL, and Dataset URL.
 5. Click Save. Pages CMS writes a Markdown file to the chosen branch, where the GitHub Pages workflow rebuilds the website.
 6. Verify the published URL. New News automatically appears in Latest News; recent Blog and Thoughts entries appear in Research & Writing.

@@ -132,3 +132,14 @@ content:
       - { name: title, label: Page title, type: string, required: true }
       - { name: summary, label: Summary, type: text }
       - { name: body, label: Biography, type: rich-text }
+  - name: teaching
+    label: Teaching page
+    type: file
+    path: content/teaching.md
+    format: yaml-frontmatter
+    operations:
+      delete: false
+    fields:
+      - { name: title, label: Page title, type: string, required: true }
+      - { name: summary, label: Summary, type: text }
+      - { name: body, label: Courses and teaching experience, type: rich-text }

@@ -1,0 +1,59 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <h1 class="hero-title">Geospatial AI for scientific discovery.</h1>
+      <p class="lead">Research projects, peer-reviewed publications, interactive tools, and writing on autonomous GIS, spatial data science, and AI for science.</p>
+      <p class="hero-actions">
+        <a class="btn btn-primary" href="{{ "project/" | relURL }}">Explore Research {{ partial "icon.html" "arrow" }}</a>
+        <a class="btn btn-outline" href="{{ "about/" | relURL }}">About Huan Ning</a>
+      </p>
+    </div>
+    {{ with .Site.Params.hero_image }}{{ with resources.Get . }}
+    {{ $img := .Fill "760x640 webp q80 Right" }}
+    <div class="hero-media"><img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="Huan Ning in front of a mountain landscape"></div>
+    {{ end }}{{ end }}
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container narrow">
+    <h2 class="section-title">Latest News</h2>
+    <div class="stream">{{ range first 4 (where .Site.RegularPages "Section" "news").ByDate.Reverse }}{{ partial "stream-item.html" (dict "page" .) }}{{ end }}</div>
+    <a class="see-all" href="{{ "news/" | relURL }}">See all news {{ partial "icon.html" "chevron" }}</a>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container narrow">
+    <h2 class="section-title">Research &amp; Writing</h2>
+    {{ $writing := union (where .Site.RegularPages "Section" "thoughts") (where .Site.RegularPages "Section" "post") }}
+    <div class="stream">{{ range first 5 $writing.ByDate.Reverse }}{{ partial "stream-item.html" (dict "page" . "showSection" true) }}{{ end }}</div>
+    <a class="see-all" href="{{ "post/" | relURL }}">See all blog posts {{ partial "icon.html" "chevron" }}</a>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <h2 class="section-title">Selected Projects</h2>
+    <div class="card-grid">{{ range first 6 (where .Site.RegularPages "Section" "project").ByDate.Reverse }}{{ partial "card.html" . }}{{ end }}</div>
+    <a class="see-all" href="{{ "project/" | relURL }}">See all projects {{ partial "icon.html" "chevron" }}</a>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container narrow">
+    <h2 class="section-title">Featured Publications</h2>
+    <div class="pub-list">{{ range first 4 (where .Site.RegularPages "Section" "publication").ByDate.Reverse }}{{ partial "pub-item.html" . }}{{ end }}</div>
+    <a class="see-all" href="{{ "publication/" | relURL }}">See all publications {{ partial "icon.html" "chevron" }}</a>
+  </div>
+</section>
+
+<section class="home-section cta-section">
+  <div class="container cta-group">
+    <a class="btn btn-primary btn-lg" href="{{ "about/" | relURL }}">About me {{ partial "icon.html" "arrow" }}</a>
+    <a class="btn btn-primary btn-lg" href="{{ .Site.Params.github }}">Open-source code {{ partial "icon.html" "arrow" }}</a>
+    <a class="btn btn-primary btn-lg" href="mailto:{{ .Site.Params.email }}">Get in touch {{ partial "icon.html" "arrow" }}</a>
+  </div>
+</section>
+{{ end }}

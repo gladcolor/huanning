@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Huan Ning, home">
+      <span class="brand-mark" aria-hidden="true">HN</span>
+      <span class="brand-name">Huan Ning</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      {{ range .Site.Menus.main }}<a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}
+    </nav>
+    <div class="header-tools">
+      <a class="icon-button" href="{{ "search/" | relURL }}" aria-label="Search the website">{{ partial "icon.html" "search" }}</a>
+      <button class="icon-button theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span class="when-light">{{ partial "icon.html" "moon" }}</span><span class="when-dark">{{ partial "icon.html" "sun" }}</span>
+      </button>
+      <details class="mobile-nav">
+        <summary class="icon-button" aria-label="Open menu">{{ partial "icon.html" "menu" }}</summary>
+        <nav aria-label="Mobile navigation">{{ range .Site.Menus.main }}<a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}</nav>
+      </details>
+    </div>
+  </div>
+</header>

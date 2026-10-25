@@ -1,0 +1,35 @@
+---
+title: The story behind Autonomous GIS
+date: '2025-03-29T22:30:58-05:00'
+summary: I attended the AAG Annual Meeting for the first time and gained so much from the experience. I had the chance to
+  meet many professors, peers, and even renowned scholars whose names I had only seen in books before. One scholar I’ve long
+  admired mentioned that our team’s article on the concept of Autonomous GIS […]
+original: https://gladcolor.wordpress.com/2025/03/29/the-story-behind-autonomous-gis/
+wordpress_id: 35
+aliases:
+- /post/the-story-behind-autonomous-gis/
+---
+
+I attended the AAG Annual Meeting for the first time and gained so much from the experience. I had the chance to meet many professors, peers, and even renowned scholars whose names I had only seen in books before. One scholar I’ve long admired mentioned that our team’s article on the concept of Autonomous GIS was discussed in his group meeting, and he had personally read it several times. Another well-known expert in the field also found our work to be highly innovative! I was genuinely encouraged by these interactions—especially considering that, since the paper was released online more than two years ago, I’ve had very few opportunities to exchange ideas with other scholars in the field. I tend to be more introverted and hadn’t participated in conferences like AAG before.
+
+The paper I co-authored with my advisor, Autonomous GIS: the next-generation AI-powered GIS, was among the earliest explorations of GIS agents in the geographic information science community. It became the most-read article of 2024 and of the past six years in the International Journal of Digital Earth, and currently ranks as the 10th most-read article in the journal’s history since its launch in 2008 (hopefully it’ll climb to the top five this year).
+
+As the saying goes, “There is no first in writing, no second in martial arts.” Indeed, there are still many aspects that the paper didn’t fully address—particularly due to space limitations. While the core ideas were presented, we didn’t delve into the technical foundations or prototype implementation of Autonomous GIS. Although we shared the source code, the overall thinking has mostly remained internal to our team. I’d like to take this opportunity to briefly explain a few of those points and welcome any discussion or collaboration.
+
+We began this project around early 2023, shortly after the release of GPT-4, which had a huge societal impact. The geospatial community was also exploring various new directions. Meanwhile, many agent frameworks like LangChain had already been available for several months. At the time, we were in a tough spot—on one hand excited by this real form of “intelligence,” but on the other hand unsure how to put it into meaningful use. We didn’t want to just build small demos or limit ourselves to prompt engineering.
+
+Eventually, after long reflection, we realized we should start from the essence of spatial analysis—geoprocessing workflows. With that clarity, the coding progressed quickly. We developed an Autonomous GIS agent, LLM-Geo, and within two to three months, the paper had taken shape. Our team felt it was a strong contribution, and the article’s citations and readership have since validated that view.
+
+We believe much of this success stems from the team’s long-term experience. We’ve worked in GIS for over two decades, both in academia and industry. Personally, after my undergraduate degree, I spent over ten years managing data engineering projects and technical teams—so breaking problems down and designing workflows has become second nature. I recall a study suggesting that people with management experience tend to write better prompts for LLMs, and I couldn’t agree more.
+
+In addition, both my advisor and I have backgrounds in software engineering. When designing LLM-Geo, we applied object-oriented principles, emphasized decoupling of functions, and kept the agent core separate from external interactions. We also prioritized code reusability. In hindsight, these were sound design choices. Based on this architecture, our team has since developed several additional agents, and this modular design has significantly supported our progress.
+
+Notably, we didn’t use existing agent frameworks like LangChain or AutoGen. We tried them but found them overly abstract and not well-suited for the computational and data-intensive tasks of spatial analysis. To stay flexible, we chose to build everything from scratch. Interestingly, a recent review article from Anthropic on agent applications echoed similar thoughts—advising against introducing unnecessary complexity and avoiding agent development unless absolutely necessary.
+
+For automated, workflow-based spatial analysis to truly minimize human intervention, every step must be accurate, which places high demands on the agent’s coding abilities. From practical experience, completing a task in one shot is unrealistic. Instead, success requires breaking it down into small steps, gradually completing and validating each one. So, we modeled our approach after real-world software engineering practices, and built features into LLM-Geo for automatic code review and debugging. We believe these capabilities are key reasons for LLM-Geo’s high success rate. In contrast, some contemporary papers reported only a 25% success rate for their agents, likely because they lacked such supporting features.
+
+The concept of Autonomous GIS is still in its early stages. We hope to establish it as a new subfield within geographic information science, and there’s still much work to be done. Currently, we’re developing a conceptual framework and have identified dozens of research topics that urgently need exploration. We look forward to sharing these new developments with the community soon!
+
+Read the article: [Autonomous GIS: the next-generation AI-powered GIS](https://www.tandfonline.com/doi/full/10.1080/17538947.2023.2278895?src=most-read-all-time#d1e718)
+
+![](media/wordpress/the-story-behind-autonomous-gis/llm-geo-f9d97ba79.png)

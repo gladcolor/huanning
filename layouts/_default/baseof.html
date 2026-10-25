@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ $desc := .Site.Params.description }}
+  {{ if .Params.summary }}{{ $desc = .Params.summary }}{{ else if .Description }}{{ $desc = .Description }}{{ end }}
+  <meta name="description" content="{{ $desc }}">
+  <meta name="author" content="Huan Ning">
+  <meta name="color-scheme" content="light dark">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | Huan Ning{{ end }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="Huan Ning RSS feed" href="{{ .Permalink }}">{{ end }}
+  <script>try{var t=localStorage.getItem("theme");if(t==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{ partial "header.html" . }}
+  <main id="main">{{ block "main" . }}{{ end }}</main>
+  {{ partial "footer.html" . }}
+  <script>
+    document.querySelector(".theme-toggle").addEventListener("click", function () {
+      var root = document.documentElement, dark = root.getAttribute("data-theme") !== "dark";
+      if (dark) root.setAttribute("data-theme", "dark"); else root.removeAttribute("data-theme");
+      try { localStorage.setItem("theme", dark ? "dark" : "light"); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

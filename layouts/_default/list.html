@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="container narrow page">
+  {{ partial "page-header.html" . }}
+  {{ with .Content }}<div class="page-intro prose">{{ . }}</div>{{ end }}
+  <div class="stream">
+    {{ range .Paginator.Pages }}{{ partial "stream-item.html" (dict "page" .) }}{{ else }}<p>No entries yet. New content will appear here automatically.</p>{{ end }}
+  </div>
+  {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}

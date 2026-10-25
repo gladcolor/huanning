@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="container narrow page">
+  <header class="page-header">
+    <h1 class="page-title">Page not found</h1>
+    <p class="page-subtitle">The page may have moved. Try the search, or start from the home page.</p>
+  </header>
+  <p class="cta-group">
+    <a class="btn btn-primary" href="{{ "search/" | relURL }}">Search the website {{ partial "icon.html" "arrow" }}</a>
+    <a class="btn btn-outline" href="{{ .Site.Home.RelPermalink }}">Home</a>
+  </p>
+</div>
+{{ end }}

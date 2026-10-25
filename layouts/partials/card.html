@@ -1,0 +1,11 @@
+{{ $p := . }}
+{{ $thumb := partial "thumb.html" (dict "page" $p "size" "720x450") }}
+<article class="card">
+  {{ with $p.Params.area }}<p class="meta">{{ . }}</p>{{ end }}
+  <a class="card-image" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true">
+    {{ with $thumb }}<img src="{{ . }}" alt="" loading="lazy" width="720" height="450">{{ else }}<span class="card-placeholder">{{ partial "icon.html" "map" }}</span>{{ end }}
+  </a>
+  <h3 class="card-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+  {{ with $p.Params.summary }}<p class="card-summary">{{ . }}</p>{{ end }}
+  {{ with $p.Params.demo_url }}<p class="card-links"><a href="{{ . }}" target="_blank" rel="noopener noreferrer">Interactive demo {{ partial "icon.html" "external" }}</a></p>{{ end }}
+</article>

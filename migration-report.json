@@ -1,0 +1,124 @@
+{
+  "run_utc": "2026-10-14T02:38:30.948388+00:00",
+  "wordpress": {
+    "status": "partial",
+    "posts_api_count": 11,
+    "posts_migrated": 11,
+    "pages_api_count": 0,
+    "pages_migrated": 0,
+    "files": [
+      {
+        "source": "https://gladcolor.wordpress.com/2026/10/13/how-to-build-a-memory-system-for-an-ai-agent/",
+        "destination": "content/post/ai-agent-memory-system.md"
+      },
+      {
+        "source": "https://gladcolor.wordpress.com/2026/09/03/what-should-be-the-scientific-communitys-immediate-priorities-in-the-age-of-agi/",
+        "destination": "content/post/2026-09-03-scientific-priorities-agi.md"
+      },
+      {
+        "source": "https://gladcolor.wordpress.com/2026/08/22/federal-geographic-data-committee-adopted-our-proposed-goals-of-autonomous-gis/",
+        "destination": "content/post/federal-geographic-data-committee-adopted-our-proposed-goals-of-autonomous-gis.md"
+      },
+      {
+        "source": "https://gladcolor.wordpress.com/2026/04/06/can-a-31b-open-weight-model-handle-autonomous-gis-tasks-on-a-single-gpu-i-tested-googles-new-gemma-4-31b-it-q4-k-m-on-an-rtx-3090-to-find-out-%f0%9f%a4%96%f0%9f%97%ba%ef%b8%8f/",
+        "destination": "content/post/can-a-31b-open-weight-model-handle-autonomous-gis-tasks-on-a-single-gpu-i-tested-googles-new-gemma-4-31b-it-q4-k-m-.md"
+      },
+      {
+        "source": "https://gladcolor.wordpress.com/2026/02/19/from-data-source-handbooks-to-agent-skills-how-academic-research-anticipated-industry-trends/",
+        "destination": "content/post/2026-02-19-agent-skills.md"
+      },
+      {
+        "source": "https://gladcolor.wordpress.com/2025/10/14/parquet-format-may-be-faster-than-csv/",
+        "destination": "content/post/2025-10-14-parquet-vs-csv.md"
+      },
+      {
+        "source": "https://gladcolor.wordpress.com/2025/09/11/ai-assisted-scientific-research/",
+        "destination": "content/post/2025-09-11-ai-research.md"
+      },
+      {
+        "source": "https://gladcolor.wordpress.com/2025/04/13/autonomous-gis-as-infrastructure/",
+        "destination": "content/post/2025-04-13-gis-infrastructure.md"
+      },
+      {
+        "source": "https://gladcolor.wordpress.com/2025/04/10/geospatial-reasoning-by-google-a-leap-towards-autonomous-gis/",
+        "destination": "content/post/2025-04-10-geospatial-reasoning.md"
+      },
+      {
+        "source": "https://gladcolor.wordpress.com/2025/03/29/the-story-behind-autonomous-gis/",
+        "destination": "content/post/2025-03-29-story-of-autonomous-gis.md"
+      },
+      {
+        "source": "https://gladcolor.wordpress.com/2025/03/19/the-zeroth-law-of-geography-and-geospatial-modeling/",
+        "destination": "content/post/2025-03-19-zeroth-law.md"
+      }
+    ],
+    "notes": [
+      "Public posts: 11/11 migrated; WordPress pages APIs responded HTTP 404 and page count cannot be independently verified without account export.",
+      "All public post HTML and API JSON are archived. Locally downloadable images stored in static/media/wordpress/."
+    ]
+  },
+  "google_sites": {
+    "status": "completed",
+    "pages_requested": 4,
+    "pages_saved": 4,
+    "projects_updated": 3,
+    "bibliography_entries": 8,
+    "assets_by_page": {
+      "home": [
+        "media/google-sites/home/amxu72ta9vjra0p7skxbulxn-x9lpbesw48iwqxhialkkaiu1ypuzcd-c3728fc89.png"
+      ],
+      "projects": [
+        "media/google-sites/projects/amxu72sqqvrkib7exbw1m-5zggjwtv7rbbtadr1-rlc6w5la6o6gpbb-65560b3b6.png",
+        "media/google-sites/projects/amxu72tmlsbxbe1ip0wpjlv81gptovvlmjat63ck21mjn0ob044w98h-1cab0d552.png",
+        "media/google-sites/projects/amxu72uwrpwsj73erzsrc27kkpoxxs9dfds2v-rzvntlneh-ig_dv6u-8aa111f0a.png"
+      ],
+      "publications": [],
+      "thoughts": [
+        "media/google-sites/thoughts/amxu72spixljpnd446gfmabphsoufp-h2pwbe1b0epb31xysqhue4u5-bcbf26ae9.png",
+        "media/google-sites/thoughts/amxu72sw0pimlzatdrfaeo9egq6nao0hqmsvjgdwevhh7i01ykqeigf-0d9788e3b.jpg",
+        "media/google-sites/thoughts/amxu72tlrlyswdpdkhsmhgl_vwfvwxvsflxxbd3ndiskqwcr9q1ki8w-2bf332b12.png",
+        "media/google-sites/thoughts/amxu72ugdmvvjdmyuhpdlmbdgkhwfk3pc_mtegvoocfd1jft4keqdt8-48899b60d.jpg",
+        "media/google-sites/thoughts/amxu72uw1833j1c1jyec8itxxeqps6_1czqgfxdvvugaro4n-rxbn5o-d18c0c062.png",
+        "media/google-sites/thoughts/ap9e6xxdrr2qjh2gygkjup2bhzisx0vfcocz90lfngpb3y25nrxolgl-6331f7d66.jpg"
+      ]
+    },
+    "pages": [
+      {
+        "source": "https://www.huanning.me/",
+        "text_characters": 1550,
+        "images": 1
+      },
+      {
+        "source": "https://www.huanning.me/projects",
+        "text_characters": 3846,
+        "images": 3
+      },
+      {
+        "source": "https://www.huanning.me/publications",
+        "text_characters": 9215,
+        "images": 0
+      },
+      {
+        "source": "https://www.huanning.me/thoughts",
+        "text_characters": 20974,
+        "images": 6
+      }
+    ],
+    "bibliography_citation_paragraphs_preserved": 38,
+    "curation_note": "The full Google Sites bibliography was rebuilt from archive/google-sites/publications.md rather than collapsed year-group text.",
+    "project_figure_links_localized": 3,
+    "thoughts_figure_links_localized": 5
+  },
+  "assets": {
+    "saved": 19,
+    "failed": [],
+    "oversize": []
+  },
+  "errors": [
+    {
+      "source": "WordPress",
+      "kind": "pages",
+      "message": "404 Client Error: Not Found for url: https://public-api.wordpress.com/rest/v1.1/sites/gladcolor.wordpress.com/pages/?number=100"
+    }
+  ]
+}

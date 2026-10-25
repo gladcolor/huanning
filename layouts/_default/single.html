@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ $dated := in (slice "post" "thoughts" "news") .Section }}
+<div class="container article-container page">
+  <article>
+    <header class="article-header">
+      <h1 class="article-title">{{ .Title }}</h1>
+      {{ if $dated }}
+      <p class="meta">
+        {{- with .CurrentSection }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end -}}
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        {{- if gt .ReadingTime 0 }}<span>{{ .ReadingTime }} min read</span>{{ end -}}
+      </p>
+      {{ else if eq .Section "publication" }}
+      <p class="meta">{{ with .Params.publication }}<span>{{ . }}</span>{{ else }}<span>{{ .Date.Format "2006" }}</span>{{ end }}</p>
+      {{ else if eq .Section "project" }}
+      {{ with .Params.area }}<p class="meta"><span>{{ . }}</span></p>{{ end }}
+      {{ end }}
+      {{ if not $dated }}{{ with .Params.summary }}<p class="lead">{{ . }}</p>{{ end }}{{ end }}
+      {{ if or .Params.demo_url .Params.paper_url .Params.repo_url .Params.data_url .Params.doi }}
+      <p class="btn-links">
+        {{ with .Params.demo_url }}<a class="btn btn-primary btn-sm" href="{{ . }}" target="_blank" rel="noopener noreferrer">Interactive Demo {{ partial "icon.html" "external" }}</a>{{ end }}
+        {{ with .Params.paper_url }}<a class="btn btn-outline btn-sm" href="{{ . }}" target="_blank" rel="noopener noreferrer">Paper</a>{{ end }}
+        {{ with .Params.doi }}<a class="btn btn-outline btn-sm" href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">DOI</a>{{ end }}
+        {{ with .Params.repo_url }}<a class="btn btn-outline btn-sm" href="{{ . }}" target="_blank" rel="noopener noreferrer">Code</a>{{ end }}
+        {{ with .Params.data_url }}<a class="btn btn-outline btn-sm" href="{{ . }}" target="_blank" rel="noopener noreferrer">Dataset</a>{{ end }}
+      </p>
+      {{ end }}
+    </header>
+    <div class="prose">{{ .Content }}</div>
+    {{ with .Params.tags }}<p class="tags">{{ range . }}<span>{{ . }}</span>{{ end }}</p>{{ end }}
+  </article>
+</div>
+{{ end }}

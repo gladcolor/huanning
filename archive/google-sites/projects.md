@@ -1,0 +1,49 @@
+# Projects
+
+### I established a lot of research projects, and hope my work can help to enhance the understand the of natural and soietal phenomena. Due to my spatial data industry training, I pull a lot of endeavor to autonatic the data processing. Thus, I use a lot of AI techniques in most projects!
+
+## Mosquito larval habitat and productivity prediction
+
+Africa’s progress toward malaria elimination is being threatened by the recent invasion of Anopheles stephensi, an urban-adapted Asian malaria vector now spreading across multiple countries, including Ethiopia, Somalia, Kenya, Nigeria, and Ghana. This species thrives in man-made urban water containers, especially construction pits, shows high resistance to adulticide insecticides, and exhibits biting behaviors that reduce the effectiveness of traditional malaria interventions. My work is to predict An. Stephensi habatit and productivity to support efficient on-site treatment, as well as the comprehensive geospatial support for site larval survey, from satellite image processing to navigation app. This is an ongoing project, funded by the Gates Foundation.
+
+![](https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tmlSBxBe1Ip0WPJlv81gpTovVLMJaT63ck21MJn0Ob044w98hvFwwjyPl6kstoimUIT-AnEyYif-OIZ-Ci1Yr-W6yJynxaqu4pP4eWl5Cl48XgLoIBAojeFoWIfufhoM4WMGSwvqcljEgBGkaKTkW0qYuhNcyIf2UgoH8ZWeEYejarOyJjLGYo1VFxR66-ulYpJpp3ZblifNRoYgBdxYqbOskxpjr5C6Ls7L7NCdc=w1280)
+
+Detected construction pits, a major type of mosquito An. Stephensi breeding sites.
+
+![](https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72sqQvrkIb7eXbW1M-5ZgGjWTv7RBBTaDr1-rlc6w5lA6O6GPbbUuR_qBvXFmPRBAskzmsqYSeh3r_nEXGkdtz0THEwPr4OsHHytxz7eWhyOQuEKG_1vpBPx1pmfEdpmLDE6BxiPI9DYlwXKkYiiIoL-S9BNnHxACDKXc8dfUkk_DW5rYaMzXVu-doOnijUIO9gO8-Lh9vjioyR6zUESSqSKd_KcSFNNOZJFc0zoMso=w1280)
+
+Online map for on-site larval survey visualization.
+
+## LLM-Find: Data retrieval agent for Autonomous Geographic Information System (GIS)
+
+LLM-Find is an autonomous agent for geo-spatial data retrieval and downloading. It can help to obtain data from your favorite data sources, such as OpenStreetMap. It is very convenient for data scientists who need to collect various data for analyzing tasks. I like this agent very much and will use it for future research on autonomous modeling.
+
+What the user need to is to type in the request in natural language, the agent will return the data for you in minutes. For example, if you want to download all coffee shop locations from OpenStreetMap in New York City, all you need to do is input "download all coffee shop locations in New York City", and the agent will download the location points for you. More details can be found [here](https://github.com/gladcolor/LLM-Find?tab=readme-ov-file). 
+
+Below is an example of download boundary and image for Tempe, Arizona, US.
+
+## Hourly population estimation at neighorhood level
+
+We are excited to share the first large-scale fine-grained hourly population dataset (per our knowledge😊)! This dataset contains dynamic populations of all the United States' 220,000 neighborhoods (Census block groups) for 8,760 hours in 2022. In other words, a population map for each hour, and 8,760 maps in total! We compared the hourly population with reported or estimated visitor counts in 11 events or places, and the match is promising.
+
+More details can be found in our paper "Nationwide Hourly Population Estimating at the Neighborhood Scale in the United States Using Stable-Attendance Anchor Calibration". The paper will be released soon! We expect the proposed statistical approach to be widely used to estimate the dynamic population in the future. Millions of thanks to the research team: Huan Ning, Zhenlong Li, Manzhu Yu, Xiao Huang, Shiyan Zhang, and Shan Qiao!
+
+This product has a lot of applications, such as environmental exposure assessment, emergency response, and social resilience analysis. This study is based on the human mobility big data derived from smartphone ping data, released by [Advan Research](https://docs.deweydata.io/docs/advan-research).
+
+Please get in touch with the research team with any questions.
+
+We strongly recommend using this website to view the dataset. You can select any neighborhoods (Census block groups) to check their hourly populations and find interesting cases. For example, please check local festivals you know about or the peak seasons for attractions. 3D animation is also supported!
+
+Site link: [Fine-Grained US Hourly Population Map (2022)](https://gladcolor.github.io/hourly_population)
+
+![](https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72uwRPwsJ73erzSRc27KkpOXXs9dfds2v-rZvNtLNeh-IG_DV6UUkJm3PJ9GQ3Wtf1bK5iyfsza-iC_vGVCNPT3984o9YBps0jM0tIb-BhYmD_3mrJ88NW8CVAi5BUsnhD7497o4hifDnZiRZvKR7aPPNGghcF84hL8MpbVuGQ4NaUtIpZmbld8oVWtg7lEWojd0cJVC8c6V3KfpQXFYVCZokZFrUVx95DT9SpdOdEM=w1280)
+
+## Street tree diameter measurement
+
+[LinkedIn](https://www.linkedin.com/in/huan-ning-53367254),  [GitHub](http://github.com/gladcolor)
+
+huan.ning@emory.edu
+
+[C.V.](https://1drv.ms/w/c/369e31f0e09c2899/ERGxPMoWWa5PhR1R1g5cpGoBUNeBIm9q52PVVq5SoRev3g?e=npcVmQ) ,  [Google Scholar](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=aK57tWMAAAAJ&sortby=pubdate)
+
+[Blog](https://gladcolor.wordpress.com/)

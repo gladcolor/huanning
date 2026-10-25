@@ -1,4 +1,3 @@
 {{ $dst := .Destination }}
-{{ if hasPrefix $dst "media/wordpress/" }}{{ $dst = $dst | relURL }}{{ end }}
-{{ if hasPrefix $dst "media/google-sites/" }}{{ $dst = $dst | relURL }}{{ end }}
+{{ if hasPrefix $dst "media/" }}{{ $dst = $dst | relURL }}{{ end }}
 <img src="{{ $dst | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">

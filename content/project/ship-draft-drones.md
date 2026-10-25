@@ -1,7 +1,6 @@
 ---
 title: "AI in the Shipping Industry: A Practical Application of Drones and Vision Language Models"
 date: 2026-10-25T16:35:22-04:00
-weight: 35
 area: Computer vision, drones
 summary: Drones photograph a cargo ship's draft marks and a vision language model reads them, cutting the inspection from more than an hour to about 15 minutes.
 image: media/linkedin/ship-draft-drones/ship-draft-cover.webp

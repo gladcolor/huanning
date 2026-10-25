@@ -1,7 +1,6 @@
 ---
 title: U.S. Hourly Population Maps
 date: 2025-04-01
-weight: 10
 area: Human mobility, urban analytics
 demo_url: https://gladcolor.github.io/hourly_population/
 demo_status: live

@@ -1,7 +1,6 @@
 ---
 title: 'LLM-Find: A Geospatial Data Retrieval Agent'
 date: 2025-01-01
-weight: 30
 area: AI agents, data discovery
 repo_url: https://github.com/gladcolor/LLM-Find
 paper_url: https://doi.org/10.1080/17538947.2025.2458688

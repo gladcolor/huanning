@@ -1,14 +1,12 @@
 ---
 title: AI-assisted scientific research
 date: '2025-09-11T13:01:39-05:00'
-summary: 'Huan Ning | 2025-09-11 Recently, Google released a wonderful paper:  An AI system to help scientists write expert-level
-  empirical software ( https://research.google/blog/accelerating-scientific-discovery-with-ai-powered-empirical-software ).
-  The authors synthesized the following ideas to enable LLM to write programs for scientific research:  Genetic Programming,
-  Generative Prog'
+summary: "Recently, Google released a wonderful paper: An AI system to help scientists write expert-level empirical software. The authors synthesized the following ideas to enable LLM to write programs for scientific research: Genetic Programming, Generative Programming, LLM coding, Automated Machine Learning (AutoML), and agents for scientific discovery."
 original: https://gladcolor.wordpress.com/2025/09/11/ai-assisted-scientific-research/
 wordpress_id: 49
 aliases:
 - /post/ai-assisted-scientific-research/
+- /post/2025-09-11-ai-research/
 ---
 
 Huan Ning | 2025-09-11

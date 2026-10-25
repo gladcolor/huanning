@@ -1,14 +1,12 @@
 ---
 title: Autonomous GIS as infrastructure?
 date: '2025-04-13T15:19:52-05:00'
-summary: 'Huan Ning, Zhenlong Li | 2025-04-13 In a recent vision paper, GIScience in the Era of Artificial Intelligence: A
-  Research Agenda Towards Autonomous GIS, we proposed three scales of autonomous GIS agents: local, centralized, and infrastructure.
-  Some GIS agents have been developed on local and centralized scales, such as LLM-Geo and Google Geospatial Reasoning. What
-  do the infras'
+summary: "In a recent vision paper, GIScience in the Era of Artificial Intelligence: A Research Agenda Towards Autonomous GIS, we proposed three scales of autonomous GIS agents: local, centralized, and infrastructure. Some GIS agents have been developed on local and centralized scales, such as LLM-Geo and Google Geospatial Reasoning. What do the infrastructure agents look like?"
 original: https://gladcolor.wordpress.com/2025/04/13/autonomous-gis-as-infrastructure/
 wordpress_id: 46
 aliases:
 - /post/autonomous-gis-as-infrastructure/
+- /post/2025-04-13-gis-infrastructure/
 ---
 
 **Huan Ning, Zhenlong Li | 2025-04-13**

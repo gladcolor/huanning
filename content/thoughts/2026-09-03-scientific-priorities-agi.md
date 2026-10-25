@@ -8,6 +8,7 @@ original: https://gladcolor.wordpress.com/2026/09/03/what-should-be-the-scientif
 wordpress_id: 79
 aliases:
 - /post/what-should-be-the-scientific-communitys-immediate-priorities-in-the-age-of-agi/
+- /post/2026-09-03-scientific-priorities-agi/
 ---
 
 On September 3, 2026, OpenAI released GPT-6 and formally declared that the era of artificial general intelligence, or AGI, had arrived, meaning that artificial intelligence now surpasses most humans in most domains. Regardless of how AGI is defined, AI has clearly reached an exceptionally high level of analytical and reasoning capability, at a cost that is increasingly affordable. When our team was writing about this topic two years ago, we still had to carefully consider whether to mention AGI. Today, perhaps that debate is no longer necessary.

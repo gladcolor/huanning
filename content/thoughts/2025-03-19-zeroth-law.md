@@ -1,14 +1,12 @@
 ---
 title: The Zeroth Law of Geography and Geospatial Modeling
 date: '2025-03-19T00:22:25+00:00'
-summary: Introduction Geospatial modeling is the process of combining observations and spatial data to investigate the dynamic
-  of phenomena over the Earth, covering physical and societal processes. Such investigations may provide explanations or predictions
-  of phenomena (Crooks et al. 2019). Various modeling methods have been established, such as physical modeling, statistical
-  modeling,
+summary: "Geospatial modeling is the process of combining observations and spatial data to investigate the dynamic of phenomena over the Earth, covering physical and societal processes. Such investigations may provide explanations or predictions of phenomena (Crooks et al. 2019)."
 original: https://gladcolor.wordpress.com/2025/03/19/the-zeroth-law-of-geography-and-geospatial-modeling/
 wordpress_id: 4
 aliases:
 - /post/the-zeroth-law-of-geography-and-geospatial-modeling/
+- /post/2025-03-19-zeroth-law/
 ---
 
 1. Introduction

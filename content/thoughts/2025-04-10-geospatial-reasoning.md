@@ -1,14 +1,12 @@
 ---
 title: 'Geospatial Reasoning by Google: A Leap Towards Autonomous GIS'
 date: '2025-04-10T10:02:53-05:00'
-summary: Huan Ning | 04/09/2025 Google Research released a framework named Geospatial Reasoning, which provides a user-friendly
-  inference for spatial analysis and visualization. By receiving users’ requests in natural language about geospatial tasks,
-  Geospatial Reasoning can choose appropriate data sources and foundation models and then create and execute geoprocessing
-  workflows to extr
+summary: "Google Research released a framework named Geospatial Reasoning, which provides a user-friendly inference for spatial analysis and visualization. By receiving users' requests in natural language about geospatial tasks, Geospatial Reasoning can choose appropriate data sources and foundation models and then create and execute geoprocessing workflows to extract information and insights from data to reply to users' requests."
 original: https://gladcolor.wordpress.com/2025/04/10/geospatial-reasoning-by-google-a-leap-towards-autonomous-gis/
 wordpress_id: 40
 aliases:
 - /post/geospatial-reasoning-by-google-a-leap-towards-autonomous-gis/
+- /post/2025-04-10-geospatial-reasoning/
 ---
 
 **Huan Ning | 04/09/2025**

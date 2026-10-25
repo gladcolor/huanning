@@ -8,6 +8,7 @@ original: https://gladcolor.wordpress.com/2026/02/19/from-data-source-handbooks-
 wordpress_id: 62
 aliases:
 - /post/from-data-source-handbooks-to-agent-skills-how-academic-research-anticipated-industry-trends/
+- /post/2026-02-19-agent-skills/
 ---
 
 In May 2024, our team ([**Zhenlong Li**](https://www.linkedin.com/in/zhenlongli?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAARvnTYBvom3tpF9GgXgXHu0V8PeJ1E6PaE) [**Temitope Ezekiel Akinboyewa**](https://www.linkedin.com/in/temitope-akinboyewa?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAABcwlx4BqVa2mvISnAMmeos0wwVeN6AE1MQ) [**M. Naser Lessani)**](https://www.linkedin.com/in/ACoAADABFKAB7Cu_KWpvkP3doI3LM8okUuzDyj8?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADABFKAB7Cu_KWpvkP3doI3LM8okUuzDyj8) developed LLM-Find — an autonomous GIS agent framework for geospatial data retrieval. At its core is a concept we call the **“data source handbook”**: a structured, plug-and-play knowledge package that teaches an LLM *how* to retrieve data from a specific source, including metadata, API details, code patterns, and technical requirements.

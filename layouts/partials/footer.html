@@ -1,12 +1,11 @@
 <footer class="site-footer">
-  <div class="container">
+  <div class="container footer-inner">
+    <p>© {{ now.Year }} Huan Ning. Built with <a href="https://gohugo.io/">Hugo</a>; source on <a href="https://github.com/gladcolor/huanning">GitHub</a>.</p>
     <p class="footer-links">
-      <a href="{{ .Site.Params.github }}">GitHub</a>
-      <a href="{{ .Site.Params.scholar }}">Google Scholar</a>
       <a href="mailto:{{ .Site.Params.email }}">Email</a>
+      <a href="{{ .Site.Params.scholar }}">Google Scholar</a>
+      <a href="{{ .Site.Params.github }}">GitHub</a>
       <a href="{{ "post/index.xml" | relURL }}">RSS</a>
     </p>
-    <p>© {{ now.Year }} Huan Ning · Spatial computing, AI for Science, and Autonomous GIS</p>
-    <p class="footer-note">Published with <a href="https://gohugo.io/">Hugo</a>. Content archived on <a href="https://github.com/gladcolor/huanning">GitHub</a>.</p>
   </div>
 </footer>

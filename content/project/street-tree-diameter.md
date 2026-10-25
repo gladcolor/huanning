@@ -1,7 +1,8 @@
 ---
 title: "Street Tree Diameter Measurement"
 date: 2026-10-01
-area: "STREET VIEW / URBAN ENVIRONMENT"
+weight: 40
+area: "Street view, urban environment"
 summary: "Exploring long-term tree growth measurements using historical street-view imagery."
 tags: ["Street View","Urban Trees","Remote Sensing"]
 ---

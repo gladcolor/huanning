@@ -1,0 +1,16 @@
+{{- $home := site.Home -}}
+<aside class="profile" aria-label="About Huan Ning">
+  {{ with site.Params.portrait }}{{ with resources.Get . }}{{ $p := .Fill "308x308 webp q88" }}
+  <img class="profile-photo" src="{{ $p.RelPermalink }}" width="154" height="154" alt="Portrait of Huan Ning">
+  {{ end }}{{ end }}
+  <div class="profile-id">
+    <p class="profile-name">Huan Ning</p>
+    <p class="profile-role">{{ $home.Params.role }}<br>{{ $home.Params.affiliation }}</p>
+  </div>
+  <ul class="profile-links">
+    <li><a href="mailto:{{ site.Params.email }}">{{ partial "icon.html" "mail" }}{{ site.Params.email }}</a></li>
+    <li><a href="{{ site.Params.scholar }}">{{ partial "icon.html" "scholar" }}Google Scholar</a></li>
+    <li><a href="{{ site.Params.github }}">{{ partial "icon.html" "github" }}GitHub</a></li>
+    {{ with site.Params.linkedin }}<li><a href="{{ . }}">{{ partial "icon.html" "linkedin" }}LinkedIn</a></li>{{ end }}
+  </ul>
+</aside>

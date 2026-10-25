@@ -1,9 +1,5 @@
 {{ $p := . }}
 <article class="pub-item">
   <h3 class="pub-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
-  {{ with $p.Params.publication }}<p class="pub-venue">{{ . }}</p>{{ end }}
-  <p class="btn-links">
-    {{ with $p.Params.doi }}<a class="btn btn-outline btn-sm" href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">DOI</a>{{ end }}
-    <a class="btn btn-outline btn-sm" href="{{ $p.RelPermalink }}">Details</a>
-  </p>
+  <p class="pub-venue">{{ with $p.Params.publication }}<span>{{ . }}</span>{{ else }}<span>{{ $p.Date.Format "2006" }}</span>{{ end }}{{ with $p.Params.doi }}<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">DOI</a>{{ end }}</p>
 </article>

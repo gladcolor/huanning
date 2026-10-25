@@ -1,59 +1,48 @@
 {{ define "main" }}
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-copy">
-      <h1 class="hero-title">Geospatial AI for scientific discovery.</h1>
-      <p class="lead">Research projects, peer-reviewed publications, interactive tools, and writing on autonomous GIS, spatial data science, and AI for science.</p>
-      <p class="hero-actions">
-        <a class="btn btn-primary" href="{{ "project/" | relURL }}">Explore Research {{ partial "icon.html" "arrow" }}</a>
-        <a class="btn btn-outline" href="{{ "about/" | relURL }}">About Huan Ning</a>
-      </p>
-    </div>
-    {{ with .Site.Params.hero_image }}{{ with resources.Get . }}
-    {{ $img := .Fill "760x640 webp q80 Right" }}
-    <div class="hero-media"><img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="Huan Ning in front of a mountain landscape"></div>
-    {{ end }}{{ end }}
-  </div>
-</section>
+{{ $news := first 3 (where .Site.RegularPages "Section" "news").ByDate.Reverse }}
+{{ $newsTitles := slice }}{{ range $news }}{{ $newsTitles = $newsTitles | append .Title }}{{ end }}
+{{ $writing := union (where .Site.RegularPages "Section" "thoughts") (where .Site.RegularPages "Section" "post") }}
+{{ $writing = where $writing "Title" "not in" $newsTitles }}
+<div class="container home">
+  {{ partial "profile.html" . }}
+  <div class="home-main">
+    <section class="intro prose" aria-label="Introduction">{{ .Content }}</section>
 
-<section class="home-section">
-  <div class="container narrow">
-    <h2 class="section-title">Latest News</h2>
-    <div class="stream">{{ range first 4 (where .Site.RegularPages "Section" "news").ByDate.Reverse }}{{ partial "stream-item.html" (dict "page" .) }}{{ end }}</div>
-    <a class="see-all" href="{{ "news/" | relURL }}">See all news {{ partial "icon.html" "chevron" }}</a>
-  </div>
-</section>
+    <section class="block">
+      <header class="block-head"><h2>News</h2><a href="{{ "news/" | relURL }}">All news</a></header>
+      <ul class="dated-list">
+        {{ range $news }}<li><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+      </ul>
+    </section>
 
-<section class="home-section">
-  <div class="container narrow">
-    <h2 class="section-title">Research &amp; Writing</h2>
-    {{ $writing := union (where .Site.RegularPages "Section" "thoughts") (where .Site.RegularPages "Section" "post") }}
-    <div class="stream">{{ range first 5 $writing.ByDate.Reverse }}{{ partial "stream-item.html" (dict "page" . "showSection" true) }}{{ end }}</div>
-    <a class="see-all" href="{{ "post/" | relURL }}">See all blog posts {{ partial "icon.html" "chevron" }}</a>
-  </div>
-</section>
+    <section class="block">
+      <header class="block-head"><h2>Research</h2><a href="{{ "project/" | relURL }}">All projects</a></header>
+      <div class="project-list">
+        {{ range first 4 (where .Site.RegularPages "Section" "project").ByWeight }}
+        {{ $thumb := partial "thumb.html" (dict "page" . "size" "240x160") }}
+        <article class="project-row">
+          <a class="project-thumb" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">{{ with $thumb }}<img src="{{ . }}" alt="" width="120" height="80" loading="lazy">{{ else }}<span class="contour-fill"></span>{{ end }}</a>
+          <div>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+            {{ with .Params.demo_url }}<p class="row-links"><a href="{{ . }}">Interactive map {{ partial "icon.html" "external" }}</a></p>{{ end }}
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </section>
 
-<section class="home-section">
-  <div class="container">
-    <h2 class="section-title">Selected Projects</h2>
-    <div class="card-grid">{{ range first 6 (where .Site.RegularPages "Section" "project").ByDate.Reverse }}{{ partial "card.html" . }}{{ end }}</div>
-    <a class="see-all" href="{{ "project/" | relURL }}">See all projects {{ partial "icon.html" "chevron" }}</a>
-  </div>
-</section>
+    <section class="block">
+      <header class="block-head"><h2>Selected publications</h2><a href="{{ "publication/" | relURL }}">All publications</a></header>
+      <div class="pub-list">{{ range first 4 (where .Site.RegularPages "Section" "publication").ByDate.Reverse }}{{ partial "pub-item.html" . }}{{ end }}</div>
+    </section>
 
-<section class="home-section">
-  <div class="container narrow">
-    <h2 class="section-title">Featured Publications</h2>
-    <div class="pub-list">{{ range first 4 (where .Site.RegularPages "Section" "publication").ByDate.Reverse }}{{ partial "pub-item.html" . }}{{ end }}</div>
-    <a class="see-all" href="{{ "publication/" | relURL }}">See all publications {{ partial "icon.html" "chevron" }}</a>
+    <section class="block">
+      <header class="block-head"><h2>Recent writing</h2><span class="block-links"><a href="{{ "thoughts/" | relURL }}">Thoughts</a><a href="{{ "post/" | relURL }}">Blog</a></span></header>
+      <ul class="dated-list">
+        {{ range first 5 $writing.ByDate.Reverse }}<li><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time><a href="{{ .RelPermalink }}">{{ .Title }}</a><span class="kind">{{ if eq .Section "thoughts" }}Thoughts{{ else }}Blog{{ end }}</span></li>{{ end }}
+      </ul>
+    </section>
   </div>
-</section>
-
-<section class="home-section cta-section">
-  <div class="container cta-group">
-    <a class="btn btn-primary btn-lg" href="{{ "about/" | relURL }}">About me {{ partial "icon.html" "arrow" }}</a>
-    <a class="btn btn-primary btn-lg" href="{{ .Site.Params.github }}">Open-source code {{ partial "icon.html" "arrow" }}</a>
-    <a class="btn btn-primary btn-lg" href="mailto:{{ .Site.Params.email }}">Get in touch {{ partial "icon.html" "arrow" }}</a>
-  </div>
-</section>
+</div>
 {{ end }}

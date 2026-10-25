@@ -88,6 +88,7 @@ content:
       - { name: title, label: Project title, type: string, required: true }
       - { name: date, label: Date, type: date }
       - { name: area, label: Research area, type: string }
+      - { name: weight, label: Display order (lower numbers first), type: number }
       - { name: summary, label: Short description, type: text }
       - { name: image, label: Card image (optional; otherwise the first image in the body is used), type: image }
       - { name: external_link, label: External link, type: string }
@@ -120,6 +121,18 @@ content:
       - { name: summary, label: Short summary, type: text }
       - { name: draft, label: Draft, type: boolean }
       - { name: body, label: Publication details, type: rich-text }
+  - name: home
+    label: Home page
+    type: file
+    path: content/_index.md
+    format: yaml-frontmatter
+    operations:
+      delete: false
+    fields:
+      - { name: title, label: Site title, type: string, required: true }
+      - { name: role, label: Role (shown under your name), type: string }
+      - { name: affiliation, label: Affiliation, type: string }
+      - { name: body, label: Introduction, type: rich-text }
   - name: about
     label: About page
     type: file

@@ -1,9 +1,6 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Huan Ning, home">
-      <span class="brand-mark" aria-hidden="true">HN</span>
-      <span class="brand-name">Huan Ning</span>
-    </a>
+    <a class="brand" href="{{ .Site.Home.RelPermalink }}">Huan Ning</a>
     <nav class="site-nav" aria-label="Primary navigation">
       {{ range .Site.Menus.main }}<a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}
     </nav>
@@ -14,7 +11,7 @@
       </button>
       <details class="mobile-nav">
         <summary class="icon-button" aria-label="Open menu">{{ partial "icon.html" "menu" }}</summary>
-        <nav aria-label="Mobile navigation">{{ range .Site.Menus.main }}<a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}</nav>
+        <nav aria-label="Mobile navigation"><a href="{{ .Site.Home.RelPermalink }}"{{ if .IsHome }} aria-current="page"{{ end }}>Home</a>{{ range .Site.Menus.main }}<a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}</nav>
       </details>
     </div>
   </div>

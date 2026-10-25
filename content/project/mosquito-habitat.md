@@ -1,7 +1,8 @@
 ---
 title: Urban Mosquito Habitat Prediction
 date: 2025-01-01
-area: GEOSPATIAL AI / PUBLIC HEALTH
+weight: 20
+area: Geospatial AI, public health
 summary: Geospatial detection and productivity prediction for urban mosquito larval habitats to support field surveillance.
 tags:
 - GeoAI

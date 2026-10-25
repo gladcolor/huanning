@@ -34,13 +34,13 @@ The U.S. Hourly Population Explorer is a currently linked example: https://gladc
 
 ## Publishing
 
-**`main` is the only long-lived branch.** Every push to `main` builds the site and deploys it to https://gladcolor.github.io/huanning/ (**Settings > Pages > Source** is **GitHub Actions**).
+**`main` is the only long-lived branch.** Every push to `main` builds the site and deploys it to https://www.huanning.me/ (**Settings > Pages > Source** is **GitHub Actions**; the old address https://gladcolor.github.io/huanning/ redirects there).
 
 1. Edit content on `main` with [Pages CMS](https://app.pagescms.org/) or GitHub's web editor. Saving an entry commits a Markdown file; GitHub Actions rebuilds the website. The CMS reads `.pages.yml` on `main`.
 2. For design or template changes, create a short-lived branch, open a pull request into `main`, wait for the **Validate website prototype** check, merge, and delete the branch.
 3. After a deploy, verify the homepage, internal links, blog, thoughts, projects, and search.
 
-**Do not change the DNS for huanning.me until the GitHub Pages test site has been checked.** When ready, configure the custom domain under Settings > Pages, then update the domain's DNS records. Update `.pages.yml` media output from `/huanning/media` to `/media` at that time.
+**Custom domain.** Settings > Pages uses `www.huanning.me`, and `baseURL` in `config/_default/hugo.yaml` matches it. At GoDaddy, `www` is a CNAME to `gladcolor.github.io` and the apex `@` has A records 185.199.108.153, 185.199.109.153, 185.199.110.153, and 185.199.111.153; keep the `google-site-verification` TXT record. Pages CMS stores uploads as `/media/...` for the domain root. Old Google Sites addresses (`/bio`, `/projects`, `/publications`, `/teaching`, `/thoughts`) still resolve.
 
 ## Content migration status
 

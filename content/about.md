@@ -1,5 +1,6 @@
 ---
 title: About Huan Ning
+aliases: [/bio/]
 summary: "Computational data scientist researching autonomous GIS, geospatial AI agents, and AI for Science."
 ---
 

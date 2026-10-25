@@ -25,7 +25,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Build site
-        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --minify
       - name: Generate static search
         run: npx --yes pagefind@1.5.2 --site public
       - name: Upload pages

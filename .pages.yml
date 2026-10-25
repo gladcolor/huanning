@@ -1,6 +1,5 @@
 # Edit at https://app.pagescms.org/ with authorized GitHub access.
-# Media URLs are set for the GitHub Pages project preview.
-# Change output to /media when the custom root domain is enabled.
+# Media URLs are set for the custom domain root (www.huanning.me).
 # Preserve metadata that is not explicitly exposed in the visual editor.
 settings:
   content:
@@ -8,7 +7,7 @@ settings:
 
 media:
   input: static/media
-  output: /huanning/media
+  output: /media
   rename: safe
 
 content:

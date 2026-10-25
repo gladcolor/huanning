@@ -1,5 +1,6 @@
 ---
 title: Publications
+aliases: [/publications/]
 description: Full academic bibliography migrated from huanning.me, with original citations and links preserved.
 ---
 

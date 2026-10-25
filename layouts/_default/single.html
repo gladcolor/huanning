@@ -1,28 +1,33 @@
 {{ define "main" }}
-<div class="container article-layout">
-  <article class="article">
-    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{{ .Site.Home.RelPermalink }}">Home</a><span aria-hidden="true">/</span>{{ with .CurrentSection }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</nav>
+{{ $dated := in (slice "post" "thoughts" "news") .Section }}
+<div class="container article-container page">
+  <article>
     <header class="article-header">
-      <p class="eyebrow">{{ if eq .Section "post" }}BLOG{{ else if eq .Section "" }}PROFILE{{ else }}{{ upper .Section }}{{ end }}</p>
-      <h1>{{ .Title }}</h1>
-      {{ with .Params.summary }}<p class="article-summary">{{ . }}</p>{{ end }}
-      {{ if and (not .Date.IsZero) (ne .Section "") (ne .Section "project") }}
-        <p class="article-byline">Huan Ning <span aria-hidden="true">·</span> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ if eq .Section "publication" }}{{ .Date.Format "2006" }}{{ else }}{{ .Date.Format "January 2, 2006" }}{{ end }}</time></p>
+      <h1 class="article-title">{{ .Title }}</h1>
+      {{ if $dated }}
+      <p class="meta">
+        {{- with .CurrentSection }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end -}}
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        {{- if gt .ReadingTime 0 }}<span>{{ .ReadingTime }} min read</span>{{ end -}}
+      </p>
+      {{ else if eq .Section "publication" }}
+      <p class="meta">{{ with .Params.publication }}<span>{{ . }}</span>{{ else }}<span>{{ .Date.Format "2006" }}</span>{{ end }}</p>
+      {{ else if eq .Section "project" }}
+      {{ with .Params.area }}<p class="meta"><span>{{ . }}</span></p>{{ end }}
+      {{ end }}
+      {{ if not $dated }}{{ with .Params.summary }}<p class="lead">{{ . }}</p>{{ end }}{{ end }}
+      {{ if or .Params.demo_url .Params.paper_url .Params.repo_url .Params.data_url .Params.doi }}
+      <p class="btn-links">
+        {{ with .Params.demo_url }}<a class="btn btn-primary btn-sm" href="{{ . }}" target="_blank" rel="noopener noreferrer">Interactive Demo {{ partial "icon.html" "external" }}</a>{{ end }}
+        {{ with .Params.paper_url }}<a class="btn btn-outline btn-sm" href="{{ . }}" target="_blank" rel="noopener noreferrer">Paper</a>{{ end }}
+        {{ with .Params.doi }}<a class="btn btn-outline btn-sm" href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">DOI</a>{{ end }}
+        {{ with .Params.repo_url }}<a class="btn btn-outline btn-sm" href="{{ . }}" target="_blank" rel="noopener noreferrer">Code</a>{{ end }}
+        {{ with .Params.data_url }}<a class="btn btn-outline btn-sm" href="{{ . }}" target="_blank" rel="noopener noreferrer">Dataset</a>{{ end }}
+      </p>
       {{ end }}
     </header>
-    {{ if eq .Section "project" }}
-      {{ if or .Params.demo_url .Params.repo_url .Params.paper_url .Params.data_url }}
-      <nav class="research-resource-links" aria-label="Research project resources">
-        {{ with .Params.demo_url }}<a class="button button-primary" href="{{ . }}" target="_blank" rel="noopener noreferrer">Interactive Demo ↗</a>{{ end }}
-        {{ with .Params.paper_url }}<a class="project-resource-text" href="{{ . }}" target="_blank" rel="noopener noreferrer">Paper ↗</a>{{ end }}
-        {{ with .Params.repo_url }}<a class="project-resource-text" href="{{ . }}" target="_blank" rel="noopener noreferrer">Code Repository ↗</a>{{ end }}
-        {{ with .Params.data_url }}<a class="project-resource-text" href="{{ . }}" target="_blank" rel="noopener noreferrer">Dataset ↗</a>{{ end }}
-      </nav>
-      {{ end }}
-    {{ end }}
-    <div class="article-prose">{{ .Content }}</div>
-    {{ with .Params.tags }}<div class="tags">{{ range . }}<span>{{ . }}</span>{{ end }}</div>{{ end }}
+    <div class="prose">{{ .Content }}</div>
+    {{ with .Params.tags }}<p class="tags">{{ range . }}<span>{{ . }}</span>{{ end }}</p>{{ end }}
   </article>
-  <aside class="article-aside"><div class="article-aside-inner"><p class="eyebrow">ABOUT THIS WEBSITE</p><p>Research and writing by Huan Ning on AI-enabled spatial science and its applications.</p><a href="{{ "about/" | relURL }}">About the author ↗</a><hr><a href="{{ "post/index.xml" | relURL }}">Subscribe to blog RSS ↗</a></div></aside>
 </div>
 {{ end }}

@@ -30,12 +30,13 @@ content:
       - { name: title, label: Headline, type: string, required: true }
       - { name: date, label: Date, type: date, required: true }
       - { name: summary, label: Short summary, type: text }
+      - { name: image, label: Card image (optional; otherwise the first image in the body is used), type: image }
       - { name: draft, label: Draft, type: boolean }
       - { name: body, label: News story, type: rich-text }
-  - name: articles
-    label: Research Articles
+  - name: thoughts
+    label: Thoughts
     type: collection
-    path: content/articles
+    path: content/thoughts
     format: yaml-frontmatter
     filename: "{year}-{month}-{day}-{primary}.md"
     exclude: ["_index.md"]
@@ -47,11 +48,12 @@ content:
         sort: date
         order: desc
     fields:
-      - { name: title, label: Article title, type: string, required: true }
+      - { name: title, label: Title, type: string, required: true }
       - { name: date, label: Date, type: date, required: true }
       - { name: summary, label: Summary, type: text }
+      - { name: image, label: Card image (optional; otherwise the first image in the body is used), type: image }
       - { name: draft, label: Draft, type: boolean }
-      - { name: body, label: Article content, type: rich-text }
+      - { name: body, label: Content, type: rich-text }
   - name: blog
     label: Blog
     type: collection
@@ -70,6 +72,7 @@ content:
       - { name: title, label: Blog post title, type: string, required: true }
       - { name: date, label: Date, type: date, required: true }
       - { name: summary, label: Summary, type: text }
+      - { name: image, label: Card image (optional; otherwise the first image in the body is used), type: image }
       - { name: draft, label: Draft, type: boolean }
       - { name: body, label: Blog post, type: rich-text }
   - name: projects
@@ -87,6 +90,7 @@ content:
       - { name: date, label: Date, type: date }
       - { name: area, label: Research area, type: string }
       - { name: summary, label: Short description, type: text }
+      - { name: image, label: Card image (optional; otherwise the first image in the body is used), type: image }
       - { name: external_link, label: External link, type: string }
       - { name: demo_url, label: Interactive Demo URL (optional), type: string }
       - { name: paper_url, label: Paper URL (optional), type: string }

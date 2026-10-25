@@ -1,10 +1,9 @@
 {{ define "main" }}
-<div class="container inner-page">
-  <header class="page-intro"><p class="eyebrow">RESEARCH JOURNAL / {{ upper .Section }}</p><h1>{{ .Title }}</h1>{{ with .Content }}<div class="page-description">{{ . }}</div>{{ end }}</header>
-  <div class="archive-grid">
-    {{ range .Paginator.Pages }}
-      {{ partial "entry-card.html" . }}
-    {{ else }}<p>No entries yet. New content will appear here automatically.</p>{{ end }}
+<div class="container narrow page">
+  {{ partial "page-header.html" . }}
+  {{ with .Content }}<div class="page-intro prose">{{ . }}</div>{{ end }}
+  <div class="stream">
+    {{ range .Paginator.Pages }}{{ partial "stream-item.html" (dict "page" .) }}{{ else }}<p>No entries yet. New content will appear here automatically.</p>{{ end }}
   </div>
   {{ template "_internal/pagination.html" . }}
 </div>

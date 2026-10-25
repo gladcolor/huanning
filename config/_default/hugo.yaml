@@ -19,3 +19,12 @@ markup:
   highlight:
     style: github
     noClasses: false
+module:
+  mounts:
+    - source: static
+      target: static
+    - source: assets
+      target: assets
+    # Also expose uploaded media to Hugo's image pipeline for small card thumbnails.
+    - source: static/media
+      target: assets/media

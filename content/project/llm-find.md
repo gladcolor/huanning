@@ -30,6 +30,8 @@ Below is an example of downloading the boundary and image for Tempe, Arizona, US
 
 *LLM-Find framework. Each data source has a handbook that records its metadata and the technical details for data retrieval. Human users or autonomous agents can add a new data source by adding a new handbook.*
 
+The data source handbook anticipated an industry trend. We developed LLM-Find in May 2024; in October 2025, about 1.5 years later, Anthropic announced Claude Skills: modular instruction packages that the agent browses, selects, and loads only when needed, just as LLM-Find selects and loads a handbook. I compare the two designs in [From Data Source Handbooks to Agent Skills](../../thoughts/2026-02-19-agent-skills/).
+
 ![LLM-Find agent workflow: select a data source, retrieve its handbook, generate fetching code, and execute it, with a self-debug module that regenerates code on errors](media/projects/llm-find/agent-workflow.webp)
 
 *LLM-Find agent workflow. The agent selects a data source, reads its handbook, and generates, executes, and debugs the data fetching program until the requested data is downloaded.*

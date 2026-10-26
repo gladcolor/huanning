@@ -30,6 +30,30 @@
       if (dark) root.setAttribute("data-theme", "dark"); else root.removeAttribute("data-theme");
       try { localStorage.setItem("theme", dark ? "dark" : "light"); } catch (e) {}
     });
+    // Click an image in a post to view it large; click it again for full size, click outside or press Esc to close.
+    document.addEventListener("click", function (e) {
+      var img = e.target.closest(".prose img");
+      if (!img) return;
+      var link = img.closest("a");
+      if (link && !/\.(webp|png|jpe?g|gif|svg)$/i.test(link.pathname)) return;
+      e.preventDefault();
+      var box = document.createElement("div"), big = document.createElement("img");
+      box.className = "lightbox";
+      box.setAttribute("role", "dialog");
+      box.setAttribute("aria-label", "Enlarged image");
+      big.src = link ? link.href : (img.currentSrc || img.src);
+      big.alt = img.alt;
+      box.appendChild(big);
+      function close() { box.remove(); document.removeEventListener("keydown", onKey); }
+      function onKey(k) { if (k.key === "Escape") close(); }
+      box.addEventListener("click", function (c) {
+        var scaled = big.naturalWidth > big.clientWidth || big.naturalHeight > big.clientHeight;
+        if (c.target === big && (scaled || box.classList.contains("zoomed"))) box.classList.toggle("zoomed");
+        else close();
+      });
+      document.addEventListener("keydown", onKey);
+      document.body.appendChild(box);
+    });
   </script>
 </body>
 </html>

@@ -13,7 +13,7 @@ tags:
 
 Change-detection models, such as Siamese neural networks, judge a building's damage by comparing an image taken before a disaster with one taken after it. Satellites make such pairs easy: they look straight down from a fixed perspective, so the before and after images line up almost pixel for pixel. Drone footage shows roofs and facades in much richer detail, but nobody flies a drone over a neighborhood before a tornado arrives, and the camera position and angle change from flight to flight. For drone-based damage assessment, the missing piece is a pre-disaster image taken from the same viewpoint as each post-disaster drone frame.
 
-My part of this tornado damage assessment study builds those pre-disaster images from Google's Photorealistic 3D Tiles.
+My part of this tornado damage assessment study builds those pre-disaster images from Google's Photorealistic 3D Tiles. The core idea is to use Google's 3D model of the neighborhood as the record of how the buildings looked before the disaster, and to render perspective images from that model with the same viewport as each drone image.
 
 > **Note:** The illustrations marked "simulated" on this page were generated with an AI image model to explain the method. Images from the study will be added soon.
 
@@ -38,3 +38,11 @@ We take screenshots from Photorealistic 3D Tiles at each replicated viewpoint. B
 ![Simulated: the same street before the tornado, rendered from 3D Tiles, and after the tornado, in a drone frame](media/projects/pre-disaster-3d-tiles/before-after-pair.webp)
 
 *Simulated illustration of a before-and-after pair: a pre-disaster view from 3D Tiles (left) and a post-disaster drone frame (right). In the study, both images of a pair share the same camera position and direction.*
+
+## From image pairs to 3D change detection
+
+The same reconstruction also opens a second path. Once the post-disaster 3D model is built from the drone footage, it can be compared directly with Google's pre-disaster 3D model to detect changes in 3D: a missing roof, a collapsed wall, or a building that is gone. Google's 3D models are a good reference for the building structure before the disaster, and current 3D reconstruction technology makes it fast to build the post-disaster model for assessment.
+
+## New value from historical data
+
+This project combines archived data, new technology, and AI to create an application that none of them supports alone. The 3D city models were not built for disaster response, but they hold a record of buildings that no one thought to survey before the tornado. My [street tree diameter growth monitoring](../street-tree-diameter/) project follows the same idea: it turns more than a decade of historical street view imagery into a growth record for every street tree. Both projects use AI to create new value from historical data.

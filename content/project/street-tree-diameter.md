@@ -42,3 +42,5 @@ The pipeline now runs in New York City and Atlanta. As of October 2026, it has p
 [![Map of Atlanta with measured streets and clusters of measured trees and a progress panel](media/projects/street-tree-diameter/atlanta-progress.webp)](/media/projects/street-tree-diameter/atlanta-progress.webp)
 
 *Citywide progress in Atlanta: 707,838 trunk measurements from 712,139 panoramas, grouped into 139,410 physical trees, with more streets still in the queue.*
+
+Related project: [Pre-disaster imagery from Google Photorealistic 3D Tiles](../pre-disaster-3d-tiles/), which also creates new value from historical data, using archived 3D city models to support building damage assessment after a tornado.

@@ -10,21 +10,45 @@ description: Peer-reviewed articles and preprints.
 
 ## Peer-reviewed and pre-prints
 
+## 2026
+
+Zhou, B., Huang, X., Wang, S., Mai, G., Li, D., Wang, Z., Wu, Q., Ning, H., et al. (2026). Measuring the spatial explicitness of GeoAI and geospatial foundation models: A systematic review and future roadmap. ISPRS Journal of Photogrammetry and Remote Sensing, 240, 601-622. <https://doi.org/10.1016/j.isprsjprs.2026.08.001>
+
+Li, Z., Khosravi Kazazi, A., Liu, R., Akinboyewa, T., Ning, H., Huang, X., Ye, X., Arundel, S. T., Li, W., Yang, C., Wang, S., & Simonis, I. (2026). Geospatial Agentic Services: a framework for interoperable geospatial intelligence. Annals of GIS, 1-21. <https://doi.org/10.1080/19475683.2026.2738374>
+
+Akinboyewa, T., Ning, H., Li, Z., Lessani, M. N., Li, X., & Qiao, S. (2026). Exploring the role of place visitation big data on small area health measure estimation. Computational Urban Science, 6(1), 52. <https://doi.org/10.1007/s43762-026-00287-0>
+
+Ning, H., Li, Z., Yu, M., & Yin, W. (2026). SIM: a framework for geometric measurement of built environment features using street view imagery. International Journal of Digital Earth, 19(1), 2678084. <https://doi.org/10.1080/17538947.2026.2678084>
+
+Niu, Y., Campbell, J., Feng, R., Huang, X., & Ning, H. (2026). Mapping AI-Related Skill Trends in Mechanical Engineering: Implications for Workforce Development (WIP). 2026 ASEE Annual Conference & Exposition. <https://doi.org/10.18260/1-2--60077>
+
+Ning, H., & Huang, X. (2026). Agent-Hive: A Fractal Research Graph Architecture for Long-Running Scientific Agent Swarms. SSRN preprint 7380678. <https://ssrn.com/abstract=7380678>
+
+Zhou, B., Huang, X., Ning, H., Wu, Q., Li, D., & Zhang, Z. (2026). NORA: A Harness-Engineered Autonomous Research Agent for End-to-End Spatial Data Science. arXiv preprint arXiv:2605.02092. <https://arxiv.org/abs/2605.02092>
+
+Ye, X., Gong, W., Yang, Y., Zou, L., Tu, Z., Huang, X., Li, Z., Ning, H., & Wu, L. (2026). Towards Agentic Urban Digital Twins (AUDiTs): advancing new urban science through Human-AI co-learning agents. Urban Informatics, 5(1), 9. <https://doi.org/10.1007/s44212-025-00099-3>
+
+Ning, H., Li, Z., Yu, M., Huang, X., Zhang, S., & Qiao, S. (2026). Nationwide Hourly Population Estimating at the Neighborhood Scale in the United States Using Stable-Attendance Anchor Calibration. arXiv preprint arXiv:2602.12291. <https://arxiv.org/abs/2602.12291>
+
 ## 2025
 
 Ning, Huan, Zhenlong Li, Temitope Akinboyewa, and M. Naser Lessani. "An autonomous GIS agent framework for geospatial data retrieval." International Journal of Digital Earth 18, no. 1 (2025): 2458688. <https://doi.org/10.1080/17538947.2025.2458688>
 
-Akinboyewa, Temitope, Zhenlong Li, Huan Ning, and M. Naser Lessani. "GIS Copilot: towards an autonomous GIS agent for spatial analysis." International Journal of Digital Earth 18, no. 1 (2025): 2497489. 
+Akinboyewa, Temitope, Zhenlong Li, Huan Ning, and M. Naser Lessani. "GIS Copilot: towards an autonomous GIS agent for spatial analysis." International Journal of Digital Earth 18, no. 1 (2025): 2497489. <https://doi.org/10.1080/17538947.2025.2497489>
 
-  
-
-Li, Zhenlong, Huan Ning\*, Song Gao, Krzysztof Janowicz, Wenwen Li, Samantha T. Arundel, Chaowei Yang, et al. “GIScience in the Era of Artificial Intelligence: A Research Agenda Towards Autonomous GIS.” arXiv, March 31, 2025.<https://doi.org/10.48550/arXiv.2503.23633>.
+Li, Zhenlong, Huan Ning\*, Song Gao, Krzysztof Janowicz, Wenwen Li, Samantha T. Arundel, Chaowei Yang, et al. “GIScience in the Era of Artificial Intelligence: A Research Agenda Towards Autonomous GIS.” Annals of GIS 31, no. 4 (2025): 501-536. <https://doi.org/10.1080/19475683.2025.2552161>
 
 Ning, Huan, Zhenlong Li, Manzhu Yu, Shiyan Zhang, and Shan Qiao. "Estimating Hourly Neighborhood Population Using Mobile Phone Data in the United States." arXiv preprint arXiv:2504.01170 (2025).
 
-Chukwu, M., Huang, X., Li Z., Ning, H., & Audu, K. (2024). Understanding Urban Park Visitors’ Pattern in New York City and the Long-Standing Inequity Issues: A Longitudinal Study with Fine-grained Human Mobility Data.
+Akinboyewa, T., Li, Z., Ning, H., Lessani, M. N., Holmes, L. M., & Qiao, S. (2025). Exploring the association between smartphone-based place visitation data and neighborhood-level coronary heart disease in the United States. PLOS One, 20(8), e0329455. <https://doi.org/10.1371/journal.pone.0329455>
 
-Temitope Akinboyewa, Zhenlong Li, Huan Ning, M. Naser Lessani, Louisa M. Holmes, Shan Qiao. Smartphone-based place visitation data better explain neighborhood-level coronary heart disease in the United States.
+Jiang, Y., Han, S. Y., Li, Z., Ning, H., & Kim, J.-S. (2025). Comparative analysis of human mobility patterns: utilizing taxi and mobile (SafeGraph) data to investigate neighbourhood-scale mobility in New York City. Annals of GIS, 31(3), 387-411. <https://doi.org/10.1080/19475683.2025.2487984>
+
+Shi, F., Mi, T., Li, X., Ning, H., Li, Z., & Yang, X. (2025). Structural Racism and HIV Pre-exposure Prophylaxis Use in the Nationwide US: A County-Level Analysis. Journal of Racial and Ethnic Health Disparities, 12(5), 3233-3239. <https://doi.org/10.1007/s40615-024-02127-5>
+
+Ning, H. (2025). Neighborhood Mobility Auditing and Assessment for Wheelchair Users Based on Street View Imagery and Artificial Intelligence. Doctoral dissertation, The Pennsylvania State University.
+
+Chukwu, M., Huang, X., Li Z., Ning, H., & Audu, K. (2024). Understanding Urban Park Visitors’ Pattern in New York City and the Long-Standing Inequity Issues: A Longitudinal Study with Fine-grained Human Mobility Data.
 
 ## 2024
 
@@ -33,8 +57,6 @@ Jing, Fengrui, Zhenlong Li, Shan Qiao, M. Naser Lessani, Huan Ning, Wenjun Ma, J
 Akinboyewa, T., Ning, H., Lessani, M. N., & Li, Z. (2024). Automated floodwater depth estimation using large multimodal model for rapid flood mapping. Computational Urban Science, 4(1), 12.
 
 Yu, M., Zhang, S., Ning, H., Li, Z., & Zhang, K. (2024). Assessing the 2023 Canadian wildfire smoke impact in Northeastern US: Air quality, exposure and environmental justice. Science of The Total Environment, 926, 171853.
-
-Shi, F., Mi, T., Li, X., Ning, H., Li, Z., & Yang, X. (2024). Structural Racism and HIV Pre-exposure Prophylaxis Use in the Nationwide US: A County-Level Analysis. Journal of Raciautol and Ethnic Health Disparities, 1-7.
 
 Wang, S., Hu, T., Xiao, H., Li, Y., Zhang, C., Ning, H., ... & Ye, X. (2024). GPT, large language models (LLMs) and generative artificial intelligence (GAI) models in geospatial science: a systematic review. International Journal of Digital Earth, 17(1), 2353122.
 
@@ -106,7 +128,7 @@ Bi, K., Li Y., Xue, Y., Ding, X., and Ning. H. "Study on Rapidly Processing Imag
 
 huan.ning@emory.edu
 
-[C.V.](https://1drv.ms/w/c/369e31f0e09c2899/ERGxPMoWWa5PhR1R1g5cpGoBUNeBIm9q52PVVq5SoRev3g?e=npcVmQ) ,  [Google Scholar](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=aK57tWMAAAAJ&sortby=pubdate)
+[C.V.](https://1drv.ms/w/c/369e31f0e09c2899/IQDaa-8NvShiRZlHz-hVKKOxAZghSEQLNxKZYyI92eHlcDY?e=IV3Aug) ,  [Google Scholar](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=aK57tWMAAAAJ&sortby=pubdate)
 
 [Blog](https://gladcolor.wordpress.com/)
 

@@ -20,7 +20,7 @@ My recent projects include autonomous geospatial data retrieval, interactive hou
 - [GitHub](https://github.com/gladcolor)
 - [Google Scholar](https://scholar.google.com/citations?user=aK57tWMAAAAJ)
 - [LinkedIn](https://www.linkedin.com/in/huan-ning-53367254)
-- [Curriculum Vitae](https://1drv.ms/w/c/369e31f0e09c2899/ERGxPMoWWa5PhR1R1g5cpGoBUNeBIm9q52PVVq5SoRev3g?e=npcVmQ)
+- [Curriculum Vitae](https://1drv.ms/w/c/369e31f0e09c2899/IQDaa-8NvShiRZlHz-hVKKOxAZghSEQLNxKZYyI92eHlcDY?e=IV3Aug)
 - [Resume (PDF)](https://1drv.ms/b/c/369e31f0e09c2899/ER7OcMNzxMNHq9dmfdj1tZ0B7DScsvF--8i7N_bwlAoPdw?e=OdyruI)
 
 The complete original biography and Google Sites source, including links and media, are also backed up in the website's GitHub repository.

@@ -1,13 +1,12 @@
 ---
 title: Publications
 aliases: [/publications/]
-description: Full academic bibliography migrated from huanning.me, with original citations and links preserved.
+description: Peer-reviewed articles and preprints.
 ---
 
-The following bibliography was migrated from my previous personal academic website. For updates and citation records, see [Google Scholar](https://scholar.google.com/citations?user=aK57tWMAAAAJ).
 
 
-### The lastest publication list can be found in [Google Scholar.](https://scholar.google.com/citations?user=aK57tWMAAAAJ&hl=en&oi=ao)
+### The latest publication list can be found in [Google Scholar.](https://scholar.google.com/citations?user=aK57tWMAAAAJ&hl=en&oi=ao)
 
 ## Peer-reviewed and pre-prints
 

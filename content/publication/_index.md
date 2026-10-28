@@ -12,6 +12,8 @@ description: Peer-reviewed articles and preprints.
 
 ## 2026
 
+Ning, H., & Li, Z. (2026). Autonomous GIS. In S. Shekhar, H. Xiong, & X. Zhou (Eds.), Encyclopedia of GIS. Springer, Cham. <https://doi.org/10.1007/978-3-319-23519-6_1727-1>
+
 Zhou, B., Huang, X., Wang, S., Mai, G., Li, D., Wang, Z., Wu, Q., Ning, H., et al. (2026). Measuring the spatial explicitness of GeoAI and geospatial foundation models: A systematic review and future roadmap. ISPRS Journal of Photogrammetry and Remote Sensing, 240, 601-622. <https://doi.org/10.1016/j.isprsjprs.2026.08.001>
 
 Li, Z., Khosravi Kazazi, A., Liu, R., Akinboyewa, T., Ning, H., Huang, X., Ye, X., Arundel, S. T., Li, W., Yang, C., Wang, S., & Simonis, I. (2026). Geospatial Agentic Services: a framework for interoperable geospatial intelligence. Annals of GIS, 1-21. <https://doi.org/10.1080/19475683.2026.2738374>

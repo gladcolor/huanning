@@ -18,6 +18,10 @@ The entry defines autonomous GIS as a GIS that uses the general abilities of gen
 - **Implementation and applications:** principles for building GIS agents, and agents for spatial analysis, data retrieval (such as our [LLM-Find](../../project/llm-find/)), cartography, and GIS copilots.
 - **Future directions:** autonomous geographic modeling and self-growing GIS.
 
+![Levels of autonomous GIS, from manual, routine-aware, workflow-aware, data-aware, and result-aware to knowledge-aware GIS, showing the agent role growing and the human role shrinking at each level](media/news/encyclopedia-autonomous-gis/autonomy-levels.webp)
+
+*Levels of autonomous GIS: the agent's role grows and the human's role shrinks at each level. Figure 1 of the entry, adapted from Li et al. (2025). © Springer Nature Switzerland AG.*
+
 Earlier this year, the U.S. Federal Geographic Data Committee [adopted our autonomous goals](../autonomous-gis-sdi/) in its Spatial Data Infrastructure Modernization objectives. This entry is another step in building the subfield.
 
 Ning, H., & Li, Z. (2026). Autonomous GIS. In S. Shekhar, H. Xiong, & X. Zhou (Eds.), *Encyclopedia of GIS*. Springer, Cham. <https://doi.org/10.1007/978-3-319-23519-6_1727-1>

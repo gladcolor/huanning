@@ -1,6 +1,6 @@
 ---
 title: "Guard the Dopamine Factory: A Five-Minute Game That Makes Students Recall Where Each Drug Strikes"
-date: 2026-10-28T23:30:00-04:00
+date: 2026-10-28T21:45:00-04:00
 area: Science education, game-based learning
 summary: A lane-defense game for first-year biology. Drugs walk in as zombies, and students stop each one by placing the part of the dopamine machine it damages. About 40 recalls in five minutes, with feedback after every mistake and danger levels drawn from overdose data.
 image: media/projects/guard-the-factory/game-overview.webp
@@ -15,9 +15,9 @@ tags:
 
 ## How it plays
 
-![The game in play: the factory with four parts on the left, guards labeled Dopamine neuron, GABA, DAT and Vesicles on the lawn, and drug zombies walking in from the bloodstream](media/projects/guard-the-factory/game-overview.webp)
+![Nine seconds of play: drug zombies walk in from the bloodstream, guards labeled Dopamine neuron, GABA, DAT and Vesicles shoot them, stopped drugs scream and turn to smoke, and marijuana walks past a wrong DAT guard and bombs the brake operator](media/projects/guard-the-factory/game-play.webp)
 
-*The factory holds the four parts of the dopamine machine. Each guard is one of those parts, and its shots hurt only the drugs that damage it.*
+*Nine seconds of play. Each guard is a part of the dopamine machine, and its shots hurt only the drugs that damage that part. In the bottom lane, the DAT guard does nothing to marijuana, which walks on and bombs the brake operator.*
 
 - **The factory** shows the four parts these drugs act on: the dopamine neuron, the GABA brake, the vesicles and the recycle pumps (DAT). They are drawn with the lesson's own drawing code, so students see exactly the pictures they just studied.
 - **Each drug** carries one bomb for every part it damages. Meth and alcohol carry two, so they need two kinds of guard.

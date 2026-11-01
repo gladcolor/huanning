@@ -1,5 +1,5 @@
 ---
-title: "No AI? No Geo!"
+title: "Rethinking GeoAI: No AI? No Geo!"
 date: '2026-10-30T23:25:00-04:00'
 summary: "Over the past decade or so, GeoAI has spread across geographic information science. Why? Not because AI is hot, but because Geo and AI are naturally alike: both are webs of complex, nonlinear connections."
 ---

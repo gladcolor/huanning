@@ -144,13 +144,23 @@ content:
       - { name: summary, label: Summary, type: text }
       - { name: body, label: Biography, type: rich-text }
   - name: teaching
-    label: Teaching page
-    type: file
-    path: content/teaching.md
+    label: Teaching
+    type: collection
+    path: content/teaching
     format: yaml-frontmatter
-    operations:
-      delete: false
+    filename: "{year}-{month}-{day}-{primary}.md"
+    exclude: ["_index.md"]
+    view:
+      fields: [title, date, summary]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
     fields:
-      - { name: title, label: Page title, type: string, required: true }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
       - { name: summary, label: Summary, type: text }
-      - { name: body, label: Courses and teaching experience, type: rich-text }
+      - { name: image, label: Card image (optional; otherwise the first image in the body is used), type: image }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: body, label: Content, type: rich-text }

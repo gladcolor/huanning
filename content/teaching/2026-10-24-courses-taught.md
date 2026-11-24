@@ -1,10 +1,11 @@
 ---
-title: Teaching
+title: "Courses I Have Taught"
+date: '2026-10-24T22:30:00-04:00'
 summary: "Courses I have taught and supported at the University of South Carolina and New Jersey Institute of Technology, from GIS labs to AI techniques in an introductory geography course."
 original: https://www.huanning.me/teaching
 ---
 
-I love sharing my knowledge and skills with others, and I am always happy to help others with my expertise. During my graduate studies, I taught college students as an independent instructor and as a teaching assistant. When I worked in the geospatial industry, I often held technical workshops and presentations to help colleagues improve their productivity.
+During my graduate studies, I taught college students as an independent instructor and as a teaching assistant.
 
 ## GEOG 105: Digital Earth
 
